@@ -1,0 +1,747 @@
+.pagina #cuerpo header #help
+{
+	
+	text-decoration: none;
+	color: #ffffff;
+	vertical-align: text-top;
+	float:right;
+	position: relative;
+	top: -110px;
+
+	font-size: 15px;
+	margin-right: 1%;
+
+}
+#formulario
+{
+margin-top: 65px;
+width: 100%;
+text-align: center;
+
+}
+
+#formulario form
+{
+	width: 100%;
+	text-align: center;
+	
+
+
+}
+#formulario form table
+{
+	width: 70%;
+	text-align: center;
+
+
+}
+#formulario form table tr
+{
+	width: 30%;
+	
+}
+#formulario form table tr td
+{
+
+	vertical-align: top;
+	font-size: 13px;
+	text-align: right;
+
+
+
+}
+
+
+
+
+#formulariosPrincipales tbody tr td
+{
+	padding: 5px;
+}
+
+
+
+.imagenCompetencia
+{
+	cursor: pointer;
+}
+
+
+.ui-dialog-titlebar-close
+{
+	cursor: pointer;
+}
+
+
+#ordenes form table tr td INPUT[type="text"]
+{
+	text-align: left;
+	width: 90%;
+	
+}
+
+#ordenes form table tr .titulo INPUT[type="text"]
+{
+	
+    text-align: center;
+	width: 250px;
+	
+}
+
+#ordenes
+{
+margin-top: 65px;
+width: 100%;
+text-align: center;
+color: #000;
+
+}
+
+#ordenes form
+{
+	width: 100%;
+	text-align: center;
+	
+
+
+}
+#ordenes form table
+{
+	width: 70%;
+	text-align: center;
+
+
+}
+#ordenes form table tr
+{
+	width: 30%;
+	
+}
+
+#ordenes form #cargosOrden table tr
+{
+	width: 686px;
+	
+} 
+#ordenes form table tr td
+{
+
+	vertical-align: top;
+	font-size: 13px;
+	text-align: left;
+	padding-left: 5px;
+
+
+
+}
+
+#ordenes form #ordenesCont table tr td
+{
+
+	vertical-align: top;
+	font-size: 13px;
+	text-align: left;
+
+
+
+}
+
+#ordenes form table tr .text
+{
+	
+	text-align: left;
+	width: 20%;
+
+
+}
+#formulario form table tr .imagenRow
+{
+
+	vertical-align: middle;
+	font-size: 13px;
+	text-align: center;
+
+
+
+}
+#formulario form table tr td img
+{
+
+cursor: pointer;
+
+
+
+
+}
+#formulario form table tr .text
+{
+	
+	text-align: right;
+	width: 20%;
+
+
+}
+
+#formulario form .proveedor
+{
+	width: 90%;
+}
+
+#formulario form .proveedor tr .text
+{
+	
+	text-align: right;
+	width: auto;
+
+
+
+}
+#formulario form table tr td INPUT[type="text"]
+{
+	text-align: left;
+	width: 90%;
+	
+}
+
+#formulario form table tr .titulo INPUT[type="text"]
+{
+	
+    text-align: center;
+	width: 250px;
+	
+}
+#formulario form .header
+{
+    /*
+	font-size: 20px;
+    */
+}
+#formulario form table tr td INPUT[type="password"]
+{
+	text-align: left;
+	width: 90%;
+	
+}
+#formulario form table tr td select
+{
+	text-align: left;
+	width: 263px;
+	
+}
+#formulario form table tr td select
+{
+	text-align: left;
+	width: 92%;
+	
+}
+#formulario form table tr td INPUT[type="number"]
+{
+	text-align: left;
+	width: 250px;
+	
+}
+#formulario form table tr td INPUT[type="number"]
+{
+	text-align: left;
+	width: 90%;
+	
+}
+#formulario form table tr td INPUT[type="date"]
+{
+	text-align: left;
+	width: 250px;
+	
+}
+#formulario form table tr td INPUT[type="date"]
+{
+	text-align: left;
+	width: 90%;
+	
+}
+#formulario form table tr td INPUT[type="button"]
+{
+	text-align: center;
+	width: 186px;
+	
+}
+#formulario form table tr td INPUT[type="reset"]
+{
+	text-align: center;
+	width: 186px;
+	
+}
+#formulario form .obligado
+{
+	background-color: red;
+	color: #ffffff;
+}
+#formulario form .normal
+{
+	background-color: white;
+}
+#formulario form .bueno
+{
+	background-color: green;
+	color: #ffffff;
+}
+#guardar
+{
+	position: absolute;
+	text-align: center;
+	width: 40%;
+}
+.cmd
+{
+	width: 186px;
+	margin-right: 5%;
+
+}
+.cmdP
+{
+	width: 230px;
+	margin-right: 5%;
+
+}
+
+.tituloCatalogo
+{
+	margin-left: 6%
+}
+#formulario aside 
+{
+
+width: 100%;
+	position: static;
+	margin-left: 0%;
+	margin-top: 1%;
+	
+
+
+
+}
+#formulario aside table
+{
+	text-align: center;
+	width: 100%;
+
+}
+#formulario aside table tr td
+{
+	padding-left: 5px;
+
+	
+	
+
+
+}
+#formulario aside table tr td INPUT[type="text"]
+{
+
+	width: 250px;
+	
+
+
+}
+#formulario aside table tr td input
+{
+
+display: inline;	
+
+
+}
+
+#formulario aside table 
+{
+	display: inline;
+}
+#formulario aside table tr td INPUT[type="button"]
+{
+
+	width: 186px;
+}
+#formulario #datos
+{
+	
+	margin-left: 2%;
+	width: 96%;
+	text-align: center;
+	
+	
+}
+#tablas img
+{
+	width: 10%;
+}
+
+#formulario #datos #tablaDatos .titulo th,#formulario #datos #tablaDatos tbody tr td
+{
+
+	cursor: pointer;
+	text-align: left;
+	padding-left: 3px;
+
+
+
+	
+}
+#formulario #datos #tablaDatos tbody tr:hover
+{
+	
+	color: #ffffff ;
+	background-color:  	#999999 ;
+	
+	
+}
+
+
+#formulario #datos #tablaDatos tr td select
+{
+	text-align: center;
+	width: 95%;
+	
+}
+
+#formulario #datos #tablaDatos tr td .comp
+{
+	width: auto;
+text-align: right;
+position: absolute;
+display: inline-block;
+
+	
+}
+
+#formulario INPUT[type="button"]
+{
+	width: 186px;
+	margin-top: 1%;
+	margin-left: 1%;
+	margin-right: 1%;
+
+}
+
+#formulario #datos #tablaDatos td .text
+{
+	
+	text-align: right;
+	width: 20%;
+
+	font-size: 30px;
+
+
+}
+#formulario form table tr .dos
+{
+	
+	display: inline-block;
+
+
+}
+#formulario #datos #tablaDatos tr .empresa
+{
+	width: 10px;
+
+	border-radius: 30%;
+	
+	
+}
+#formulario #datos #tablaDatos tr .empresa:hover
+{
+	cursor: pointer;
+	color: #ffffff ;
+	background-color:  	#585858 ;
+	
+	
+}
+
+.modulos
+{
+	background-color: #399AE9 ;
+	color: #ffffff;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.imagen
+{
+	position: absolute;
+	text-align: center;
+	
+
+}
+
+#formulario form table .imagenRow .imagen
+{
+	position: relative;
+	text-align: center;
+	padding: 8px;
+	
+
+}
+
+
+
+/* ******************************************************************** Bundles canales */
+#formulario form .principalBundle
+{
+	width: 100%;
+	text-align: center;
+
+
+}
+#formulario form .principalBundle tr
+{
+	width: 30%;
+	
+}
+#formulario form .principalBundle tr td
+{
+
+	text-align: left;
+
+
+
+}
+#formulario form .principalBundle tr .text
+{
+	
+	text-align: right;
+	width: 20%;
+
+
+}
+#formulario form .principalBundle tr td .media
+{
+	text-align: left;
+	width: 90%;
+	
+}
+#formulario form .principalBundle tr td INPUT[type="text"]
+{
+	text-align: left;
+	width: 100%;
+	
+}
+
+#formulario form .principalBundle tr .titulo INPUT[type="text"]
+{
+	text-align: center;
+	width: 90%;
+	
+}
+
+#formulario form .principalBundle tr td INPUT[type="password"]
+{
+	text-align: left;
+	width: 90%;
+	
+}
+#formulario form .principalBundle tr td select
+{
+	text-align: left;
+	width: 100%;
+	
+}
+#formulario form .principalBundle tr td INPUT[type="number"]
+{
+	text-align: left;
+	width: 90%;
+	
+}
+#formulario form .principalBundle tr td INPUT[type="button"]
+{
+	text-align: center;
+	width: 30%;
+	
+}
+#formulario form .principalBundle tr td INPUT[type="reset"]
+{
+	text-align: center;
+	width: 30%;
+	
+}
+
+/* ******************************************************************** Bundles canales derecha*/
+#formulario form .derechaBundle
+{
+	width: 98%;
+	text-align: center;
+
+
+}
+#formulario form .derechaBundle tr
+{
+	width: 30%;
+	
+}
+#formulario form .derechaBundle tr td
+{
+
+	text-align: left;
+
+
+
+}
+#formulario form .derechaBundle tr .text
+{
+	
+	text-align: right;
+	width: 10%;
+
+
+}
+#formulario form .derechaBundle tr td .media
+{
+	text-align: left;
+	width: 90%;
+	
+}
+#formulario form .derechaBundle tr td INPUT[type="text"]
+{
+	text-align: left;
+	width: 100%;
+	
+}
+
+#formulario form .derechaBundle tr .titulo INPUT[type="text"]
+{
+	text-align: center;
+	width: 90%;
+	
+}
+
+#formulario form .derechaBundle tr td INPUT[type="password"]
+{
+	text-align: left;
+	width: 90%;
+	
+}
+#formulario form .derechaBundle tr td select
+{
+	text-align: left;
+	width: 90%;
+	
+}
+#formulario form .derechaBundle tr td INPUT[type="number"]
+{
+	text-align: left;
+	width: 100%;
+	
+}
+#formulario form .derechaBundle tr td select
+{
+	text-align: left;
+	width: 100%;
+	
+}
+#formulario form .derechaBundle tr td textarea
+{
+	text-align: left;
+	width: 100%;
+	
+}
+#formulario form .derechaBundle tr td INPUT[type="button"]
+{
+	text-align: center;
+	width: 30%;
+	
+}
+#formulario form .principalBundle tr td INPUT[type="reset"]
+{
+	text-align: center;
+	width: 30%;
+	
+}
+.caracteres
+{
+	
+	display: inline-block;
+	text-align: right;
+	width: 130%;
+	vertical-align: bottom;
+	
+	
+}
+.TituloCatalogo
+{
+	width: 100%;
+	text-align: left;
+	font-size: 25px;
+	float: left;
+}
+
+.text
+{
+	text-align: right;
+}
+
+#usuarioprov .entradaTexto
+{
+	margin: 7px;
+}
+#usuarioprov form
+{
+	margin-top: 50px;
+}
+
+#formulario #soporte table tr td {
+    vertical-align: top;
+    font-size: 13px;
+    text-align: left;
+}
+#formulario #soporte table tr .text {
+    text-align: right;
+    width: 20%;
+}
+
+.menuGrafico
+{
+	width:200px;
+	display: inline-block;
+	margin-top: -10000000%;
+	margin-left: -60px;
+
+}
+.contenidoGrafico
+{
+	width:80%;
+	display: inline-block;
+}
+
+#adminBD tr td
+{
+	padding-right: 5px;
+	padding-bottom: 2px;
+	color: black;
+}
+#formulario form .ventasReporte
+{
+	width: 40%;
+
+}
+#formulario form .ventasReporte tr td
+{
+	text-align: center;
+	
+
+}
+
+.combosCentrar
+{
+	    width: 90%;
+    text-align: center;
+}
+
+.colIz
+{
+	display: inline-block;
+    margin-right: 5%;
+    width: 20%;
+}
+
+.colDer
+{
+	display: inline-block;
+    margin-left: 5%;
+    width: 20%;
+}

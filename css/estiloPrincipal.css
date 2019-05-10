@@ -1,0 +1,500 @@
+/**
+ * Created by JDR
+ * For more information www.facebook.com/DEANIELL6195
+ * Unique creator
+ */
+body
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;;
+	font-size: 12px;
+}
+body
+{
+	background-color: 		#ffffff ;
+}
+
+#cuerpo
+{
+	background-color: #ffffff ;
+	color: #999999;
+	width: 100%;
+	height: 90%;
+	
+
+}
+#cuerpo header u a
+{
+
+	font-size: 30px;
+}
+#cuerpo nav
+{
+	text-align: left;
+	margin-left: 5%;
+	width: 90%;
+}
+#cuerpo nav select
+{
+	margin-right: 5%;
+}
+#resultado
+{
+	color: red;
+	text-align: center;
+}
+.log #resultado
+{
+	color: red;
+	text-align: left;
+}
+
+.log
+{
+	margin-left: 10%;
+	margin-right: 30%;
+	text-align: center;
+	border-radius: 20px;
+	width: 60%;
+	height: 80%;
+}
+.log form
+{
+	text-align: left;
+	
+	
+}
+.pandiadoT tr td
+{
+	padding: 5px;
+}
+.log form table tbody tr td span a
+{
+	text-decoration: none;
+	color: black;
+}
+.log form table tbody tr td span
+{
+	margin-left: 10%;
+	color: #000000;
+	font-size: 16px;
+}
+
+.log form table
+{
+	left: 0px;
+
+	width: 100%;
+
+}
+
+.log form table tbody tr td INPUT[type="button"]
+{
+
+	
+	margin-left: 26%;
+
+	cursor: pointer;
+	
+}
+.log form table tbody tr td INPUT[type="text"]
+{
+	right: 0px;
+	margin-left: 0%;
+	width: 40%;
+	text-align: left;
+	font-size: 16px;
+	border-radius: 7px;
+	border: solid 1px #999999;
+	background-color: #ffffff;
+	color: #707070;
+	padding-top: 1%;
+	padding-bottom: 1%;
+
+}
+.log form table tbody tr td INPUT[type="password"]
+{
+	right: 0px;
+	margin-left: 0%;
+	width: 40%;
+	text-align: left;
+	font-size: 16px;
+	border-radius: 7px;
+	border: solid 1px #999999;
+	background-color: #ffffff;
+	color: #707070;
+	padding-top: 1%;
+	padding-bottom: 1%;
+
+}
+.log form table tbody tr
+{
+	width: 100%;
+}
+.log form table tbody
+{
+	padding: 100px;
+}
+.log form table tbody tr td
+{
+	padding: 1%;
+}
+.log form table tbody tr td INPUT[type="text"]
+{
+	padding: 2%;
+}
+.log form table tbody tr td INPUT[type="password"]
+{
+	padding: 2%;
+}
+
+
+.fdg_sortable 
+{
+	cursor:pointer;
+	color:#00f;
+}
+
+.alterRow 
+{
+	background-color:#dfdfdf
+}
+
+
+#formulario #datos #tablaPaises
+{
+	margin-top: 2%;
+	margin-right: 10%;
+	text-align: center;
+	width: 100%;
+	position: relative;
+	
+	
+
+
+}
+#formulario #datos #tablaPaises tr 
+{
+	text-align: center;
+}
+#formulario #datos #tablaPaises tr td
+{
+
+	border-radius: 20px;
+	
+
+
+}
+#formulario #datos #tablaPaises tr td .imageninicio
+{
+
+	height: 300px;
+	width: 500px;
+	
+
+
+}
+#formulario #datos #tablaPaises tr td:hover
+{
+
+	cursor: pointer;
+	color: #ffffff ;
+	background-color:  	#ff9b7a ;
+	
+
+
+}
+.tablaEstadisticasDatos
+{
+	display: inline-table;
+	width: 350px;
+	height: 240px;
+	text-align: left;
+	border: solid 1px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+.tituloPromedio
+{
+	width:99%; 
+	height:30px; 
+	background-color:#CCC; 
+	color: #FF571C;
+	font-size: 18px;
+	text-shadow: 2px 2px #aaa;
+	text-align:left; 
+	padding-left:10px;
+	border-radius: 10px 10px 0px 0px;
+	margin-top: 2px;
+}
+.averaPromedio
+{
+	    width: 50%;
+    height: 40px;
+    text-align: right;
+    padding-right: 10px;
+    float: right;
+}
+.maxMinPromedio
+{
+	width: 10%;
+    height: 70px;
+    text-align: left;
+    padding-left: 10px;
+    float: right;
+    margin-top: 250px;
+    font-size: 16px;
+    position: absolute;
+}
+.miniEstadisticaPromedio
+{
+	    width: 100%;
+    height: 200px;
+    text-align: left;
+    padding-left: 0px;
+    float: right;
+    margin-bottom: 70px;
+
+}
+.slider {
+	position: absolute;
+        width: 50%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+    	
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+    	
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+
+        color: black;
+    }
+      #cintaimagen {
+      width:100%;
+      height:100px;/* ALTO CINTA */
+      background:url(../images/mensajes/repite.jpg) repeat-x transparent;
+      display:block;
+      position: absolute;
+      margin-top: 0px;
+   
+
+      -webkit-animation-name: cintaimagen;
+      -webkit-animation-duration: 20s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+    
+      -moz-animation-name: cintaimagen;
+      -moz-animation-duration: 20s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: linear;
+
+      animation-name: cintaimagen;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    @-webkit-keyframes cintaimagen{  0% {background-position:0 0;} 100% { background-position:-960px 0; } }
+
+    @-moz-keyframes cintaimagen {  0% {background-position:0 0;} 100% { background-position:-960px 0; } }
+
+    @keyframes cintaimagen {  0% {background-position:0 0;} 100% { background-position:-960px 0; } }
+
+    #formulario #contacto table tbody tr td
+{
+	text-align: left;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+    #formulario #contacto table tbody tr .text
+{
+	text-align: right;
+}
+
+ul, ol {
+  list-style: none;
+}
+#accordion1 li.panel{
+    margin-bottom: 0px;
+}
+#accordion2 li.panel{
+    margin-bottom: 0px;
+}
+#accordion3 li.panel{
+    margin-bottom: 0px;
+}
+#accordion4 li.panel{
+    margin-bottom: 0px;
+}
+#accordion5 li.panel{
+    margin-bottom: 0px;
+}
+#accordion6 li.panel{
+    margin-bottom: 0px;
+}
+.menuCollapseLi
+{
+	cursor: pointer;
+}
+.menuCollapseLi:hover
+{
+	background-color: #ddd;
+}
+
+#formulariosPrincipales tr td
+{
+	text-align: center;
+	cursor: pointer;
+}
+
+
+.globoFlotante
+{
+	border: solid;
+    position: absolute;
+    right: 150px;
+    margin-top: -130px;
+    height: 90px;
+    width: 200px;
+    border-radius: 30px 30px 30px 0px;
+    background: white;
+    padding: 10px 7px 7px 10px;
+    display: none;
+
+}
+.parrafoFlotante
+{
+	overflow-y: auto;
+	height: 90px;
+	margin-right: -10px;
+	margin-bottom: -28px;
+}
+.linkArchivo
+{
+	text-decoration: none;
+}
+
+.linkArchivo a:hover 
+{
+	
+}
+
+.linkArchivo a:hover .globoFlotante
+{
+	display: block;
+}
+
+.globoFlotanteExistencia
+{
+	
+   	margin-left: -90px;
+    border: solid #000000;
+    position: absolute;
+    height: 150px;
+    width: 300px;
+    border-radius: 30px 30px 30px 30px;
+    background: white;
+    padding: 10px 7px 7px 10px;
+    display: none;
+
+}
+.globoFlotanteExistencia:before{
+    content: "";
+    width: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 0 5px 10px 5px;
+    border-color: #EEE transparent #000000 transparent;
+    top: -10px;
+	left: 100px;
+}
+.parrafoFlotanteExistencia
+{
+	overflow-y: auto;
+	height: 150px;
+	margin-right: -10px;
+	margin-bottom: -28px;
+	margin-left: -10px;
+	font-size: 12px;
+}
+.bodegaDeclara
+{
+	text-decoration: none;
+	text-align: left;
+}
+
+.bodegaDeclara a:hover 
+{
+	text-decoration: none;
+}
+.bodegaDeclara a 
+{
+	text-decoration: none;
+	color: black;
+}
+
+.bodegaDeclara a:hover .globoFlotanteExistencia
+{
+	display: block;
+}
+
+.s6{
+	width: 100%;
+}
+.s5{
+	width: 83%;
+}
+.s4{
+	width: 66%;
+}
+.s3{
+	width: 50%;
+}
+.s2{
+	width: 33%;
+}
+.s1{
+	width: 16%;
+}
+
+.frigth5{
+	margin-left: 16.6%;
+}
+.fleft5{
+	margin-right: 16.6%;
+}
+
+.frigth4{
+	margin-left: 33.33%;
+}
+.fleft4{
+	margin-right: 33.33%;
+}
+
+.frigth3{
+	margin-left: 50%;
+}
+.fleft3{
+	margin-right: 50%;
+}
+
+.frigth2{
+	margin-left: 66.66%;
+}
+.fleft2{
+	margin-right: 66.66%;
+}
+
+.frigth1{
+	margin-left: 83.33%;
+}
+.fleft1{
+	margin-right: 83.33%;
+}	

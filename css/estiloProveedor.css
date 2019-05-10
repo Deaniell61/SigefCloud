@@ -1,0 +1,25 @@
+/**
+ * Created by JDR
+ * For more information www.facebook.com/DEANIELL6195
+ * Unique creator
+ */
+#formularioP form table tr .text
+{
+	
+	text-align: right;
+	width: 20%;
+
+
+}
+#formularioProveedor form table tr td .entradaTexto
+{
+        float: left;
+    width: 250px;
+}
+#formularioProveedor form table tr td .textoGrande
+{
+    text-align: left;
+    width:calc(100% + 253px);
+}
+/* CSS Document */
+

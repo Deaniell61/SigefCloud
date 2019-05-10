@@ -1,0 +1,268 @@
+.pestanas ul li {
+    display: inline-table;
+    border-top: solid;
+    border-left: solid;
+    border-right: solid;
+    border-radius: 9px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#formulario {
+    width: 100%;
+    margin-top: 0px;
+}
+
+#productos {
+    position: relative;
+}
+
+#productos form table tr .guardar {
+    width: 70%;
+    position: absolute;
+}
+
+#productos form table tr td {
+    text-align: center;
+}
+
+#productos form .exporta tr td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#productos form table tr td INPUT[type="text"] {
+    float: left;
+    width: 250px;
+}
+
+#productos form table tr td INPUT[type="number"] {
+    float: left;
+    width: 250px;
+}
+
+#productos form table tr td #prodName, #productos form table tr td #descSistema {
+    float: left;
+    width: calc(100% + 253px);
+}
+
+.colo1 {
+    width: 40%
+}
+
+#productos form table tr td INPUT[type="number"] {
+    width: 250px;
+}
+
+#cuerpoSellers #datos {
+    width: calc(68% + 253px);
+    float: left;
+}
+
+#productos form table tr td textarea {
+    width: calc(100% + 253px);
+    float: left;
+}
+
+#productos form table tr td select {
+    float: left;
+    width: 263px;
+}
+
+#productos form table tr td #subForm {
+    float: left;
+    margin-top: 0.3%;
+    margin-left: .5%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.pallets {
+    width: 500px;
+    height: 500px;
+}
+
+.pallets img {
+    display: inline;
+    width: 10%;
+    position: relative;
+    height: 10%;
+}
+
+#caja {
+    float: left;
+    width: 340px;
+    height: 340px;
+}
+
+#pallets {
+    float: right;
+    width: 340px;
+    height: 340px;
+}
+
+#productos form table tr td .dimensiones {
+    position: relative;
+    width: 90%;
+    margin-top: 1%;
+    border: outset;
+    border-width: 1px;
+}
+
+#productos form table tr td .dimensiones table tr .text {
+    width: 48%;
+    text-align: right;
+}
+
+#productos form table tr td .dimensiones table tr td INPUT[type="number"] {
+    width: 90%;
+}
+
+#productos form table tr td .dimensiones table tr td INPUT[type="text"] {
+    width: 90%;
+}
+
+#detallesBundle #datos #tablaDatos .titulo {
+    width: 35%;
+    text-align: left;
+    background-image: url('../../images/th.png');
+    height: 30px;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: #012b4d 2px 2px 2px;
+}
+
+#detallesBundle #datos #tablaDatos tr td {
+    text-align: left;
+}
+
+#detallesBundle #datos {
+    width: 100%;
+}
+
+#detallesBundle #datos #tablaDatos td .text {
+    text-align: right;
+    width: 50%;
+    font-size: 30px;
+}
+
+#productos form table tr td #subBundle {
+    width: 2.3%;
+    height: 20px;
+    margin-top: 0.2%;
+    margin-left: .5%;
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bundle {
+    vertical-align: text-top;
+}
+
+#bundle #datos {
+    width: 95%;
+    margin-left: 5%;
+}
+
+#bundle #datos #tablaDatos tr td {
+    text-align: left;
+}
+
+#bundle #datos #tablaDatos .titulo {
+    width: 5%;
+    text-align: center;
+    background-image: url('../../images/th.png');
+    height: 30px;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: #012b4d 2px 2px 2px;
+}
+
+#bundle #datos #tablaDatos td .text {
+    text-align: right;
+    width: 20%;
+    font-size: 30px;
+}
+
+#productos form table tr td .dimensiones table .horizontal td INPUT[type="number"] {
+    width: 16%;
+    margin-right: 4%;
+}
+
+#productos form table tr td .dimensiones table .horizontal td {
+    text-align: left;
+    width: auto;
+}
+
+#formulario #productos form table tr td .dimensiones table tr .text1 {
+    width: 37%;
+}
+
+#productos form table tr td .dimensiones table .horizontal .der {
+    text-align: right;
+}
+
+#productos form table tr .nombres INPUT[type="text"] {
+    width: 400px;
+    display: inline-block;
+    margin-right: 5%;
+}
+
+#productos form table tr .nombres span {
+    display: inline-block;
+    float: left;
+}
+
+#productos form table tr .nombres {
+    text-align: right;
+}
+
+#productos form table tr td .dimensiones table tr td {
+    text-align: left;
+}
+
+/*#codigo
+{
+	margin-left: 160px;
+}*/
+#productos form table {
+    width: 100%;
+}
+
+#diameter {
+    font-size: 10px;
+}
+
+td.der {
+    width: 250px;
+}
+
+.claseinp {
+    width: 50px;
+}
+
+#fondoPeso {
+    width: 230px;
+    height: 230px;
+    margin-top: 1%;
+}
+
+#dentro {
+    position: absolute;
+    left: 12%;
+    top: 55%;
+}
+
+#dentro2 {
+    position: absolute;
+    left: 42%;
+    top: 55%;
+}
+
+#dentro3 {
+    position: absolute;
+    left: 77%;
+    top: 55%;
+}

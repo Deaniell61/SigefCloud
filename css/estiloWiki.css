@@ -1,0 +1,19 @@
+/* CSS Document */
+
+.aside
+{
+	    width: 20%;
+    height: 500px;
+    border: solid;
+    float: left;
+    position: fixed;
+    overflow-y: auto;
+    text-align: left;
+}
+.contenido
+{
+	width: 70%;
+    margin-left: 25%;
+    text-align: left;
+    color: #111111;
+}

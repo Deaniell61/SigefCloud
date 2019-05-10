@@ -1,0 +1,64 @@
+/**
+ * Created by JDR
+ * For more information www.facebook.com/DEANIELL6195
+ * Unique creator
+ */
+#table{
+	width:100%;
+	z-index: -1;
+}
+
+th{
+   background-image:url('../images/th.png');
+   height:30px;
+   background-repeat:no-repeat;
+   color:white;
+   text-shadow: #012b4d 2px 2px 2px;
+   text-align: center;
+   cursor: pointer;
+   vertical-align: middle;
+   
+}
+
+
+
+
+
+.grip{
+	width:20%;
+	height:30%;
+	margin-top:-3px;
+	margin-left:-5px;
+	position:relative;
+	z-index:88;
+	cursor:e-resize;
+}
+
+.grip:hover{
+	background-position-x:-20px;
+}
+
+.dragging .grip{
+	background-position-x:-40px;
+}
+
+.sampleText{
+	position:relative;
+	width:100%;
+}
+
+.dotted{
+	background-image:url('../images/dotted.png');
+	background-repeat:repeat-y;
+}
+
+input.check{
+	
+}
+
+#sample2Txt{
+	float:right;	
+}
+label{
+	color:#0361ae;
+}

@@ -1,0 +1,144 @@
+#formulario #tablaParametros
+{
+	margin-top: 2%;
+	margin-right: 10%;
+	text-align: center;
+	width: 100%;
+	position: relative;
+	
+	
+
+
+}
+#formulario #tablaParametros .titulo
+{
+	width: 100%;
+	
+	
+	
+}
+#formulario #tablaParametros .titulo th
+{
+	text-align: center;
+	cursor: pointer;
+
+
+	
+}
+#formulario #tablaParametros tr
+{
+	width: auto;
+	text-align: center;
+	
+
+
+	
+}
+#formulario #tablaParametros tr td
+{
+	font-size: 13px;
+	text-align: left;
+	width: auto;
+
+	
+	cursor: pointer;
+	
+
+
+	
+}
+
+
+#formulario #tablaParametros tbody tr
+{
+	background-color:  	#f4f4f4 ;
+	color: #000000 ;
+	
+	
+}
+
+
+#formulario #tablaParametros tbody tr:hover
+{
+	cursor: pointer;
+	color: #ffffff ;
+	background-color:  	#999999 ;
+	
+	
+}
+
+
+
+
+
+
+#formulario #tablaParametros tr td select
+{
+	text-align: center;
+	width: 95%;
+	
+}
+
+#formulario #tablaParametros tr td .comp
+{
+	width: auto;
+text-align: right;
+position: absolute;
+display: inline-block;
+
+	
+}
+#formulario #tablaParametros tr td input
+{
+	text-align: center;
+	width: 100%;
+	
+
+
+	
+}
+#formulario INPUT[type="button"]
+{
+	width: 186px;
+	margin-top: 1%;
+	margin-left: 1%;
+	margin-right: 1%;
+
+}
+#formulario #tablaParametros .titulo .check
+{
+	width: 5%;
+	text-align: center;
+	background-image:url('../images/th.png');
+   height:30px;
+   background-repeat:no-repeat;
+   color:white;
+   text-shadow: #012b4d 2px 2px 2px;
+
+}
+#formulario #tablaParametros .titulo
+{
+	width: 5%;
+	text-align: center;
+	background-image:url('../images/th.png');
+   height:30px;
+   background-repeat:no-repeat;
+   color:white;
+   text-shadow: #012b4d 2px 2px 2px;
+
+}
+#formulario #tablaParametros tr .codigo
+{
+	
+	cursor: pointer;
+}
+#formulario #tablaParametros td .text
+{
+	
+	text-align: right;
+	width: 20%;
+
+	font-size: 30px;
+
+
+}

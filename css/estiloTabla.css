@@ -1,0 +1,112 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300);
+* {margin:0;padding:0; border: 0 none; position: relative;}
+*, *:before, *:after {box-sizing: inherit;}
+
+#formulario #datos #tablaDatos * {height: auto; /*min-height: none;*/} /* fixed ie9 & <*/
+#formulario #datos #tablaDatos {
+  background: #15BFCC;
+  table-layout: fixed;
+  margin: 1rem auto;
+  width: 98%;
+  box-shadow: 0 0 4px 2px rgba(0,0,0,.4);
+  border-collapse: collapse;
+  border: 1px solid rgba(0,0,0,.5);
+  border-top: 0 none;
+}
+#formulario #datos #tablaDatos thead {
+  background: #FF7361;
+  text-align: center;
+  z-index: 2;
+}
+#formulario #datos #tablaDatos thead tr {
+  padding-right: 17px;
+  box-shadow: 0 4px 6px rgba(0,0,0,.6);
+  z-index: 2;
+}
+#formulario #datos #tablaDatos thead th {
+  border-right: 2px solid rgba(0,0,0,.2);
+  padding: .7rem 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-variant: small-caps;
+}
+#formulario #datos #tablaDatos tbody {
+  display: block;
+  height: calc(50vh - 1px);
+  min-height: calc(200px + 1px);
+  /*use calc for fixed ie9 & <*/
+  overflow-Y: scroll;
+  color: #000;
+}
+#formulario #datos #tablaDatos tr {
+  display: block;
+  overflow: hidden;
+}
+#formulario #datos #tablaDatos tbody tr:nth-child(odd) {
+  background: rgba(0,0,0,.2);
+}
+#formulario #datos #tablaDatos th, td {
+  width: 21%;
+  float:left;
+}
+#formulario #datos #tablaDatos td {
+  padding: .5rem 0 .5rem 1rem;
+  border-right: 2px solid rgba(0,0,0,.2);
+}
+#formulario #datos #tablaDatos td:nth-child(2n) {color: #fff;}
+[data-campo='Mail'] {
+  width: 30%;
+}  
+#formulario #datos #tablaDatos th:last-child, td:last-child {
+  width: 7%;
+  text-align: center;
+  border-right: 0 none;
+  padding-left: 0;
+}
+
+
+@media only screen and (max-width:600px) {
+  #formulario #datos #tablaDatos  {
+    border-top: 1px solid ;
+  }
+  #formulario #datos #tablaDatos thead {display: none;}
+  #formulario #datos #tablaDatos tbody {
+    height: auto;
+    max-height: 55vh;
+  }
+  #formulario #datos #tablaDatos tr {
+    border-bottom: 2px solid rgba(0,0,0,.35);
+  }
+  #formulario #datos #tablaDatos tbody tr:nth-child(odd) {background: #15BFCC;}
+  #formulario #datos #tablaDatos tbody tr:nth-child(even) {background:#FF7361;}
+  #formulario #datos #tablaDatos td {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    padding: .4rem .5rem .4rem 40%;
+    border-right: 0 none;
+  }
+  #formulario #datos #tablaDatos td:before {
+    content: attr(data-campo);
+    background: rgba(0,0,0,.1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: auto;
+    min-width: 37%;
+    padding-left: .5rem;
+    font-family: monospace;
+    font-size: 150%;
+    font-variant: small-caps;
+    line-height: 1.8;
+  }
+  #formulario #datos #tablaDatos tbody td:last-child {
+    text-align: left;
+    padding-left: 40%;
+  }
+  #formulario #datos #tablaDatos td:nth-child(even) {
+    background: rgba(0,0,0,.2);
+  }
+}
+a {color: #FF7361}
