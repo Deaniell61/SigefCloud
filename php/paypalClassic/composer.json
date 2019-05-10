@@ -1,0 +1,6 @@
+{
+  "name": "me/shopping-cart-app",
+  "require": {
+    "paypal/invoice-sdk-php":"3.*"
+  }
+}
