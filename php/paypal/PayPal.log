@@ -1,0 +1,4 @@
+[20-07-2017 12:39:11] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[20-07-2017 12:39:12] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[20-07-2017 12:39:12] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/vault/credit-cards
+[20-07-2017 12:39:12] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
