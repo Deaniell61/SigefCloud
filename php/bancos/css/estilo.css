@@ -1,0 +1,245 @@
+/**
+ * Created by JDR
+ * For more information www.facebook.com/DEANIELL6195
+ * Unique creator
+ */
+#bancos
+{
+width: 90%;
+background-position: center;
+margin-left: 10%;
+padding: 0% 10% 0% 0%;
+	position: relative;
+	
+}
+
+#bancos2
+{
+width: 90%;
+margin-left: -7%;
+
+}
+
+
+.ajustefiel
+{
+	width: 208%; 
+	padding: 12% 7% 15% 0%;
+	border-color: #B7B7B7;
+	margin-left: 12%;
+}
+
+.ajuste3a
+{
+	position: absolute;
+	margin-left: 24%;
+}
+
+.ajuste4a
+{
+	position: absolute;
+	margin-left: 4%;
+}
+
+.ajustesvarios
+{
+	padding: 0% 24% 0% 24%;
+}
+#bancos form table tr .guardar
+{
+	width: 70%;
+	position: absolute;
+}
+#bancos form table
+{
+	width: 100%;
+}
+#bancos form table tr td INPUT[type="text"]
+{
+	width: 90%;
+
+}
+
+
+#bancos form table tr td INPUT[type="text1"]
+{
+	width: 20%;
+	margin-left: -68%;
+}
+
+.ajueste5a
+{
+margin-left: 40%;	
+}
+
+#bancos2 form table tr td INPUT[type="text1"]
+{
+	
+	margin-left: 1%;
+	width: 68%;
+}
+
+#bancos2 form table tr td INPUT[type="text3"]
+{
+	
+	margin-left: 95%;
+	width: 204%;
+}
+
+#bancos2 form table tr td INPUT[type="text4"]
+{
+	
+	margin-left: 11%;
+	width: 136%;
+}
+#bancos1 form table tr td INPUT[type="text2"]
+{
+	width: 189%;
+	margin-left: -50%;
+
+}
+
+
+
+#bancos form table tr td INPUT[type="text2"]
+{
+	width: 67%;
+
+}
+
+#bancos form table tr td INPUT[type="text3"]
+{
+	width: 85%;
+	margin-left: -79%;
+
+}
+
+#bancos form table tr td INPUT[type="text5"]
+{
+	width: 85%;
+	margin-left: -132%;
+
+}
+
+#bancos form table tr td INPUT[type="text6"]
+{
+	width: 85%;
+	margin-left: -389%;
+
+}
+
+#bancos form table tr td INPUT[type="text7"]
+{
+	width: 60%;
+	margin-left: -29%;
+
+}
+
+#bancos form table tr td INPUT[type="text4"]
+{
+	width: 85%;
+	margin-left: 90%;
+
+}
+
+#bancos form table tr td INPUT[type="checkbox"]
+{
+	margin-left: -69%;
+}
+
+
+#bancos form table tr td INPUT[type="number"]
+{
+	width: 100%;
+}
+#bancos form table tr td select
+{
+	width: 60%;
+	margin-left: -29%;
+}
+
+ .ajusteselect
+{
+	width: 60%;
+	margin-left: -29%;
+}
+
+
+#bancos form table tr td #subForm
+{
+	
+
+	float: left;
+	margin-top: 0.3%;
+	margin-left: .5%;
+	position: absolute;
+	display: inline-block;
+	cursor: pointer;
+
+
+
+	
+}
+
+#bancos form table tr td #subForm1
+{
+	float: left;
+	margin-top: 0.3%;
+	margin-left: -23.5%;
+	position: absolute;
+	display: inline-block;
+	cursor: pointer;
+
+	
+}
+#bancos form table tr td
+{
+	padding:  0.3%;
+	
+}
+
+#bancos form table tr td .ajuste1
+{
+	position: absolute;
+	width: 23%;
+	margin-left: -47%;
+	
+}
+
+
+#bancos form table tr td .ajuste7
+{
+	margin-left: 32%;
+	
+}
+#bancos form table tr td .ajuste2
+{
+	
+	position: absolute;
+	margin-left: -34%;
+	margin-top: -1%;
+}
+
+#ajuste3
+{
+	position: absolute;
+	margin-top: -2.5%;
+	margin-left: 8%;
+	
+}
+
+#ajuste4
+{
+	position: absolute;
+	margin-top: -2.5%;
+	margin-left: 28%;
+	
+}
+
+#ajuste5
+{
+	position: absolute;
+	margin-top: -2.5%;
+	margin-left: 48%;
+	
+}

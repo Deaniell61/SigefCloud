@@ -1,0 +1,34 @@
+
+ALTER TABLE sigef_guatemala.cat_banc 
+ADD COLUMN codempresa VARCHAR(20) NOT NULL AFTER IVENTA,
+ADD COLUMN codprov VARCHAR(20) NOT NULL AFTER codempresa;
+
+CREATE TABLE cat_tipocuen (CODTCUEN int primary key auto_increment ,NOMBRE varChar (50) NOT NULL,codempresa varchar(20) not null);
+
+CREATE TABLE cat_tipomone (CODMONE int primary key auto_increment ,NOMBRE varChar (50) NOT NULL,codempresa varchar(20) not null);
+
+ALTER TABLE sigef_guatemala.cat_cuen 
+ADD COLUMN codempresa VARCHAR(20) NOT NULL AFTER CONND,
+ADD COLUMN codprov VARCHAR(20) NOT NULL AFTER codempresa;
+
+
+ALTER TABLE sigef_guatemala.cat_cuen 
+CHANGE COLUMN FORFECHA FORFECHA VARCHAR(20) NOT NULL ;
+
+ALTER TABLE sigef_guatemala.cat_tipomone 
+CHANGE COLUMN CODMONE CODMONE VARCHAR(20) NOT NULL ,
+CHANGE COLUMN codempresa Moneda VARCHAR(10) NOT NULL ;
+
+ALTER TABLE sigef_guatemala.tra_cuen 
+CHANGE COLUMN MONEDA MONEDA VARCHAR(20) NOT NULL ;
+
+ALTER TABLE sigef_guatemala.tra_cuen 
+CHANGE COLUMN STAT STAT INT NOT NULL ;
+
+ALTER TABLE sigef_guatemala.tra_pol_enc
+CHANGE COLUMN NUMERO NUMERO INT NOT NULL ;
+
+ALTER TABLE sigef_guatemala.tra_cuen 
+CHANGE COLUMN NUMERO NUMERO INT NOT NULL ,
+CHANGE COLUMN ORDEN ORDEN INT NOT NULL ;
+

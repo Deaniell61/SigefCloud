@@ -1,0 +1,32 @@
+CREATE TABLE cat_banc (CODBANC int primary key auto_increment ,NOMBRE varChar (50) NOT NULL,TASACAMBIO double NOT NULL,PRIORIDAD double NOT NULL,LOGO varChar(30) NOT NULL,ACTUALIZA double NOT NULL,ACOMPRA varChar (10) NOT NULL,AVENTA varChar (10) NOT NULL,ICOMPRA varChar (10) NOT NULL,IVENTA varChar (10) NOT NULL,codempresa varchar(20) not null,codprov varchar(20) not null);
+
+CREATE TABLE cat_cuen (CODCUEN  int primary key auto_increment ,NUMCUEN varChar (50) NOT NULL,NOMBRE varChar (50) NOT NULL,CODBANC int NOT NULL,CODTCUEN varChar (10) NOT NULL,CODMONE varChar (10) NOT NULL,PAGOS int NOT NULL,CODBANCTC varChar (10) NOT NULL,CODCUENTA varChar (12) NOT NULL,FORFECHA int (20) NOT NULL,COLNUM varChar (10) NOT NULL,LINNUM int NOT NULL,COLTRAN varChar (10) NOT NULL,LINTRAN int NOT NULL,CONCH varChar (150) NOT NULL,CONDP varChar (150) NOT NULL,CONNC varChar (150) NOT NULL,CONND varChar (150) NOT NULL,codempresa varchar(20) not null,codprov varchar(20) not null)
+
+CREATE TABLE tra_cuen (CODTCUEN  int primary key auto_increment ,CODCUEN int NOT NULL,NUMERO varChar (10) NOT NULL,FECHA date NOT NULL,TIPDOC double NOT NULL,CONCEPTO Text NOT NULL,BENEFICIA varChar (100) NOT NULL,VALOR double (14,2) NOT NULL,ESTATUS varChar (2) NOT NULL,IMPRESO int NOT NULL,MONEDA varChar (1) NOT NULL,NEGOCIABLE int NOT NULL,TASA Double (12,5) NOT NULL,ORDEN Double (10,2) NOT NULL,CAJA_CHICA varChar (10) NOT NULL,SFONDOS Double (12,2) NOT NULL,DISPONIBLE Double (17,2) NOT NULL,CONCILIA varChar (10) NOT NULL,CIRCULA varChar (75) NOT NULL,CODPOLIZA varChar (10) NOT NULL,CODVOUCHER int NOT NULL,STAT Double (2,2) NOT NULL,CODPROY varChar (10) NOT NULL,AUTNEGO varChar (10) NOT NULL,DESAUTNEGO varChar (100) NOT NULL,FECHAUTNEG date NOT NULL,codempresa varchar(20) not null,codprov varchar(20) not null);
+
+CREATE TABLE tra_voucher (CODVOUCHER  int primary key auto_increment ,CODCUEN int NOT NULL,NUMERO Double (20,2) NOT NULL,IMPRESO int NOT NULL,codempresa varchar(20) not null,codprov varchar(20) not null);
+
+CREATE TABLE tra_con_enc (CODCONCI  int primary key auto_increment ,PERIODO varChar (7) NOT NULL,DEL date NOT NULL,AL date NOT NULL,FECHA date NOT NULL,CODCUEN int NOT NULL,DPCIRCN Decimal (12) NOT NULL,DPCIRCV Decimal (16,2) NOT NULL,NCCIRCN Decimal (12) NOT NULL,NCCIRCV Decimal (16,2) NOT NULL,CHCIRCN Decimal (12) NOT NULL,CHCIRCV Decimal (16,2) NOT NULL,NDCIRCN Decimal (12) NOT NULL,NDCIRCV Decimal (16,2) NOT NULL,SALDOBCO Decimal (16,2) NOT NULL,SALDOCON Decimal (16,2) NOT NULL,SALDOMAY Decimal (16,2) NOT NULL,codempresa varchar(20) not null,codprov varchar(20) not null);
+
+CREATE TABLE tra_con_det (CODDCON  int primary key auto_increment ,CODCONCI int NOT NULL,DOCTO varChar (2) NOT NULL,CODDOCTO varChar (10) NOT NULL,NUMERO varChar (10) NOT NULL,FECHA date NOT NULL,DESCRIPCIO varChar (240) NOT NULL,VALOR Decimal (16,2) NOT NULL,CONCILIA Decimal (3) NOT NULL,codempresa varchar(20) not null,codprov varchar(20) not null);
+
+///////////////////////////////
+CREATE TABLE cat_tipocuen (CODTCUEN int primary key auto_increment ,NOMBRE varChar (50) NOT NULL,codempresa varchar(20) not null);
+
+CREATE TABLE cat_tipomone (CODMONE int primary key auto_increment ,NOMBRE varChar (50) NOT NULL,codempresa varchar(20) not null);
+
+CREATE TABLE cat_formafecha (CODMONE int primary key auto_increment ,NOMBRE varChar (50) NOT NULL,codempresa varchar(20) not null);
+
+CREATE TABLE cat_tipotasa (CODBANCTC int primary key auto_increment ,NOMBRE varChar (50) NOT NULL,codempresa varchar(20) not null);
+
+CREATE TABLE ubicaconta (codubicconta int primary key auto_increment , tipoubica varChar (50) NOT NULL,nombre varchar(20) not null);
+
+INSERT INTO sigef_guatemala.ubicaconta (codubicconta, tipoubica, nombre) VALUES ('1', 'B', 'BALANCE GENERAl');
+INSERT INTO sigef_guatemala.ubicaconta (codubicconta, tipoubica, nombre) VALUES ('2', 'R', 'ESTADO DE RESULTADOS');
+
+CREATE TABLE tipoconta (codtipoconta int primary key auto_increment , letratipoconta varChar (50) NOT NULL,nombre varchar(20) not null);
+
+INSERT INTO sigef_guatemala.tipoconta (codtipoconta, letratipoconta, nombre) VALUES ('1', 'T', 'Titulo');
+INSERT INTO sigef_guatemala.tipoconta (codtipoconta, letratipoconta, nombre) VALUES ('2', 'D', 'Detalle');
+
+ALTER TABLE sigef_guatemala.cat_banc CHANGE COLUMN 'LOGO' 'LOGO' VARCHAR(400) NOT NULL ;
