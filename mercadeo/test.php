@@ -1,0 +1,10 @@
+<iframe
+    src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FShopGuateDirect%2F&width=80&layout=box_count&action=like&size=small&show_faces=false&share=true&height=65&appId=238076850099684"
+    width="80"
+    height="65"
+    style="border:none;overflow:hidden"
+    scrolling="no"
+    frameborder="0"
+    allowTransparency="true"
+    allow="encrypted-media">
+</iframe>

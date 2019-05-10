@@ -46,6 +46,7 @@ Thumbs.db
 /images/cajas
 /php/webmail
 /cron/error*
+/transfers
 
 *Updated*
 *Error*

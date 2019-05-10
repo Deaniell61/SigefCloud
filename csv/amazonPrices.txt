@@ -1,0 +1,3 @@
+ProductID	SitePrice	BuyItNowPrice	StartPrice	AmazonPrice	BuyDotComPrice	MAPPrice	NewEggDotComPrice	JETPrice	OverStockPrice	SearsPrice	WalmartAPIPrice	PriceFallPrice	MyPriceOnAmazon	ListPrice
+500026	7.11	7.11	7.11	7.11	7.11	7.11	7.11	7.11	7.11	7.11	7.11	7.11	7.11	7.11
+500029	39.69	39.69	39.69	39.69	39.69	39.69	39.69	39.69	39.69	39.69	39.69	39.69	39.69	39.69
