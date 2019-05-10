@@ -15,7 +15,7 @@
 require_once('php/coneccion.php');
 
 require_once('php/fecha.php');
-//echo strtoupper(sys2015());
+
 $idioma=idioma();
 
 require_once('php/idiomas/'.$idioma.'.php');
@@ -230,7 +230,7 @@ $(document).ready(function(e) {
 
             
 
-            <td><br>	<input type="button" class='`' onClick="Validar(document.getElementById('user').value,document.getElementById('contra').value);" value="<?php echo $lang[ $idioma ]['Entrar']; ?>"/>
+            <td><br>	<input type="button" class='btn button button-highlight button-pill' onClick="Validar(document.getElementById('user').value,document.getElementById('contra').value);" value="<?php echo $lang[ $idioma ]['Entrar']; ?>"/>
 
             </td>
 
