@@ -1,0 +1,2859 @@
+20181114-061100Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 190.14.142.189
+            [HowHeard] => 0
+            [LockShippingMethod] => false
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 0
+            [SalesRepId] => 0
+            [DiscountTotal] => 0.00000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2018-11-14T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5020000040
+            [OrderDate] => 2018-11-14T18:27:58
+            [CustomerFirstName] => 
+            [CustomerLastName] => 
+            [CustomerEmail] => 
+            [BillingAddressFirstName] => 
+            [BillingAddressLastName] => 
+            [BillingAddressStreet1] => 
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => 
+            [BillingAddressState] => AL
+            [BillingAddressZipCode] => 
+            [BillingAddressCountry] => AF
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => 
+            [ShippingAddressLastName] => 
+            [ShippingAddressStreet1] => 
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => 
+            [ShippingAddressState] => AL
+            [ShippingAddressZipCode] => 
+            [ShippingAddressCountry] => AF
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => NoPayment
+            [SubTotal] => 0.00000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 0.00000
+        )
+
+)
+20181115-09:11:36Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 190.14.142.189
+            [HowHeard] => 0
+            [LockShippingMethod] => false
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 0
+            [SalesRepId] => 0
+            [DiscountTotal] => 0.00000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 1
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 502505018
+                                    [ItemName] => The Green Basket DRAGONFRUIT - PITAYA ,  100% natural superfood, dried crispy slices
+                                    [Qty] => 1
+                                    [UnitPrice] => 13.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 13.47000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2018-11-20T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5020000041
+            [OrderDate] => 2018-11-15T09:02:34
+            [CustomerFirstName] => fba:guatedirect
+            [CustomerLastName] => amazon.cm
+            [CustomerEmail] => mauricio.aldana@guatedirect.com
+            [BillingAddressFirstName] => fba:guatedirect
+            [BillingAddressLastName] => amazon.cm
+            [BillingAddressStreet1] => 10240 Old Dowd RD
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => charlotte
+            [BillingAddressState] => NC
+            [BillingAddressZipCode] => 28214-8082
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => fba:guatedirect
+            [ShippingAddressLastName] => amazon.cm
+            [ShippingAddressStreet1] => 10240 Old Dowd RD
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => charlotte
+            [ShippingAddressState] => NC
+            [ShippingAddressZipCode] => 28214-8082
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => FullyShipped
+            [PaymentStatus] => NoPayment
+            [SubTotal] => 13.47000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 13.47000
+        )
+
+)
+20181115-09:11:52Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 190.14.142.189
+            [HowHeard] => 0
+            [LockShippingMethod] => true
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 0
+            [SalesRepId] => 0
+            [DiscountTotal] => 0.00000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 1
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 502505018
+                                    [ItemName] => The Green Basket DRAGONFRUIT - PITAYA ,  100% natural superfood, dried crispy slices
+                                    [Qty] => 1
+                                    [UnitPrice] => 13.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 13.47000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2018-11-20T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5020000042
+            [OrderDate] => 2018-11-15T09:09:50
+            [CustomerFirstName] => fba:guatedirect
+            [CustomerLastName] => amazon.com
+            [CustomerEmail] => mauricio.aldana@guatedirect.com
+            [BillingAddressFirstName] => fba:guatedirect
+            [BillingAddressLastName] => amazon.com
+            [BillingAddressStreet1] => 10240 Old Dowd RD
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => charlotte
+            [BillingAddressState] => NC
+            [BillingAddressZipCode] => 28214-8082
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => fba:guatedirect
+            [ShippingAddressLastName] => amazon.com
+            [ShippingAddressStreet1] => 10240 Old Dowd RD
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => charlotte
+            [ShippingAddressState] => NC
+            [ShippingAddressZipCode] => 28214-8082
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => NoPayment
+            [SubTotal] => 13.47000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 13.47000
+        )
+
+)
+20181115-10:11:45Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 190.14.142.189
+            [HowHeard] => 0
+            [LockShippingMethod] => true
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 0
+            [SalesRepId] => 0
+            [DiscountTotal] => 0.00000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 1
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 502505018
+                                    [ItemName] => The Green Basket DRAGONFRUIT - PITAYA ,  100% natural superfood, dried crispy slices
+                                    [Qty] => 1
+                                    [UnitPrice] => 13.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 13.47000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5020000043
+            [OrderDate] => 2018-11-15T10:45:43
+            [CustomerFirstName] => fba:guatedirect
+            [CustomerLastName] => amazon.com
+            [CustomerEmail] => mauricio.aldana@guatedirect.com
+            [BillingAddressFirstName] => fba:guatedirect
+            [BillingAddressLastName] => amazon.com
+            [BillingAddressStreet1] => 10240 Old Dowd RD
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => charlotte
+            [BillingAddressState] => NC
+            [BillingAddressZipCode] => 28214-8082
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => fba:guatedirect
+            [ShippingAddressLastName] => amazon.com
+            [ShippingAddressStreet1] => 10240 Old Dowd RD
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => charlotte
+            [ShippingAddressState] => NC
+            [ShippingAddressZipCode] => 28214-8082
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => NoPayment
+            [SubTotal] => 13.47000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 13.47000
+        )
+
+)
+20181115-10:11:05Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 190.14.142.189
+            [HowHeard] => 0
+            [LockShippingMethod] => true
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 0
+            [SalesRepId] => 0
+            [DiscountTotal] => 0.00000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 1
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 502505018
+                                    [ItemName] => The Green Basket DRAGONFRUIT - PITAYA ,  100% natural superfood, dried crispy slices
+                                    [Qty] => 1
+                                    [UnitPrice] => 13.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 13.47000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2018-11-15T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5020000044
+            [OrderDate] => 2018-11-15T10:50:02
+            [CustomerFirstName] => fba:guatedirect
+            [CustomerLastName] => amazon.com
+            [CustomerEmail] => mauricio.aldana@guatedirect.com
+            [BillingAddressFirstName] => fba:guatedirect
+            [BillingAddressLastName] => amazon.com
+            [BillingAddressStreet1] => 10240 Old Dowd RD
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => charlotte
+            [BillingAddressState] => NC
+            [BillingAddressZipCode] => 28214-8082
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => fba:guatedirect
+            [ShippingAddressLastName] => amazon.com
+            [ShippingAddressStreet1] => 10240 Old Dowd RD
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => charlotte
+            [ShippingAddressState] => NC
+            [ShippingAddressZipCode] => 28214-8082
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => Unpayed
+            [SubTotal] => 13.47000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 13.47000
+        )
+
+)
+20181116-11:11:53Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 186.151.35.127
+            [HowHeard] => 0
+            [LockShippingMethod] => true
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 0
+            [SalesRepId] => 0
+            [DiscountTotal] => 0.00000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 1
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 502505018
+                                    [ItemName] => The Green Basket DRAGONFRUIT - PITAYA ,  100% natural superfood, dried crispy slices
+                                    [Qty] => 1
+                                    [UnitPrice] => 13.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 13.47000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2018-11-16T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5020000045
+            [OrderDate] => 2018-11-16T11:01:51
+            [CustomerFirstName] => fba:guatedirect.com
+            [CustomerLastName] => amazon.com
+            [CustomerEmail] => mauricio.aldana@guatedirect.com
+            [BillingAddressFirstName] => fba:guatedirect.com
+            [BillingAddressLastName] => amazon.com
+            [BillingAddressStreet1] => 10240 Old Dowd RD
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => charlotte
+            [BillingAddressState] => NC
+            [BillingAddressZipCode] => 28214-8082
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => fba:guatedirect.com
+            [ShippingAddressLastName] => amazon.com
+            [ShippingAddressStreet1] => 10240 Old Dowd RD
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => charlotte
+            [ShippingAddressState] => NC
+            [ShippingAddressZipCode] => 28214-8082
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => NoPayment
+            [SubTotal] => 13.47000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 13.47000
+        )
+
+)
+20181119-10:11:31Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 190.14.142.189
+            [HowHeard] => 0
+            [LockShippingMethod] => false
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 0.00000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 502505018
+                                    [ItemName] => The Green Basket DRAGONFRUIT - PITAYA ,  100% natural superfood, dried crispy slices
+                                    [Qty] => 1
+                                    [UnitPrice] => 13.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 13.47000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2018-11-19T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5020000046
+            [OrderDate] => 2018-11-19T10:11:29
+            [CustomerFirstName] => t
+            [CustomerLastName] => t
+            [CustomerEmail] => t@t.t
+            [BillingAddressFirstName] => t
+            [BillingAddressLastName] => t
+            [BillingAddressStreet1] => 10240 Old Dowd RD
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => charlotte
+            [BillingAddressState] => NC
+            [BillingAddressZipCode] => 28214-8082
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => t
+            [ShippingAddressLastName] => t
+            [ShippingAddressStreet1] => 10240 Old Dowd RD
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => charlotte
+            [ShippingAddressState] => NC
+            [ShippingAddressZipCode] => 28214-8082
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => NoPayment
+            [SubTotal] => 13.47000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 13.47000
+        )
+
+)
+20181119-10:11:04Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 190.14.142.189
+            [HowHeard] => 0
+            [LockShippingMethod] => true
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 13.00000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 502505018
+                                    [ItemName] => The Green Basket DRAGONFRUIT - PITAYA ,  100% natural superfood, dried crispy slices
+                                    [Qty] => 1
+                                    [UnitPrice] => 13.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 13.47000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2018-11-19T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5020000047
+            [OrderDate] => 2018-11-19T10:30:01
+            [CustomerFirstName] => t
+            [CustomerLastName] => t
+            [CustomerEmail] => t@t.t
+            [BillingAddressFirstName] => t
+            [BillingAddressLastName] => t
+            [BillingAddressStreet1] => 10240 Old Dowd RD
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => charlotte
+            [BillingAddressState] => NC
+            [BillingAddressZipCode] => 28214-8082
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => t
+            [ShippingAddressLastName] => t
+            [ShippingAddressStreet1] => 10240 Old Dowd RD
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => charlotte
+            [ShippingAddressState] => NC
+            [ShippingAddressZipCode] => 28214-8082
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => NoPayment
+            [SubTotal] => 13.47000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 13.47000
+        )
+
+)
+20181129-12:11:28Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 181.174.102.196
+            [HowHeard] => 0
+            [LockShippingMethod] => true
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 309.12000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 300001
+                                    [ItemName] => B&B Picamas Green Hot sauce 3.52 oz - Salsa verde picante (Pack of 1)
+                                    [Qty] => 48
+                                    [UnitPrice] => 6.44000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 309.12000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2018-11-29T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5020000048
+            [OrderDate] => 2018-11-29T12:37:24
+            [CustomerFirstName] => Yanelys
+            [CustomerLastName] => Rodriguez
+            [CustomerEmail] => mauricio.aldana@guatedirect.com
+            [BillingAddressFirstName] => Yanelys
+            [BillingAddressLastName] => Rodriguez
+            [BillingAddressStreet1] => 1501 Venera Avenue
+            [BillingAddressStreet2] => Suite 220
+            [BillingAddressCity] => Coral Gables
+            [BillingAddressState] => FL
+            [BillingAddressZipCode] => 33146
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => Yanelys
+            [ShippingAddressLastName] => Rodriguez
+            [ShippingAddressStreet1] => 1501 Venera Avenue
+            [ShippingAddressStreet2] => Suite 220
+            [ShippingAddressCity] => Coral Gables
+            [ShippingAddressState] => FL
+            [ShippingAddressZipCode] => 33146
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => Charged
+            [SubTotal] => 309.12000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 0.00000
+        )
+
+)
+20181129-12:11:46Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 190.14.142.189
+            [HowHeard] => 0
+            [LockShippingMethod] => true
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 13.47000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 502505018
+                                    [ItemName] => The Green Basket DRAGONFRUIT - PITAYA ,  100% natural superfood, dried crispy slices
+                                    [Qty] => 1
+                                    [UnitPrice] => 13.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 13.47000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2018-11-29T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5020000049
+            [OrderDate] => 2018-11-29T12:53:44
+            [CustomerFirstName] => t
+            [CustomerLastName] => t
+            [CustomerEmail] => t@t.t
+            [BillingAddressFirstName] => t
+            [BillingAddressLastName] => t
+            [BillingAddressStreet1] => 10240 Old Dowd RD
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => charlotte
+            [BillingAddressState] => NC
+            [BillingAddressZipCode] =>  28214-8082
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => t
+            [ShippingAddressLastName] => t
+            [ShippingAddressStreet1] => 10240 Old Dowd RD
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => charlotte
+            [ShippingAddressState] => NC
+            [ShippingAddressZipCode] =>  28214-8082
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => NoPayment
+            [SubTotal] => 13.47000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 13.47000
+        )
+
+)
+20181129-12:11:40Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 190.14.142.189
+            [HowHeard] => 0
+            [LockShippingMethod] => false
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 13.47000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 502505018
+                                    [ItemName] => The Green Basket DRAGONFRUIT - PITAYA ,  100% natural superfood, dried crispy slices
+                                    [Qty] => 1
+                                    [UnitPrice] => 13.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 13.47000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2018-11-29T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5020000050
+            [OrderDate] => 2018-11-29T12:56:38
+            [CustomerFirstName] => t
+            [CustomerLastName] => t
+            [CustomerEmail] => t@t.t
+            [BillingAddressFirstName] => t
+            [BillingAddressLastName] => t
+            [BillingAddressStreet1] => 10240 Old Dowd RD
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => charlotte
+            [BillingAddressState] => NC
+            [BillingAddressZipCode] => 28214-8082
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => t
+            [ShippingAddressLastName] => t
+            [ShippingAddressStreet1] => 10240 Old Dowd RD
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => charlotte
+            [ShippingAddressState] => NC
+            [ShippingAddressZipCode] => 28214-8082
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => NoPayment
+            [SubTotal] => 13.47000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 13.47000
+        )
+
+)
+20181203-09:12:28Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 190.14.142.223
+            [HowHeard] => 0
+            [LockShippingMethod] => False
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 13.47000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 502505018
+                                    [ItemName] => The Green Basket DRAGONFRUIT - PITAYA ,  100% natural superfood, dried crispy slices
+                                    [Qty] => 1
+                                    [UnitPrice] => 13.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 13.47000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2018-12-03T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5020000051
+            [OrderDate] => 2018-12-03T09:38:26
+            [CustomerFirstName] => t
+            [CustomerLastName] => t
+            [CustomerEmail] => t@t.t
+            [BillingAddressFirstName] => t
+            [BillingAddressLastName] => t
+            [BillingAddressStreet1] => 10240 Old Dowd RD
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => charlotte
+            [BillingAddressState] => NC
+            [BillingAddressZipCode] => 28214-8082
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => t
+            [ShippingAddressLastName] => t
+            [ShippingAddressStreet1] => 10240 Old Dowd RD
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => charlotte
+            [ShippingAddressState] => NC
+            [ShippingAddressZipCode] => 28214-8082
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => NoPayment
+            [SubTotal] => 13.47000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 13.47000
+        )
+
+)
+20181205-04:12:38Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 190.14.130.43
+            [HowHeard] => 0
+            [LockShippingMethod] => False
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 252.00000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300221
+                                    [ItemName] => Cacao Nibs   Ginger - Cacao Nibs   Jengibre (Pack of 1)
+                                    [Qty] => 30
+                                    [UnitPrice] => 2.80000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 84.00000
+                                )
+
+                            [1] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300220
+                                    [ItemName] => Cacao Nibs   Cinnamon - Cacao Nibs   Canela (Pack of 1)
+                                    [Qty] => 30
+                                    [UnitPrice] => 2.80000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 84.00000
+                                )
+
+                            [2] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300186
+                                    [ItemName] => Cacao Nibs   Chili Pepper - Cacao Nibs   Chile Rojo (Pack of 1)
+                                    [Qty] => 30
+                                    [UnitPrice] => 2.80000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 84.00000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2018-12-05T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5060000003
+            [OrderDate] => 2018-12-05T16:34:36
+            [CustomerFirstName] => Sally
+            [CustomerLastName] => Arnold
+            [CustomerEmail] => sally@schnoogs.com
+            [BillingAddressFirstName] => Sally
+            [BillingAddressLastName] => Arnold
+            [BillingAddressStreet1] => 1005 Mono Way
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => Sonora
+            [BillingAddressState] => CA
+            [BillingAddressZipCode] => 95370
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => Sally
+            [ShippingAddressLastName] => Arnold
+            [ShippingAddressStreet1] => 1005 Mono Way
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => Sonora
+            [ShippingAddressState] => CA
+            [ShippingAddressZipCode] => 95370
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => NoPayment
+            [SubTotal] => 252.00000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 252.00000
+        )
+
+)
+20181210-07:12:41Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 181.174.102.196
+            [HowHeard] => 0
+            [LockShippingMethod] => False
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 948.25000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 502505019
+                                    [ItemName] => The Green Basket DRAGONFRUIT - PITAYA ,  100% natural superfood, dried crispy slices
+                                    [Qty] => 25
+                                    [UnitPrice] => 23.96000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 599.00000
+                                )
+
+                            [1] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 502505018
+                                    [ItemName] => The Green Basket DRAGONFRUIT - PITAYA ,  100% natural superfood, dried crispy slices
+                                    [Qty] => 25
+                                    [UnitPrice] => 13.97000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 349.25000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2018-12-11T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5020000052
+            [OrderDate] => 2018-12-10T19:30:38
+            [CustomerFirstName] => FBA GuateDirect:
+            [CustomerLastName] => Amazon.com.dedc LLC
+            [CustomerEmail] => mauricio.aldana@guatedirect.com
+            [BillingAddressFirstName] => FBA GuateDirect:
+            [BillingAddressLastName] => Amazon.com.dedc LLC
+            [BillingAddressStreet1] => 10240 Old Dowd Rd
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => Charlotte,
+            [BillingAddressState] => NC
+            [BillingAddressZipCode] => 28214-8082
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => FBA GuateDirect:
+            [ShippingAddressLastName] => Amazon.com.dedc LLC
+            [ShippingAddressStreet1] => 10240 Old Dowd Rd
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => Charlotte,
+            [ShippingAddressState] => NC
+            [ShippingAddressZipCode] => 28214-8082
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => Charged
+            [SubTotal] => 948.25000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 0.00000
+        )
+
+)
+20190125-10:01:10Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 181.174.102.48
+            [HowHeard] => 0
+            [LockShippingMethod] => False
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 0.00000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300187
+                                    [ItemName] => 100% Pure Blue Zone Coffee 18 oz - CAFE 100% PURO BLUE ZONE 18 oz (Pack of 1)
+                                    [Qty] => 1
+                                    [UnitPrice] => 26.35000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 26.35000
+                                )
+
+                            [1] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300222
+                                    [ItemName] => Nutri-Maximum - Nutri-Maximum (Pack of 1)
+                                    [Qty] => 1
+                                    [UnitPrice] => 9.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 9.47000
+                                )
+
+                            [2] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300128
+                                    [ItemName] => NALGA DE PERRO HOT SAUCE - NALGA DE PERRO (Pack of 1)
+                                    [Qty] => 1
+                                    [UnitPrice] => 22.20000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 22.20000
+                                )
+
+                            [3] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300316
+                                    [ItemName] => GOURMET MEDIUM HOT PEPPER CONGO - 155 g (Pack of 1)
+                                    [Qty] => 1
+                                    [UnitPrice] => 9.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 9.47000
+                                )
+
+                            [4] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300129
+                                    [ItemName] => CONGUILA - CONGUILA (Pack of 1)
+                                    [Qty] => 1
+                                    [UnitPrice] => 22.20000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 22.20000
+                                )
+
+                            [5] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300130
+                                    [ItemName] => KILLER - KILLER (Pack of 1)
+                                    [Qty] => 1
+                                    [UnitPrice] => 22.20000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 22.20000
+                                )
+
+                            [6] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300319
+                                    [ItemName] => Ojoche Nut - Cinnamon Tea  - Te de Ojoche - Canela  (Pack of 1)
+                                    [Qty] => 1
+                                    [UnitPrice] => 9.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 9.47000
+                                )
+
+                            [7] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300317
+                                    [ItemName] => Mozote - Mint Tea - Te de Mozote - Hierbabuena (Pack of 1)
+                                    [Qty] => 1
+                                    [UnitPrice] => 9.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 9.47000
+                                )
+
+                            [8] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300287
+                                    [ItemName] => Chan - Lemongrass Tea - Te de Chan - Zacate de Limon (Pack of 1)
+                                    [Qty] => 1
+                                    [UnitPrice] => 9.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 9.47000
+                                )
+
+                            [9] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300318
+                                    [ItemName] => Juanilama Lime - Hibiscus Tea - Te de Juanilama Lima - Jamaica (Pack of 1)
+                                    [Qty] => 1
+                                    [UnitPrice] => 29.23000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 29.23000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2019-01-25T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5060000004
+            [OrderDate] => 2019-01-25T10:48:08
+            [CustomerFirstName] => David
+            [CustomerLastName] => Wang
+            [CustomerEmail] => ahurtado@grupogarnier.com
+            [BillingAddressFirstName] => David
+            [BillingAddressLastName] => Wang
+            [BillingAddressStreet1] => 5730 N Willard Ave #3
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => San Gabriel
+            [BillingAddressState] => CA
+            [BillingAddressZipCode] => 91775
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => David
+            [ShippingAddressLastName] => Wang
+            [ShippingAddressStreet1] => 5730 N Willard Ave #3
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => San Gabriel
+            [ShippingAddressState] => CA
+            [ShippingAddressZipCode] => 91775
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => Charged
+            [SubTotal] => 169.53000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 0.00000
+        )
+
+)
+20190128-06:01:47Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 181.174.102.48
+            [HowHeard] => 0
+            [LockShippingMethod] => False
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 189.40000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300316
+                                    [ItemName] => GOURMET MEDIUM HOT PEPPER CONGO - 155 g (Pack of 1)
+                                    [Qty] => 20
+                                    [UnitPrice] => 9.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 189.40000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2019-01-28T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5060000005
+            [OrderDate] => 2019-01-28T18:54:45
+            [CustomerFirstName] => FBA: BLUE ZONE GUANACASTE S.A
+            [CustomerLastName] => Amazon.com.dedc LLC
+            [CustomerEmail] => s2@terra.ba
+            [BillingAddressFirstName] => FBA: BLUE ZONE GUANACASTE S.A
+            [BillingAddressLastName] => Amazon.com.dedc LLC
+            [BillingAddressStreet1] => 39000 Amrhein RD
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => Livonia
+            [BillingAddressState] => MI
+            [BillingAddressZipCode] => 48150-1043
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => FBA: BLUE ZONE GUANACASTE S.A
+            [ShippingAddressLastName] => Amazon.com.dedc LLC
+            [ShippingAddressStreet1] => 39000 Amrhein RD
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => Livonia
+            [ShippingAddressState] => MI
+            [ShippingAddressZipCode] => 48150-1043
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => Charged
+            [SubTotal] => 189.40000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 189.40000
+        )
+
+)
+20190128-06:01:31Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 181.174.102.48
+            [HowHeard] => 0
+            [LockShippingMethod] => False
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 0.00000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300199
+                                    [ItemName] => Nutri-Carao Natural - Nutri-Carao Natural (Pack of 1)
+                                    [Qty] => 20
+                                    [UnitPrice] => 29.23000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 584.60000
+                                )
+
+                            [1] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300130
+                                    [ItemName] => KILLER - KILLER (Pack of 1)
+                                    [Qty] => 20
+                                    [UnitPrice] => 22.20000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 444.00000
+                                )
+
+                            [2] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300222
+                                    [ItemName] => Nutri-Maximum - Nutri-Maximum (Pack of 1)
+                                    [Qty] => 20
+                                    [UnitPrice] => 9.47000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 189.40000
+                                )
+
+                            [3] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300129
+                                    [ItemName] => CONGUILA - CONGUILA (Pack of 1)
+                                    [Qty] => 20
+                                    [UnitPrice] => 22.20000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 444.00000
+                                )
+
+                            [4] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300318
+                                    [ItemName] => Juanilama Lime - Hibiscus Tea - Te de Juanilama Lima - Jamaica (Pack of 1)
+                                    [Qty] => 50
+                                    [UnitPrice] => 29.23000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 1461.50000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2019-01-28T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5060000006
+            [OrderDate] => 2019-01-28T18:58:29
+            [CustomerFirstName] => FBA: BLUE ZONE GUANACASTE S.A.
+            [CustomerLastName] => Amazon.com.dedc LLC
+            [CustomerEmail] => s2@terra.ba
+            [BillingAddressFirstName] => FBA: BLUE ZONE GUANACASTE S.A.
+            [BillingAddressLastName] => Amazon.com.dedc LLC
+            [BillingAddressStreet1] => 10240 Old Dowd Rd
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => Charlotte
+            [BillingAddressState] => NC
+            [BillingAddressZipCode] => 28214-8082
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => FBA: BLUE ZONE GUANACASTE S.A.
+            [ShippingAddressLastName] => Amazon.com.dedc LLC
+            [ShippingAddressStreet1] => 10240 Old Dowd Rd
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => Charlotte
+            [ShippingAddressState] => NC
+            [ShippingAddressZipCode] => 28214-8082
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => Charged
+            [SubTotal] => 3123.50000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 0.00000
+        )
+
+)
+20190129-10:01:11Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 181.174.102.48
+            [HowHeard] => 0
+            [LockShippingMethod] => False
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 0.00000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300326
+                                    [ItemName] => Pure Joy Crispy Banana Bites 56g - Pure Joy Banano Crujiente (Pack of 1)
+                                    [Qty] => 2
+                                    [UnitPrice] => 14.62000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 29.24000
+                                )
+
+                            [1] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300326
+                                    [ItemName] => Pure Joy Crispy Banana Bites 56g - Pure Joy Banano Crujiente (Pack of 1)
+                                    [Qty] => 2
+                                    [UnitPrice] => 14.62000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 29.24000
+                                )
+
+                            [2] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300325
+                                    [ItemName] => Pure Joy Crispy Banana Bites 28g - Pure Joy Banano Crujiente (Pack of 1)
+                                    [Qty] => 10
+                                    [UnitPrice] => 9.00000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 90.00000
+                                )
+
+                            [3] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300324
+                                    [ItemName] => Pure Joy Crispy Pinneapple Bites 56g - Pure Joy Pina Crujiente (Pack of 1)
+                                    [Qty] => 4
+                                    [UnitPrice] => 14.62000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 58.48000
+                                )
+
+                            [4] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300323
+                                    [ItemName] => Pure Joy Crispy Pinneapple Bites 28g - Pure Joy Pina Crujiente (Pack of 1)
+                                    [Qty] => 10
+                                    [UnitPrice] => 9.00000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 90.00000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2019-01-29T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5060000007
+            [OrderDate] => 2019-01-29T10:53:09
+            [CustomerFirstName] => Zacarías
+            [CustomerLastName] => Ayub
+            [CustomerEmail] => marketing@pitalia.cr
+            [BillingAddressFirstName] => Zacarías
+            [BillingAddressLastName] => Ayub
+            [BillingAddressStreet1] => 7715 NW 48 St.
+            [BillingAddressStreet2] => Suite 210
+            [BillingAddressCity] => Doral
+            [BillingAddressState] => FL
+            [BillingAddressZipCode] => 33166
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => Zacarías
+            [ShippingAddressLastName] => Ayub
+            [ShippingAddressStreet1] => 7715 NW 48 St.
+            [ShippingAddressStreet2] => Suite 210
+            [ShippingAddressCity] => Doral
+            [ShippingAddressState] => FL
+            [ShippingAddressZipCode] => 33166
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => Charged
+            [SubTotal] => 296.96000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 0.00000
+        )
+
+)
+20190129-10:01:35Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 181.174.102.48
+            [HowHeard] => 0
+            [LockShippingMethod] => False
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 0.00000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300326
+                                    [ItemName] => Pure Joy Crispy Banana Bites 56g - Pure Joy Banano Crujiente (Pack of 1)
+                                    [Qty] => 2
+                                    [UnitPrice] => 14.62000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 29.24000
+                                )
+
+                            [1] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300325
+                                    [ItemName] => Pure Joy Crispy Banana Bites 28g - Pure Joy Banano Crujiente (Pack of 1)
+                                    [Qty] => 2
+                                    [UnitPrice] => 9.00000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 18.00000
+                                )
+
+                            [2] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300324
+                                    [ItemName] => Pure Joy Crispy Pinneapple Bites 56g - Pure Joy Pina Crujiente (Pack of 1)
+                                    [Qty] => 2
+                                    [UnitPrice] => 14.62000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 29.24000
+                                )
+
+                            [3] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300323
+                                    [ItemName] => Pure Joy Crispy Pinneapple Bites 28g - Pure Joy Pina Crujiente (Pack of 1)
+                                    [Qty] => 2
+                                    [UnitPrice] => 9.00000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 18.00000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2019-01-29T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5060000008
+            [OrderDate] => 2019-01-29T10:56:33
+            [CustomerFirstName] => Sr. Cruz
+            [CustomerLastName] => Blanco Creek Farms
+            [CustomerEmail] => marketin@pitalia.cr
+            [BillingAddressFirstName] => Sr. Cruz
+            [BillingAddressLastName] => Blanco Creek Farms
+            [BillingAddressStreet1] => 359 N. W.W. White Road
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => San Antonio
+            [BillingAddressState] => TX
+            [BillingAddressZipCode] => 78219  
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => Sr. Cruz
+            [ShippingAddressLastName] => Blanco Creek Farms
+            [ShippingAddressStreet1] => 359 N. W.W. White Road
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => San Antonio
+            [ShippingAddressState] => TX
+            [ShippingAddressZipCode] => 78219  
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => Charged
+            [SubTotal] => 94.48000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 0.00000
+        )
+
+)
+20190208-03:02:09Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 143.208.56.165
+            [HowHeard] => 0
+            [LockShippingMethod] => False
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 2244.95000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300222
+                                    [ItemName] => Nutri-Maximum - Nutri-Maximum (Pack of 1)
+                                    [Qty] => 15
+                                    [UnitPrice] => 8.80000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 132.00000
+                                )
+
+                            [1] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300199
+                                    [ItemName] => Nutri-Carao Natural - Nutri-Carao Natural (Pack of 1)
+                                    [Qty] => 5
+                                    [UnitPrice] => 9.73000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 48.65000
+                                )
+
+                            [2] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300128
+                                    [ItemName] => NALGA DE PERRO HOT SAUCE - NALGA DE PERRO (Pack of 1)
+                                    [Qty] => 10
+                                    [UnitPrice] => 22.20000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 222.00000
+                                )
+
+                            [3] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300319
+                                    [ItemName] => Juanilama Lime - Hibiscus Tea - Te de Juanilama Lima - Jamaica (Pack of 1)
+                                    [Qty] => 71
+                                    [UnitPrice] => 4.22000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 299.62000
+                                )
+
+                            [4] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300317
+                                    [ItemName] => Mozote - Mint Tea - Te de Mozote - Hierbabuena (Pack of 1)
+                                    [Qty] => 71
+                                    [UnitPrice] => 4.22000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 299.62000
+                                )
+
+                            [5] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300287
+                                    [ItemName] => Chan - Lemongrass Tea - Te de Chan - Zacate de Limon (Pack of 1)
+                                    [Qty] => 71
+                                    [UnitPrice] => 4.22000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 299.62000
+                                )
+
+                            [6] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300197
+                                    [ItemName] => Purple Corn Cacao Pinolillo Drink - Pinolillo de Maiz Morado Pujagua (Pack of 1)
+                                    [Qty] => 48
+                                    [UnitPrice] => 4.39000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 210.72000
+                                )
+
+                            [7] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300194
+                                    [ItemName] => Purple Pujagua Corn Flour - Harina de Maiz Morado Pujagua (Pack of 1)
+                                    [Qty] => 48
+                                    [UnitPrice] => 4.26000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 204.48000
+                                )
+
+                            [8] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300187
+                                    [ItemName] => 100% Pure Blue Zone Coffee 18 oz - CAFE 100% PURO BLUE ZONE 18 oz (Pack of 1)
+                                    [Qty] => 35
+                                    [UnitPrice] => 7.44000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 260.40000
+                                )
+
+                            [9] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300187
+                                    [ItemName] => 100% Pure Blue Zone Coffee 18 oz - CAFE 100% PURO BLUE ZONE 18 oz (Pack of 1)
+                                    [Qty] => 36
+                                    [UnitPrice] => 7.44000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 267.84000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2019-02-08T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5060000009
+            [OrderDate] => 2019-02-08T15:19:07
+            [CustomerFirstName] => AISLINN
+            [CustomerLastName] => KOTIFANI
+            [CustomerEmail] => ahurtado@grupogarnier.com
+            [BillingAddressFirstName] => AISLINN
+            [BillingAddressLastName] => KOTIFANI
+            [BillingAddressStreet1] => 10955 Bren Rd E
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => Minnetonka
+            [BillingAddressState] => MN
+            [BillingAddressZipCode] => 55343
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => AISLINN
+            [ShippingAddressLastName] => KOTIFANI
+            [ShippingAddressStreet1] => 10955 Bren Rd E
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => Minnetonka
+            [ShippingAddressState] => MN
+            [ShippingAddressZipCode] => 55343
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => NoPayment
+            [SubTotal] => 2244.95000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 2244.95000
+        )
+
+)
+20190226-09:02:28Array
+(
+    [order] => Array
+        (
+            [IsGiftOrder] => 0
+            [ShippingLocationID] => 0
+            [StationID] => 109
+            [OrderSourceOrderID2] => Local_Store
+            [CustomerIP] => 181.174.102.48
+            [HowHeard] => 0
+            [LockShippingMethod] => False
+            [OrderCreationSourceApplication] => Default
+            [Customer_TaxExempt] => false
+            [TaxRate] => 0
+            [ParentOrderID] => 0
+            [ShipFromWarehouseId] => 109
+            [SalesRepId] => 0
+            [DiscountTotal] => 782.88000
+            [RushOrder] => 0
+            [Payments] => Array
+                (
+                    [OrderPaymentDetails] => Array
+                        (
+                        )
+
+                )
+
+            [Items] => Array
+                (
+                    [OrderItemDetails] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300326
+                                    [ItemName] => Pure Joy Crispy Banana Bites 56g - Pure Joy Banano Crujiente (Pack of 1)
+                                    [Qty] => 12
+                                    [UnitPrice] => 14.62000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 175.44000
+                                )
+
+                            [1] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300325
+                                    [ItemName] => Pure Joy Crispy Banana Bites 28g - Pure Joy Banano Crujiente (Pack of 1)
+                                    [Qty] => 24
+                                    [UnitPrice] => 9.00000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 216.00000
+                                )
+
+                            [2] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300324
+                                    [ItemName] => Pure Joy Crispy Pinneapple Bites 56g - Pure Joy Pina Crujiente (Pack of 1)
+                                    [Qty] => 12
+                                    [UnitPrice] => 14.62000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 175.44000
+                                )
+
+                            [3] => Array
+                                (
+                                    [ShipFromWarehouseID] => 109
+                                    [VariantID] => 0
+                                    [DiscountAmount] => 0
+                                    [DiscountType] => FixedAmount
+                                    [DiscountTotal] => 0
+                                    [QtyReturned] => 0
+                                    [QtyShipped] => 0
+                                    [OrderItemUniqueIDInDB] => 0
+                                    [SKU] => 506300323
+                                    [ItemName] => Pure Joy Crispy Pinneapple Bites 28g - Pure Joy Pina Crujiente (Pack of 1)
+                                    [Qty] => 24
+                                    [UnitPrice] => 9.00000
+                                    [ShippingPrice] => 0.00000
+                                    [SubTotal] => 216.00000
+                                )
+
+                        )
+
+                )
+
+            [Packages] => Array
+                (
+                    [OrderPackageDetails] => Array
+                        (
+                            [Carrier] => 
+                            [ShipMethod] => FreeEconom
+                            [ShipDate] => 2019-02-26T00:00:00
+                            [FinalShippingCost] => 0.00000
+                            [ShippingWeight] => 0
+                            [ShippingWidth] => 0
+                            [ShippingLength] => 0
+                            [ShippingHeight] => 0
+                        )
+
+                )
+
+            [CompanyID] => 163
+            [OrderSource] => Local_Store
+            [OrderSourceOrderID] => 5060000010
+            [OrderDate] => 2019-02-26T09:29:26
+            [CustomerFirstName] => Richard
+            [CustomerLastName] => Cruz
+            [CustomerEmail] => mauricio.aldana@guatedirect.com
+            [BillingAddressFirstName] => Richard
+            [BillingAddressLastName] => Cruz
+            [BillingAddressStreet1] => 359 N. Ww white road
+            [BillingAddressStreet2] => 
+            [BillingAddressCity] => San Antonio
+            [BillingAddressState] => TX
+            [BillingAddressZipCode] => 78219
+            [BillingAddressCountry] => US
+            [BillingAddressPhone] => 
+            [ShippingAddressFirstName] => Richard
+            [ShippingAddressLastName] => Cruz
+            [ShippingAddressStreet1] => 359 N. Ww white road
+            [ShippingAddressStreet2] => 
+            [ShippingAddressCity] => San Antonio
+            [ShippingAddressState] => TX
+            [ShippingAddressZipCode] => 78219
+            [ShippingAddressCountry] => US
+            [ShippingAddressPhone] => 
+            [ShippingMethod] => FreeEconom
+            [ShippingCarrier] => 
+            [ShippingStatus] => Unshipped
+            [PaymentStatus] => Charged
+            [SubTotal] => 782.88000
+            [TaxTotal] => 0.00000
+            [ShippingTotal] => 0.00000
+            [GiftWrapTotal] => 0.00000
+            [AdjustmentTotal] => 0
+            [GrandTotal] => 782.88000
+        )
+
+)
