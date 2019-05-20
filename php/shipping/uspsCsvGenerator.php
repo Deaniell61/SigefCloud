@@ -94,21 +94,21 @@ function generateCSV($connectionCountry)
 
         $shippingValues = getShippingValues($row["CODORDEN"], $connectionCountry);
         $pacTyp = findPackage($shippingValues["peso"]);
-        echo $shippingValues["peso"] . " - $pacTyp<br>";
+        // echo "<script>console.log(".$shippingValues["peso"] . " - $pacTyp);</script>";
 
         $contactName = $row["name"];
         $companyOrName = $row["name"];
         $country = $row["shicou"];
         $address1 = $row["shiadd1"];
         $address2 = $row["shiadd2"];
-        $address3 = $row[""];
+        $address3 = "";
         $city = $row["shipcity"];
         $state = $row["shipstate"];
         $postalCode = $row["shizipcod"];
         $telephone = $row["shiphonum"];
-        $ext = $row[""];
+        $ext = "";
         $residentialIndicator = getResidentialIndicator($row["WALRESIND"]);
-        $email = $row[""];
+        $email = "";
         $packagingType = "2";
         $customsValue = $shippingValues["sugsalpric"];
         $weight = $shippingValues["peso"];
@@ -116,53 +116,53 @@ function generateCSV($connectionCountry)
         $width = $shippingValues["ancho"];
         $height = $shippingValues["alto"];
         $unitOfMeasure = "LB";
-        $descriptionOfGoods = $row[""];
-        $documentsOfNoComercialValue = $row[""];
-        $gnifc = $row[""];
+        $descriptionOfGoods = "";
+        $documentsOfNoComercialValue = "";
+        $gnifc = "";
         $packageDeclaredValue = $shippingValues["packageDeclaredValue"];
-        $service = $row[""];
+        $service = "";
         $deliveryConfirmation = "N";
         $shipperReleaseDeliverWithoutConfirmation = "0";
         $returnOfDocument = "0";
         $deliverOnSaturday = "0";
         $upsCarbonNeutral = "0";
         $largePackage = "0";
-        $aditionalHandling = $row[""];
-        $reference1 = $row[""];
+        $aditionalHandling = "";
+        $reference1 = "";
         $reference2 = $row["orderid"];
-        $reference3 = $row[""];
-        $emailNtification1Address = $row[""];
-        $emailNtification1Ship = $row[""];
-        $emailNtification1Exception = $row[""];
-        $emailNtification1Delivery = $row[""];
-        $emailNtification2Address = $row[""];
-        $emailNtification2Ship = $row[""];
-        $emailNtification2Exception = $row[""];
-        $emailNtification2Delivery = $row[""];
-        $emailNtification3Address = $row[""];
-        $emailNtification3Ship = $row[""];
-        $emailNtification3Exception = $row[""];
-        $emailNtification3Delivery = $row[""];
-        $emailNtification4Address = $row[""];
-        $emailNtification4Ship = $row[""];
-        $emailNtification4Exception = $row[""];
-        $emailNtification4Delivery = $row[""];
-        $emailNtification5Address = $row[""];
-        $emailNtification5Ship = $row[""];
-        $emailNtification5Exception = $row[""];
-        $emailNtification5Delivery = $row[""];
-        $emailMessage = $row[""];
-        $emailFailureAddress = $row[""];
+        $reference3 = "";
+        $emailNtification1Address = "";
+        $emailNtification1Ship = "";
+        $emailNtification1Exception = "";
+        $emailNtification1Delivery = "";
+        $emailNtification2Address = "";
+        $emailNtification2Ship = "";
+        $emailNtification2Exception = "";
+        $emailNtification2Delivery = "";
+        $emailNtification3Address = "";
+        $emailNtification3Ship = "";
+        $emailNtification3Exception = "";
+        $emailNtification3Delivery = "";
+        $emailNtification4Address = "";
+        $emailNtification4Ship = "";
+        $emailNtification4Exception = "";
+        $emailNtification4Delivery = "";
+        $emailNtification5Address = "";
+        $emailNtification5Ship = "";
+        $emailNtification5Exception = "";
+        $emailNtification5Delivery = "";
+        $emailMessage = "";
+        $emailFailureAddress = "";
         $upsPremiumCare = "0";
-        $locationId = $row[""];
-        $mediaType = $row[""];
-        $language = $row[""];
+        $locationId = "";
+        $mediaType = "";
+        $language = "";
         $notificationAddress = "webmaster@worldirect.com";
-        $adlCodValue = $row[""];
-        $adlDeliverToAddressee = $row[""];
-        $adlShipperMediaType = $row[""];
-        $adlShipperLanguage = $row[""];
-        $adlShipperNotification = $row[""];
+        $adlCodValue = "";
+        $adlDeliverToAddressee = "";
+        $adlShipperMediaType = "";
+        $adlShipperLanguage = "";
+        $adlShipperNotification = "";
         
         $data[] = [
             "$contactName",
@@ -243,11 +243,10 @@ function generateCSV($connectionCountry)
     foreach ($data as $row) {
         fputcsv($file, $row);
     }
-
     fclose($file);
 
 
-    /*
+    
     header('Content-Description: File Transfer');
     header('Content-Type: application/octet-stream');
     header('Content-Disposition: attachment; filename="'.basename($fileName).'"');
@@ -255,9 +254,8 @@ function generateCSV($connectionCountry)
     header('Cache-Control: must-revalidate');
     header('Pragma: public');
     header('Content-Length: ' . filesize($fileName));
-    readfile($fileName);
-    exit;
-    */
+    echo "<script type='text/javascript'>window.close();</script>";
+    
 
 }
 
@@ -283,7 +281,7 @@ function getShippingValues($codorden, $connectionCountry){
         INNER JOIN
             tra_bun_det AS bun ON det.productid = bun.amazonsku
         INNER JOIN
-            cat_prod AS prod ON bun.mastersku = prod.mastersku where enc.codorden = '_5470IQ971';
+            cat_prod AS prod ON bun.mastersku = prod.mastersku where enc.codorden = '$codorden';
     ";
 
     $result = mysqli_query(conexion($connectionCountry), $query);
@@ -302,8 +300,13 @@ function getShippingValues($codorden, $connectionCountry){
             ];
         }
 
-//        var_dump($values);
-
+    //    echo var_dump($values);
+        $ancho='';
+        $alto='';
+        $profun='';
+        $peso='';
+        $sugsalpric='';
+        $packageDeclaredValue='';
         foreach ($values as $value){
             $ancho += $value["ancho"];
             $alto += $value["alto"];
@@ -336,7 +339,7 @@ function getCatPackages(){
         SELECT 
             nombre, ((alto * ancho * largo) / 1728) as val
         FROM
-            cat_package having val > 0 order by val ASC;
+            cat_package havin val > 0 order by val ASC;
     ";
 
     $result = mysqli_query(conexion(""), $query);
