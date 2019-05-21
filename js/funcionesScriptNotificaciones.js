@@ -3,7 +3,7 @@
  * For more information www.facebook.com/DEANIELL6195
  * Unique creator
  */
- function abrirNotificacion(codprov,pais,codpais)
+function abrirNotificacion(codprov,pais,codpais)
 {
 	params  = 'width='+screen.width;
 			 params += ', height='+screen.height;

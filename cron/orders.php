@@ -710,9 +710,11 @@ class orders {
         include_once($_SERVER["DOCUMENT_ROOT"] . "/php/fecha.php");
         $getOrderDetailsQuery = "SELECT * FROM tra_ord_det WHERE CODORDEN = '" . $item["CODORDEN"] . "';";
         $getOrderDetailsResult = mysqli_query(conexion($country), $getOrderDetailsQuery);
+        $ORDERUNITS = 0;
         if ($getOrderDetailsResult) {
             if ($getOrderDetailsResult->num_rows > 0) {
                 while($getOrderDetailsRow = mysqli_fetch_array($getOrderDetailsResult)){
+                    $ORDERUNITS++;
                     $CODTMOV = sys2015();
                     $CODMOVBOD = $codMovBod;
 //                $CODPROD = "(SELECT product.CODPROD FROM cat_prod AS product INNER JOIN tra_bun_det AS bundle ON bundle.MASTERSKU = product.MASTERSKU WHERE bundle.MASTERSKU = '" . $getOrderDetailsRow["PRODUCTID"] . "' OR AMAZONSKU = '" . $getOrderDetailsRow["PRODUCTID"] . "' LIMIT 1)";
@@ -889,6 +891,8 @@ class orders {
                         }
                     }
                 }
+                $query = "update tra_ord_enc set ORDERUNITS=$ORDERUNITS WHERE CODORDEN = '" . $item["CODORDEN"] . "';";
+                $result = mysqli_query(conexion($country), $query);
             }
         }
     }

@@ -4,12 +4,21 @@ include_once($_SERVER["DOCUMENT_ROOT"] . "/php/coneccion.php");
 
 $catPackages = getCatPackages();
 
-print_r(json_encode($catPackages)) . "<br>";
+if(isset($_GET["orderids"])){
+    $orderIds = $_GET["orderids"];
+}
 
-generateCSV("Guatemala");
+$carrierName = $_GET["carrierName"];
 
-function generateCSV($connectionCountry)
+//print_r(json_encode($catPackages)) . "<br>";
+
+generateCSV("Guatemala", $orderIds);
+
+function generateCSV($connectionCountry, $orderIds)
 {
+    global $catPackages, $carrierName;
+
+    /*
     $data[] = [
         "Contact Name",
         "Company or Name",
@@ -79,13 +88,41 @@ function generateCSV($connectionCountry)
         "ADL Shipper Language",
         "ADL Shipper Notification"
     ];
+    */
 
+    $today = date("Y-m-d H:i:s", strtotime("today"));
+    $yesterday = date("Y-m-d H:i:s", strtotime("yesterday"));
+
+//    echo "$today - $yesterday";
+
+    if($orderIds){
+        $orderidsq = " AND enc.orderid IN ($orderIds)";
+    }
 
     $q = "
         SELECT 
-            CONCAT(shifirnam, ' ', shilasnam) AS name, shicou, shiadd1, shiadd2, shipcity, shipstate, shizipcod, shiphonum, orderid, CODORDEN
+            CONCAT(shifirnam, ' ', shilasnam) AS name,
+            shicou,
+            shiadd1,
+            shiadd2,
+            shipcity,
+            shipstate,
+            shizipcod,
+            shiphonum,
+            orderid,
+            enc.CODORDEN,
+            shi.oricarmet,
+            enc.timoford,
+            enc.username,
+            enc.walresind
         FROM
-            tra_ord_enc LIMIT 10;
+            tra_ord_enc AS enc
+                INNER JOIN
+            (select * from tra_ord_det group by codorden) AS det ON enc.codorden = det.codorden
+                INNER JOIN
+            (select * from tra_ord_shi group by codorddet) AS shi ON det.coddetord = shi.codorddet
+        WHERE
+            enc.orderid IN ($orderIds);
     ";
 
     $r = mysqli_query(conexion($connectionCountry), $q);
@@ -93,76 +130,81 @@ function generateCSV($connectionCountry)
     while ($row = mysqli_fetch_array($r)) {
 
         $shippingValues = getShippingValues($row["CODORDEN"], $connectionCountry);
-        $pacTyp = findPackage($shippingValues["peso"]);
-        // echo "<script>console.log(".$shippingValues["peso"] . " - $pacTyp);</script>";
+        $pacTyp = findPackage($shippingValues["value"]);
+        $tSV = $catPackages[$pacTyp];
+//        $pacTyp = findPackage("0.0346");
+//        echo $shippingValues["value"] . " - $pacTyp<br>";
 
         $contactName = $row["name"];
         $companyOrName = $row["name"];
-        $country = $row["shicou"];
+        $country = getCountryCode($row["shicou"]);
         $address1 = $row["shiadd1"];
         $address2 = $row["shiadd2"];
-        $address3 = "";
+        $address3 = $row[""];
         $city = $row["shipcity"];
         $state = $row["shipstate"];
-        $postalCode = $row["shizipcod"];
+        $postalCode = str_pad((string)$row["shizipcod"],5,'0',STR_PAD_LEFT);
         $telephone = $row["shiphonum"];
-        $ext = "";
-        $residentialIndicator = getResidentialIndicator($row["WALRESIND"]);
-        $email = "";
+        $ext = $row[""];
+        $residentialIndicator = getResidentialIndicator($row["walresind"]);
+        $email = $row[""];
         $packagingType = "2";
         $customsValue = $shippingValues["sugsalpric"];
-        $weight = $shippingValues["peso"];
-        $length = $shippingValues["profun"];
-        $width = $shippingValues["ancho"];
-        $height = $shippingValues["alto"];
+        $weight = ceil($shippingValues["peso"]);
+        $length = $tSV["largo"];
+        $length = "";
+        $width = $tSV["ancho"];
+        $width = "";
+        $height = $tSV["alto"];
+        $height = "";
         $unitOfMeasure = "LB";
-        $descriptionOfGoods = "";
-        $documentsOfNoComercialValue = "";
-        $gnifc = "";
+        $descriptionOfGoods = $row[""];
+        $documentsOfNoComercialValue = "0";
+        $gnifc = "0";
         $packageDeclaredValue = $shippingValues["packageDeclaredValue"];
-        $service = "";
-        $deliveryConfirmation = "N";
+        $service = "03";
+        $deliveryConfirmation = "";
         $shipperReleaseDeliverWithoutConfirmation = "0";
         $returnOfDocument = "0";
         $deliverOnSaturday = "0";
         $upsCarbonNeutral = "0";
         $largePackage = "0";
-        $aditionalHandling = "";
-        $reference1 = "";
+        $aditionalHandling = $row[""];
+        $reference1 = $row[""];
         $reference2 = $row["orderid"];
-        $reference3 = "";
-        $emailNtification1Address = "";
-        $emailNtification1Ship = "";
-        $emailNtification1Exception = "";
-        $emailNtification1Delivery = "";
-        $emailNtification2Address = "";
-        $emailNtification2Ship = "";
-        $emailNtification2Exception = "";
-        $emailNtification2Delivery = "";
-        $emailNtification3Address = "";
-        $emailNtification3Ship = "";
-        $emailNtification3Exception = "";
-        $emailNtification3Delivery = "";
-        $emailNtification4Address = "";
-        $emailNtification4Ship = "";
-        $emailNtification4Exception = "";
-        $emailNtification4Delivery = "";
-        $emailNtification5Address = "";
-        $emailNtification5Ship = "";
-        $emailNtification5Exception = "";
-        $emailNtification5Delivery = "";
-        $emailMessage = "";
-        $emailFailureAddress = "";
-        $upsPremiumCare = "0";
-        $locationId = "";
-        $mediaType = "";
-        $language = "";
-        $notificationAddress = "webmaster@worldirect.com";
-        $adlCodValue = "";
-        $adlDeliverToAddressee = "";
-        $adlShipperMediaType = "";
-        $adlShipperLanguage = "";
-        $adlShipperNotification = "";
+        $reference3 = $row[""];
+//        $emailNtification1Address = $row[""];
+//        $emailNtification1Ship = $row[""];
+//        $emailNtification1Exception = $row[""];
+//        $emailNtification1Delivery = $row[""];
+//        $emailNtification2Address = $row[""];
+//        $emailNtification2Ship = $row[""];
+//        $emailNtification2Exception = $row[""];
+//        $emailNtification2Delivery = $row[""];
+//        $emailNtification3Address = $row[""];
+//        $emailNtification3Ship = $row[""];
+//        $emailNtification3Exception = $row[""];
+//        $emailNtification3Delivery = $row[""];
+//        $emailNtification4Address = $row[""];
+//        $emailNtification4Ship = $row[""];
+//        $emailNtification4Exception = $row[""];
+//        $emailNtification4Delivery = $row[""];
+//        $emailNtification5Address = $row[""];
+//        $emailNtification5Ship = $row[""];
+//        $emailNtification5Exception = $row[""];
+//        $emailNtification5Delivery = $row[""];
+//        $emailMessage = $row[""];
+//        $emailFailureAddress = $row[""];
+//        $upsPremiumCare = "0";
+//        $locationId = $row[""];
+//        $mediaType = $row[""];
+//        $language = $row[""];
+//        $notificationAddress = "webmaster@worldirect.com";
+//        $adlCodValue = $row[""];
+//        $adlDeliverToAddressee = $row[""];
+//        $adlShipperMediaType = $row[""];
+//        $adlShipperLanguage = $row[""];
+//        $adlShipperNotification = $row[""];
         
         $data[] = [
             "$contactName",
@@ -200,53 +242,52 @@ function generateCSV($connectionCountry)
             "$reference1",
             "$reference2",
             "$reference3",
-            "$emailNtification1Address",
-            "$emailNtification1Ship",
-            "$emailNtification1Exception",
-            "$emailNtification1Delivery",
-            "$emailNtification2Address",
-            "$emailNtification2Ship",
-            "$emailNtification2Exception",
-            "$emailNtification2Delivery",
-            "$emailNtification3Address",
-            "$emailNtification3Ship",
-            "$emailNtification3Exception",
-            "$emailNtification3Delivery",
-            "$emailNtification4Address",
-            "$emailNtification4Ship",
-            "$emailNtification4Exception",
-            "$emailNtification4Delivery",
-            "$emailNtification5Address",
-            "$emailNtification5Ship",
-            "$emailNtification5Exception",
-            "$emailNtification5Delivery",
-            "$emailMessage",
-            "$emailFailureAddress",
-            "$upsPremiumCare",
-            "$locationId",
-            "$mediaType",
-            "$language",
-            "$notificationAddress",
-            "$adlCodValue",
-            "$adlDeliverToAddressee",
-            "$adlShipperMediaType",
-            "$adlShipperLanguage",
-            "$adlShipperNotification"
+//            "$emailNtification1Address",
+//            "$emailNtification1Ship",
+//            "$emailNtification1Exception",
+//            "$emailNtification1Delivery",
+//            "$emailNtification2Address",
+//            "$emailNtification2Ship",
+//            "$emailNtification2Exception",
+//            "$emailNtification2Delivery",
+//            "$emailNtification3Address",
+//            "$emailNtification3Ship",
+//            "$emailNtification3Exception",
+//            "$emailNtification3Delivery",
+//            "$emailNtification4Address",
+//            "$emailNtification4Ship",
+//            "$emailNtification4Exception",
+//            "$emailNtification4Delivery",
+//            "$emailNtification5Address",
+//            "$emailNtification5Ship",
+//            "$emailNtification5Exception",
+//            "$emailNtification5Delivery",
+//            "$emailMessage",
+//            "$emailFailureAddress",
+//            "$upsPremiumCare",
+//            "$locationId",
+//            "$mediaType",
+//            "$language",
+//            "$notificationAddress",
+//            "$adlCodValue",
+//            "$adlDeliverToAddressee",
+//            "$adlShipperMediaType",
+//            "$adlShipperLanguage",
+//            "$adlShipperNotification"
         ];
     }
 
     $date = date("Y-m-d");
-    $fileName = "usps-$date.csv";
+    $fileName = "labels-$carrierName-$date.csv";
 
     $file = fopen($fileName, "w");
 
     foreach ($data as $row) {
         fputcsv($file, $row);
     }
+
     fclose($file);
 
-
-    
     header('Content-Description: File Transfer');
     header('Content-Type: application/octet-stream');
     header('Content-Disposition: attachment; filename="'.basename($fileName).'"');
@@ -254,9 +295,8 @@ function generateCSV($connectionCountry)
     header('Cache-Control: must-revalidate');
     header('Pragma: public');
     header('Content-Length: ' . filesize($fileName));
-    echo "<script type='text/javascript'>window.close();</script>";
-    
-
+    readfile($fileName);
+    exit;
 }
 
 function getResidentialIndicator($value){
@@ -290,6 +330,7 @@ function getShippingValues($codorden, $connectionCountry){
         $values[] = null;
 
         while ($row = mysqli_fetch_array($result)){
+//            print_r(json_encode($row)) . "<br>";
             $values[] = [
                 "ancho" => $row["ancho"] * $row["unitbundle"],
                 "alto" => $row["alto"],
@@ -300,13 +341,8 @@ function getShippingValues($codorden, $connectionCountry){
             ];
         }
 
-    //    echo var_dump($values);
-        $ancho='';
-        $alto='';
-        $profun='';
-        $peso='';
-        $sugsalpric='';
-        $packageDeclaredValue='';
+//        var_dump($values);
+
         foreach ($values as $value){
             $ancho += $value["ancho"];
             $alto += $value["alto"];
@@ -326,6 +362,7 @@ function getShippingValues($codorden, $connectionCountry){
             "packageDeclaredValue" => $packageDeclaredValue,
         ];
 
+//        echo "<br>RESPONSE:";
 //        var_dump($response);
 //        echo "<br>";
 
@@ -337,15 +374,16 @@ function getCatPackages(){
 
     $query = "
         SELECT 
-            nombre, ((alto * ancho * largo) / 1728) as val
+            nombre, ((alto * ancho * largo) / 1728) as val, alto, ancho, largo
         FROM
-            cat_package havin val > 0 order by val ASC;
+            cat_package having val > 0 order by val ASC;
     ";
 
     $result = mysqli_query(conexion(""), $query);
 
     while ($row = mysqli_fetch_array($result)){
-        $response[] = $row;
+        $tNombre = $row["nombre"];
+        $response[$tNombre] = $row;
     }
 
     return $response;
@@ -357,9 +395,16 @@ function findPackage($value){
     foreach ($catPackages as $catPackage){
         $tVal = $catPackage["val"];
         $tNombre = $catPackage["nombre"];
-        echo "->$value - $tVal - $tNombre<br>";
-        if($value > $tVal){
+//        echo "->$value - $tVal - $tNombre<br>";
+        if($tVal >= $value){
             return $tNombre;
         }
+    }
+}
+
+function getCountryCode($value){
+    switch ($value){
+        case "USA":
+            return "US";
     }
 }

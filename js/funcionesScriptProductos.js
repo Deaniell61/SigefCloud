@@ -1585,7 +1585,7 @@ function guardarImagen() {
 function MarcasLlenar(codempresa, pais, esmas, tipo, selectedBrand) {
 
     $.ajax({
-        url: 'combosProductos.php',
+        url: './../php/productos/combosProductos.php',
         type: 'POST',
         data: 'tipo=' + tipo + '&codempresa=' + codempresa + '&pais=' + pais + '&esmas=' + esmas + '&selectedBrand=' + selectedBrand,
         success: function (resp) {

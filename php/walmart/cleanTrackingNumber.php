@@ -41,15 +41,23 @@ while ($row = mysqli_fetch_array($orderIdsResult)){
 //var_dump($emptyOrders);
 //echo "<br>";
 //echo "<br>";
-
+$cadenaUpdate = "";
 foreach ($data as $row) {
 
     if ($cont > 0) {
         if ($carrier == "ups") {
             $tReference1 = $row[37];
             $tReference2 = $row[38];
-            $tOrderId = ($tReference2 != '') ? $tReference2 : $tReference1;
+            $tName = $row[39];
             $tTrackingNumber = $row[4];
+            $tOrderId = '';
+            if($tReference1*1){
+                $tOrderId = $tReference1*1;
+            }elseif($tReference2*1){
+                $tOrderId = $tReference2*1;
+            }else{
+                $tOrderId = getOrdId($tName,$tTrackingNumber);
+            }
             $tShipDate = date("Y-m-d h:m:s", strtotime($row[0]));
             $tShiMetSel = $row[1];
         } else if ($carrier == "fedex") {
@@ -141,7 +149,7 @@ foreach ($data as $row) {
                                 WHERE
                                     enc.orderid = '$tOrderId');
                     ";
-
+                    $cadenaUpdate .= $cleanCodOrdShi;
 //                    echo "tra_ord_shi<br>$cleanCodOrdShi";
 
                     if ($check == "") {
@@ -155,7 +163,7 @@ foreach ($data as $row) {
             }
         }
         else{
-            echo "E: $tOrderId - $tTrackingNumber<br>";
+            echo "<script>console.log('E: $tOrderId - $tTrackingNumber');</script>";
         }
     }
     $cont += 1;
@@ -171,4 +179,26 @@ function getShiCar($carrier)
         case "usps":
             return "USPS";
     }
+}
+
+function getOrdId($tName,$tTrackingNumber){
+    $orderIdsQ = "
+    SELECT 
+        orderid
+    FROM
+        tra_ord_enc
+    WHERE
+        tranum = '$tTrackingNumber';
+    ";
+
+    //echo "$orderIdsQ<br>";
+    $emptyOrders=null;
+
+    $orderIdsResult = mysqli_query(conexion($_SESSION["pais"]), $orderIdsQ);
+
+    while ($row = mysqli_fetch_array($orderIdsResult)){
+        $emptyOrders = $row["orderid"];
+    }
+
+    return $emptyOrders;
 }
