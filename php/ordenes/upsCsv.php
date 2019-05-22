@@ -32,6 +32,38 @@ function getPackagesDrop()
 }
 
 ?>
+
+
+<link href="../../css/estiloPrincipal.css" rel="stylesheet" type="text/css">
+        <link href="../../css/estiloLupa.css" rel="stylesheet" type="text/css">
+        <link href="../../css/estiloForms.css" rel="stylesheet" type="text/css">
+        <link href="../../css/grid.css" rel="stylesheet" type="text/css">
+        <link href="../menu/css/encabezado.css" rel="stylesheet" type="text/css">
+        <link href="../../Inicio/css/productos.css" rel="stylesheet" type="text/css">
+        <link href="../../css/verificar.css" rel="stylesheet" type="text/css">
+        <link href="../../css/botones.css" rel="stylesheet" type="text/css">
+        <link href="../../css/textos.css" rel="stylesheet" type="text/css">
+        <link href="../../css/tabla.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../../css/jquery-ui.min.css" type="text/css"/>
+<script type="text/javascript" src="../../js/jquery-2.2.3.min.js"></script>
+<script src="../../js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../../js/colResizable-1.5.min.js"></script>
+<script src="../../js/jqueryRotate.js"></script>
+<script src="../../js/jquery.tablesorter.js"></script>
+<script src="../../js/Lupa.js" type="text/javascript"></script>
+<script src="../../js/jquery-barcode.js" type="text/javascript"></script>
+<script src="../../js/funcionesScript.js" type="text/javascript"></script>
+<script src="../../js/Jqueryvalidation.js" type="text/javascript"></script>
+<script src="../../js/funcionesScriptUsuarios.js" type="text/javascript"></script>
+<script src="../../js/funcionesScriptEmpresas.js" type="text/javascript"></script>
+<script src="../../js/funcionesScriptModulos.js" type="text/javascript"></script>
+<script src="../../js/funcionesScriptTerminos.js" type="text/javascript"></script>
+<script>$.ajaxSetup({cache: false});</script>
+<script src="../../js/funcionesScriptUsuarioLogiado.js" type="text/javascript"></script>
+<script src="../../js/datatables.min.js" type="text/javascript"></script>
+<script src="../../js/estibar.js" type="text/javascript"></script>
+<script src="../../js/lib/ckeditor/ckeditor.js" type="text/javascript"></script>
+<div id="cargaLoad"></div>
 <div hidden id="upsCsv" title="Shipping">
     <div class="divRow">
         <div class="divCol">
@@ -517,12 +549,15 @@ function getPackagesDrop()
 
     function refreshContent() {
         fillFormIds();
+        ventana('cargaLoad',300,400);
+        document.getElementById('cargaLoad').innerHTML = '<center><img src="../../images/Cargando.gif" height="200" width="200" /><br><span>Por favor Espere... Procesando ordenes </span></center>';
         setTimeout(function () {
             var carrierName = $("#carriers").val();
             $('#upsCsvContent').html("<p style='text-align: center;'>loading...</p>");
             $('#upsCsvContent').load("../php/ordenes/upsCsvData.php?carrier=" + carrierName);
             fillFormIds();
-            console.log("here");
+            $('#cargaLoad').dialog('close');
+            // console.log("here");
         }, 1000);
     };
 

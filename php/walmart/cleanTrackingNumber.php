@@ -42,7 +42,7 @@ while ($row = mysqli_fetch_array($orderIdsResult)){
 //echo "<br>";
 //echo "<br>";
 $cadenaUpdate = "";
-echo "<script>ventana('cargaLoad',300,400);</script>";
+// echo "<script>ventana('cargaLoad',300,400);</script>";
 foreach ($data as $row) {
 
     if ($cont > 0) {
@@ -84,7 +84,7 @@ foreach ($data as $row) {
             $tTrackingNumber = $row[0];
             $tShipDate = date("Y-m-d h:m:s", strtotime($row[1]));
             $tShiMetSel = (+$row[$refIndex1]*1)?$row[$refIndex1+1]:$row[$refIndex1];
-            echo "<script>document.getElementById('cargaLoad').innerHTML = '<center><img src=\"../../images/Cargando.gif\" height=\"200\" width=\"200\" /><br><span>Por favor Espere... Procesando orden ".$cont." </span></center>'</script>";
+            // echo "<script>document.getElementById('cargaLoad').innerHTML = '<center><img src=\"../../images/Cargando.gif\" height=\"200\" width=\"200\" /><br><span>Por favor Espere... Procesando orden ".$cont." </span></center>'</script>";
             echo "<script>console.log('".$tTrackingNumber." - ".$tShiMetSel." - ".$tOrderId."');</script>";
 //            echo "$refIndex - $tOrderId - $tShiMetSel<br>";
         }else if ($carrier == "usps") {
@@ -169,7 +169,7 @@ foreach ($data as $row) {
         }
     }
     $cont += 1;
-    echo "<script>$('#cargaLoad').dialog('close');</script>";
+    // echo "<script>$('#cargaLoad').dialog('close');</script>";
 
 }
 
