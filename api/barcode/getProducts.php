@@ -33,7 +33,7 @@ while ($countriesRow = mysqli_fetch_array($countriesR)) {
                 cat_prod AS prod ON tin.codprod = prod.codprod
             WHERE
                 sisexi > 0
-            ORDER BY nomprod LIMIT 5;
+            ORDER BY nomprod LIMIT 15;
         ";
     }
     else{
@@ -46,7 +46,7 @@ while ($countriesRow = mysqli_fetch_array($countriesR)) {
                 cat_prod AS prod ON tin.codprod = prod.codprod
             WHERE
                 fisexi = 0 AND sisexi
-            ORDER BY nomprod LIMIT 5;
+            ORDER BY nomprod LIMIT 15;
         ";
     }
 

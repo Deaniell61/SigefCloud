@@ -42,6 +42,16 @@ require_once('php/idiomas/'.$idioma.'.php');
 
 			}
 
+			case "u":
+
+			{
+
+				header('Location:Inicio/inicio.php');
+
+				break;
+
+			}
+
 			case "A":
 
 			{
@@ -53,6 +63,15 @@ require_once('php/idiomas/'.$idioma.'.php');
 			}
 
 			case "P":
+
+			{
+
+				header('Location:InicioProveedor/inicio.php');
+
+				break;
+
+			}
+			case "p":
 
 			{
 

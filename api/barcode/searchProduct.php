@@ -23,15 +23,15 @@ while ($countriesRow = mysqli_fetch_array($countriesR)) {
 
     $productQ = "
         SELECT 
-            mastersku, descsis, upc
+            mastersku, prodname, upc
         FROM
             cat_prod AS prod
         WHERE
             mastersku LIKE '%$term%'
-                || descsis LIKE '%$term%'
+                || prodname LIKE '%$term%'
                 || upc LIKE '%$term%'
-        ORDER BY descsis , mastersku , upc
-        LIMIT 5;
+        ORDER BY prodname , mastersku , upc
+        LIMIT 15;
     ";
 
 
@@ -42,7 +42,7 @@ while ($countriesRow = mysqli_fetch_array($countriesR)) {
         $validProduct = true;
         while($product = mysqli_fetch_array($productR)){
             $mastersku = $product["mastersku"];
-            $descsis = $product["descsis"];
+            $descsis = $product["prodname"];
             $upc = $product["upc"];
 
             $response[] = [

@@ -5,41 +5,87 @@
     $method = $_POST['method'];
 
     if($method == 'newOrder'){
+//        echo "newOrder";
+        $orderId = $_POST['orderid'];
+        $date = $_POST['date'];
+        $username = $_POST['username'];
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+
+        $orderChannel = $_POST['orderChannel'];
+        $paysta = $_POST['paysta'];
+        $paymet = $_POST['paymet'];
+        $payrefnum = $_POST['payrefnum'];
+
+        $site = $_POST['site'];
+        $paydat = $_POST['paydat'];
+        $channel = $_POST['channel'];
+
+        $shimetsel = $_POST['shimetsel'];
+        $shista = $_POST['shista'];
+        $shipdate = $_POST['shipdate'];
+        $shifee = $_POST['shifee'];
+
+        $shicou = $_POST['shicou'];
+        $shipstate = $_POST['shipstate'];
+        $shipcity = $_POST['shipcity'];
+        $shizipcod = $_POST['shizipcod'];
+        $shiadd1 = $_POST['shiadd1'];
+        $shiadd2 = $_POST['shiadd2'];
+
+        $tracking = $_POST['tracking'];
+        $status = $_POST['status'];
+        $shiamocar = $_POST['shiamocar'];
 
         $subtotal = $_POST['subtotal'];
         $shitot = $_POST['shitot'];
         $orddistot = $_POST['orddistot'];
-        $estatus = $_POST['estatus'];
-        $paysta = $_POST['paysta'];
-        $paydat = $_POST['paydat'];
-        $payrefnum = $_POST['payrefnum'];
-        $paymet = $_POST['paymet'];
-        $shista = $_POST['shista'];
-        $shipdate = $_POST['shipdate'];
-        $shifee = $_POST['shifee'];
-        $shipcity = $_POST['shipcity'];
-        $shipstate = $_POST['shipstate'];
-        $shizipcod = $_POST['shizipcod'];
-        $shicou = $_POST['shicou'];
-        $shimetsel = $_POST['shimetsel'];
+        $grandtotal = $_POST['grandtotal'];
+
         $isrusord = $_POST['isrusord'];
 
-        insertOrderEnc($subtotal, $shitot, $orddistot, $estatus, $paysta, $paydat, $payrefnum, $paymet, $shista, $shipdate, $shifee, $shipcity, shipsta, $shizipcod, $shicou, $shimetsel, $isrusord);
-        //echo sys2015();
-        //getNewOrderId();
-        /*
-        if(orderEncExists($tCodOrden) == 0){
-            insertOrderEnc();
+        $codorden = sys2015();
+
+        $codbod = $_POST["codbod"];
+        $torden = $_POST["torden"];
+
+        //echo ':this:'.$orderId;
+        //echo $orderId . '-' . $codorden;
+        if($orderId != ""){
+            $tquery = "SELECT CODORDEN FROM tra_ord_enc WHERE ORDERID = '$orderId';";
+            $tresult = mysqli_query(conexion($_SESSION['pais']), $tquery);
+            $codorden = mysqli_fetch_array($tresult)[0];
+            //echo ':'.$codorden .' - '. $tquery . ':';
+        }
+        else{
+            $orderId = insertOrderEnc($codorden, $subtotal, $shitot, $orddistot, $status, $shista, $shipdate, $shifee, $paysta, $paydat, $payrefnum, $paymet,  $shipcity, $shipstate, $shizipcod, $shiadd1, $shiadd2, $shicou, $shimetsel, $shiamocar, $isrusord, $codbod, $username, $firstname, $lastname, $grandtotal, $torden);
         }
 
-        updateOrderEnc();
+        time_nanosleep(0, 1000000000);
 
-        if(orderDetExists() == 0){
-            insertOrderDet();
+        if($codorden != ""){
+            $cleanDetQuery = "DELETE FROM tra_ord_det WHERE CODORDEN = '$codorden';";
+            //echo $cleanDetQuery;
+            mysqli_query(conexion($_SESSION['pais']), $cleanDetQuery);
+        }
+        //echo 'CO2:'.$codorden;
+
+        $jsonText = $_POST['json'];
+        $decodedText = html_entity_decode($jsonText);
+        $data = json_decode($decodedText, true);
+        echo $_POST['json'];
+        //[{"CODIGO":"","DESCRIPCION DEL PRODUCTO":"","CANTIDAD":"","PRECIO UNITARIO":"","TOTAL":""}]
+        for ($index = 0; $index < (count($data)); $index++) {
+            //echo $data[$index]["Codigo"];
+            //echo 'CO3:'.$codorden;
+            if($data[$index]["Codigo"] != "No data available in table"){
+                //echo 'CO4:'.$codorden;
+//                echo $codorden."-".$data[$index]["Descripcion del Producto"]."-".$data[$index]["Cantidad"]."<br>";
+                insertOrderDet($codorden, $data[$index]["Codigo"], $data[$index]["Descripcion del Producto"], $data[$index]["Cantidad"], $data[$index]["Precio Unitario"]);
+            }
         }
 
-        updateOrderDet();
-        */
+        echo $orderId;
     }
 
     function orderEncExists($mCodOrden){
@@ -94,29 +140,35 @@
         return $resp;
     }
 
-    function insertOrderEnc($SUBTOTAL, $SHITOT, $ORDDISTOT, $ESTATUS, $SHISTA, $SHIPDATE, $SHIFEE, $PAYSTA, $PAYDAT, $PAYREFNUM, $PAYMET, $SHIPCITY, $SHIPSTATE, $SHIZIPCOD, $SHICOU, $SHIMETSEL, $ISRUSORD){
+    function insertOrderEnc($CODORDEN, $SUBTOTAL, $SHITOT, $ORDDISTOT, $ESTATUS, $SHISTA, $SHIPDATE, $SHIFEE, $PAYSTA, $PAYDAT, $PAYREFNUM, $PAYMET, $SHIPCITY, $SHIPSTATE, $SHIZIPCOD, $SHIADD1, $SHIADD2, $SHICOU, $SHIMETSEL, $SHIAMOCAR, $ISRUSORD, $CODBOD, $USERNAME, $FIRSTNAME, $LASTNAME, $GRANDTOTAL, $torden){
 
-        $KITITEMID = $SHIADD1 = $SHIADD2 = $SHIPHONUM = $EBAYSALREC = $INVPRI = $SHICAR = $COMPANYID = $STATIONID = $CUSSERSTA = $TAXRATE = $TAXTOTAL = $GOOORDNUM = $ISINDIS = $DISSTAON = $PAYFEETOT = $POSFEETOT = $FINVALTOT = $SHIWEITOTO = $TRANUM = $LOCNOT = $UPC = $MARSOU = $GIFTWRAP = $MARDISCOUN = $CODMOVBOD = $CODPOLIZA = $CODCOS = $CODAMADET = $CODAMABAL = $ORDERUNITS = $OLDSTATE = $LIQID = $SHIAMOCAR = $LIQID2 = $LIQID3 = $LIQID4 = $LIQID5 = 0;
+        session_start();
+        include_once ($_SERVER['DOCUMENT_ROOT'] . '/php/coneccion.php');
+        $KITITEMID = $SHIPHONUM = $EBAYSALREC = $INVPRI = $SHICAR = $COMPANYID = $STATIONID = $CUSSERSTA = $TAXRATE = $TAXTOTAL = $GOOORDNUM = $ISINDIS = $DISSTAON = $PAYFEETOT = $POSFEETOT = $FINVALTOT = $SHIWEITOTO = $TRANUM = $LOCNOT = $UPC = $MARSOU = $GIFTWRAP = $MARDISCOUN = $CODMOVBOD = $CODPOLIZA = $CODCOS = $CODAMADET = $CODAMABAL = $ORDERUNITS = $OLDSTATE = $LIQID = $LIQID2 = $LIQID3 = $LIQID4 = $LIQID5 = '';
 
-        $CODORDEN = sys2015();
         $ORDERID = $ORDSOUORDI = getNewOrderId();
         $SITECODE = 'LS';
-        $TIMOFORD = $INVPRIDAT = date('m-d-Y');
+        $TIMOFORD = $INVPRIDAT = date('Y-m-d H:i:s');
 
         $tCustomerInfo = getCustomerInfo();
         $USERID = $tCustomerInfo['ID'];
-        $USERNAME = $SHIFIRNAM = $tCustomerInfo['NAME'];
-        $FIRSTNAME = $SHILASNAM = $tCustomerInfo['FNAME'];
-        $LASTNAME = $tCustomerInfo['LNAME'];
+//        $USERNAME = $SHIFIRNAM = $tCustomerInfo['NAME'];
+//        $FIRSTNAME = $SHILASNAM = $tCustomerInfo['FNAME'];
+//        $LASTNAME = $tCustomerInfo['LNAME'];
+        $SHIFIRNAM = $FIRSTNAME;
+        $SHILASNAM = $LASTNAME;
 
-        $GRANDTOTAL = $ORDSOUORDT = ($SUBTOTAL + $SHITOT + $ORDDISTOT);
+//        $GRANDTOTAL = $ORDSOUORDT = ($SUBTOTAL + $SHITOT + $ORDDISTOT);
 
         $CODPROV = $_SESSION['codprov'];
 
-        $ORDSOU = 'Local Store';
+        $ORDSOU = 'Local_Store';
+        $CODTORDEN = $torden;
+
+        $CREATOR = $_SESSION["user"];
 
         $query = "
-        INSERT INTO tra_ord_enc (CODORDEN, ORDERID, KITITEMID, USERID, USERNAME, FIRSTNAME, LASTNAME, SITECODE, TIMOFORD, SUBTOTAL, SHITOT, ORDDISTOT, GRANDTOTAL, ESTATUS, PAYSTA, PAYDAT, PAYREFNUM, PAYMET, SHISTA, SHIPDATE, SHIFEE, SHIFIRNAM, SHILASNAM, SHIADD1, SHIADD2, SHIPCITY, SHIPSTATE, SHIZIPCOD, SHICOU, SHIPHONUM, ORDSOU, ORDSOUORDI, EBAYSALREC, SHIMETSEL, ISRUSORD, INVPRI, INVPRIDAT, SHICAR, COMPANYID, ORDSOUORDT, STATIONID, CUSSERSTA, TAXRATE, TAXTOTAL, GOOORDNUM, ISINDIS, DISSTAON, PAYFEETOT, POSFEETOT, FINVALTOT, SHIWEITOTO, TRANUM, LOCNOT, UPC, MARSOU, GIFTWRAP, MARDISCOUN, CODMOVBOD, CODPOLIZA, CODCOS, CODAMADET, CODAMABAL, ORDERUNITS, OLDSTATE, LIQID, SHIAMOCAR, LIQID2, LIQID3, LIQID4, LIQID5, CODPROV) VALUES (
+        INSERT INTO tra_ord_enc (CODORDEN, ORDERID, KITITEMID, USERID, USERNAME, FIRSTNAME, LASTNAME, SITECODE, TIMOFORD, SUBTOTAL, SHITOT, ORDDISTOT, GRANDTOTAL, ESTATUS, PAYSTA, PAYDAT, PAYREFNUM, PAYMET, SHISTA, SHIPDATE, SHIFEE, SHIFIRNAM, SHILASNAM, SHIADD1, SHIADD2, SHIPCITY, SHIPSTATE, SHIZIPCOD, SHICOU, SHIPHONUM, ORDSOU, ORDSOUORDI, EBAYSALREC, SHIMETSEL, ISRUSORD, INVPRI, INVPRIDAT, SHICAR, COMPANYID, ORDSOUORDT, STATIONID, CUSSERSTA, TAXRATE, TAXTOTAL, GOOORDNUM, ISINDIS, DISSTAON, PAYFEETOT, POSFEETOT, FINVALTOT, SHIWEITOTO, TRANUM, LOCNOT, UPC, MARSOU, GIFTWRAP, MARDISCOUN, CODMOVBOD, CODPOLIZA, CODCOS, CODAMADET, CODAMABAL, ORDERUNITS, OLDSTATE, LIQID, SHIAMOCAR, LIQID2, LIQID3, LIQID4, LIQID5, CODPROVE, CODTORDEN, CODBOD, CREATOR) VALUES (
         '$CODORDEN',/*CODORDEN*/
         '$ORDERID',/*ORDERID*/
         '$KITITEMID',/*KITITEMID*/
@@ -153,7 +205,7 @@
         '$SHIMETSEL',/*SHIMETSEL*/
         '$ISRUSORD',/*ISRUSORD*/
         '$INVPRI',/*INVPRI*/
-        '$INVPRIDAT',/*INVPRIDAT*/
+        '$INVPRIDAT',/*INVPRIDAT*/ 
         '$SHICAR',/*SHICAR*/
         '$COMPANYID',/*COMPANYID*/
         '$ORDSOUORDT',/*ORDSOUORDT*/
@@ -179,7 +231,7 @@
         '$CODCOS',/*CODCOS*/
         '$CODAMADET',/*CODAMADET*/
         '$CODAMABAL',/*CODAMABAL*/
-        '$ORDERUNITS',/*ORDERUNITS*/
+          '$ORDERUNITS',/*ORDERUNITS*/
         '$OLDSTATE',/*OLDSTATE*/
         '$LIQID',/*LIQID*/
         '$SHIAMOCAR',/*SHIAMOCAR*/
@@ -187,98 +239,30 @@
         '$LIQID3',/*LIQID3*/
         '$LIQID4',/*LIQID4*/
         '$LIQID5',/*LIQID5*/
-        '$CODPROV'/*CODPROV*/);
+        '$CODPROV',/*CODPROV*/
+        '$CODTORDEN',/*CODPROV*/
+        '$CODBOD',/*CODBOD*/
+        '$CREATOR'/*CREATOR*/
+        );
         ";
 
-        //$tRes = mysqli_query(conexionProveedorLocal($_SESSION['pais']), $query);
-        echo $query;
+        session_start();
+        $_SESSION["CODORDEN"] = $CODORDEN;
+        $_SESSION["CODBODEGA"] = $CODBOD;
+        $tRes = mysqli_query(conexion($_SESSION['pais']), $query);
+//        echo $query;
+        return $ORDERID;
     }
 
-    function updateOrderEnc(){
+    function insertOrderDet($CODORDEN, $PRODUCTID, $DISNAM, $QTY, $ORIUNIPRI){
 
-        $CODORDEN = $ORDERID = $KITITEMID = $USERID = $USERNAME = $FIRSTNAME = $LASTNAME = $SITECODE = $TIMOFORD = $SUBTOTAL = $SHITOT = $ORDDISTOT = $GRANDTOTAL = $ESTATUS = $PAYSTA = $PAYDAT = $PAYREFNUM = $PAYMET = $SHISTA = $SHIPDATE = $SHIFEE = $SHIFIRNAM = $SHILASNAM = $SHIADD1 = $SHIADD2 = $SHIPCITY = $SHIPSTATE = $SHIZIPCOD = $SHICOU = $SHIPHONUM = $ORDSOU = $ORDSOUORDI = $EBAYSALREC = $SHIMETSEL = $ISRUSORD = $INVPRI = $INVPRIDAT = $SHICAR = $COMPANYID = $ORDSOUORDT = $STATIONID = $CUSSERSTA = $TAXRATE = $TAXTOTAL = $GOOORDNUM = $ISINDIS = $DISSTAON = $PAYFEETOT = $POSFEETOT = $FINVALTOT = $SHIWEITOTO = $TRANUM = $LOCNOT = $UPC = $MARSOU = $GIFTWRAP = $MARDISCOUN = $CODMOVBOD = $CODPOLIZA = $CODCOS = $CODAMADET = $CODAMABAL = $ORDERUNITS = $OLDSTATE = $LIQID = $SHIAMOCAR = $LIQID2 = $LIQID3 = $LIQID4 = $LIQID5 = $CODPROV = 0;
+        session_start();
+        include_once ($_SERVER['DOCUMENT_ROOT'] . '/php/coneccion.php');
+        $ORDITEID = $EBAYITEMID = $BACORDQTY = $ORISHICOS = $ADJUNIPRI = $ADJSHICOS = $INVAVAQTY = $UPC = $CODAMABAL = $QUAPUR = $LIQID = $BUCLE = '';
 
-        $query = "
-        REPLACE INTO tra_ord_enc (CODORDEN, ORDERID, KITITEMID, USERID, USERNAME, FIRSTNAME, LASTNAME, SITECODE, TIMOFORD, SUBTOTAL, SHITOT, ORDDISTOT, GRANDTOTAL, ESTATUS, PAYSTA, PAYDAT, PAYREFNUM, PAYMET, SHISTA, SHIPDATE, SHIFEE, SHIFIRNAM, SHILASNAM, SHIADD1, SHIADD2, SHIPCITY, SHIPSTATE, SHIZIPCOD, SHICOU, SHIPHONUM, ORDSOU, ORDSOUORDI, EBAYSALREC, SHIMETSEL, ISRUSORD, INVPRI, INVPRIDAT, SHICAR, COMPANYID, ORDSOUORDT, STATIONID, CUSSERSTA, TAXRATE, TAXTOTAL, GOOORDNUM, ISINDIS, DISSTAON, PAYFEETOT, POSFEETOT, FINVALTOT, SHIWEITOTO, TRANUM, LOCNOT, UPC, MARSOU, GIFTWRAP, MARDISCOUN, CODMOVBOD, CODPOLIZA, CODCOS, CODAMADET, CODAMABAL, ORDERUNITS, OLDSTATE, LIQID, SHIAMOCAR, LIQID2, LIQID3, LIQID4, LIQID5, CODPROV) VALUES (
-        '$CODORDEN',/*CODORDEN*/
-        '$ORDERID',/*ORDERID*/
-        '$KITITEMID',/*KITITEMID*/
-        '$USERID',/*USERID*/
-        '$USERNAME',/*USERNAME*/
-        '$FIRSTNAME',/*FIRSTNAME*/
-        '$LASTNAME',/*LASTNAME*/
-        '$SITECODE',/*SITECODE*/
-        '$TIMOFORD',/*TIMOFORD*/
-        '$SUBTOTAL',/*SUBTOTAL*/
-        '$SHITOT',/*SHITOT*/
-        '$ORDDISTOT',/*ORDDISTOT*/
-        '$GRANDTOTAL',/*GRANDTOTAL*/
-        '$ESTATUS',/*ESTATUS*/
-        '$PAYSTA',/*PAYSTA*/
-        '$PAYDAT',/*PAYDAT*/
-        '$PAYREFNUM',/*PAYREFNUM*/
-        '$PAYMET',/*PAYMET*/
-        '$SHISTA',/*SHISTA*/
-        '$SHIPDATE',/*SHIPDATE*/
-        '$SHIFEE',/*SHIFEE*/
-        '$SHIFIRNAM',/*SHIFIRNAM*/
-        '$SHILASNAM',/*SHILASNAM*/
-        '$SHIADD1',/*SHIADD1*/
-        '$SHIADD2',/*SHIADD2*/
-        '$SHIPCITY',/*SHIPCITY*/
-        '$SHIPSTATE',/*SHIPSTATE*/
-        '$SHIZIPCOD',/*SHIZIPCOD*/
-        '$SHICOU',/*SHICOU*/
-        '$SHIPHONUM',/*SHIPHONUM*/
-        '$ORDSOU',/*ORDSOU*/
-        '$ORDSOUORDI',/*ORDSOUORDI*/
-        '$EBAYSALREC',/*EBAYSALREC*/
-        '$SHIMETSEL',/*SHIMETSEL*/
-        '$ISRUSORD',/*ISRUSORD*/
-        '$INVPRI',/*INVPRI*/
-        '$INVPRIDAT',/*INVPRIDAT*/
-        '$SHICAR',/*SHICAR*/
-        '$COMPANYID',/*COMPANYID*/
-        '$ORDSOUORDT',/*ORDSOUORDT*/
-        '$STATIONID',/*STATIONID*/
-        '$CUSSERSTA',/*CUSSERSTA*/
-        '$TAXRATE',/*TAXRATE*/
-        '$TAXTOTAL',/*TAXTOTAL*/
-        '$GOOORDNUM',/*GOOORDNUM*/
-        '$ISINDIS',/*ISINDIS*/
-        '$DISSTAON',/*DISSTAON*/
-        '$PAYFEETOT',/*PAYFEETOT*/
-        '$POSFEETOT',/*POSFEETOT*/
-        '$FINVALTOT',/*FINVALTOT*/
-        '$SHIWEITOTO',/*SHIWEITOTO*/
-        '$TRANUM',/*TRANUM*/
-        '$LOCNOT',/*LOCNOT*/
-        '$UPC',/*UPC*/
-        '$MARSOU',/*MARSOU*/
-        '$GIFTWRAP',/*GIFTWRAP*/
-        '$MARDISCOUN',/*MARDISCOUN*/
-        '$CODMOVBOD',/*CODMOVBOD*/
-        '$CODPOLIZA',/*CODPOLIZA*/
-        '$CODCOS',/*CODCOS*/
-        '$CODAMADET',/*CODAMADET*/
-        '$CODAMABAL',/*CODAMABAL*/
-        '$ORDERUNITS',/*ORDERUNITS*/
-        '$OLDSTATE',/*OLDSTATE*/
-        '$LIQID',/*LIQID*/
-        '$SHIAMOCAR',/*SHIAMOCAR*/
-        '$LIQID2',/*LIQID2*/
-        '$LIQID3',/*LIQID3*/
-        '$LIQID4',/*LIQID4*/
-        '$LIQID5',/*LIQID5*/
-        '$CODPROV'/*CODPROV*/);
-        ";
+        $CODDETORD = sys2015();
 
-        $tRes = mysqli_query(conexionProveedorLocal($_SESSION['pais']), $query);
-    }
-
-    function insertOrderDet(){
-
-        $CODDETORD = $CODORDEN = $ORDITEID = $PRODUCTID = $QTY = $DISNAM = $LINETOTAL = $EBAYITEMID = $BACORDQTY = $ORIUNIPRI = $ORISHICOS = $ADJUNIPRI = $ADJSHICOS = $INVAVAQTY = $UPC = $CODAMABAL = $QUAPUR = $LIQID = $BUCLE = 0;
+        $LINETOTAL = $QTY * $ORIUNIPRI;
 
         $query = "
         INSERT INTO tra_ord_det (CODDETORD, CODORDEN, ORDITEID, PRODUCTID, QTY, DISNAM, LINETOTAL, EBAYITEMID, BACORDQTY, ORIUNIPRI, ORISHICOS, ADJUNIPRI, ADJSHICOS, INVAVAQTY, UPC, CODAMABAL, QUAPUR, LIQID, BUCLE) VALUES (
@@ -304,66 +288,36 @@
         );
         ";
 
-        $tRes = mysqli_query(conexionProveedorLocal($_SESSION['pais']), $query);
-    }
-
-
-    function updateOrderDet(){
-
-        $CODDETORD = $CODORDEN = $ORDITEID = $PRODUCTID = $QTY = $DISNAM = $LINETOTAL = $EBAYITEMID = $BACORDQTY = $ORIUNIPRI = $ORISHICOS = $ADJUNIPRI = $ADJSHICOS = $INVAVAQTY = $UPC = $CODAMABAL = $QUAPUR = $LIQID = $BUCLE = 0;
-
-        $query = "
-        REPLACE INTO tra_ord_det (CODDETORD, CODORDEN, ORDITEID, PRODUCTID, QTY, DISNAM, LINETOTAL, EBAYITEMID, BACORDQTY, ORIUNIPRI, ORISHICOS, ADJUNIPRI, ADJSHICOS, INVAVAQTY, UPC, CODAMABAL, QUAPUR, LIQID, BUCLE) VALUES (
-        '$CODDETORD',/*CODDETORD*/
-        '$CODORDEN',/*CODORDEN*/
-        '$ORDITEID',/*ORDITEID*/
-        '$PRODUCTID',/*PRODUCTID*/
-        '$QTY',/*QTY*/
-        '$DISNAM',/*DISNAM*/
-        '$LINETOTAL',/*LINETOTAL*/
-        '$EBAYITEMID',/*EBAYITEMID*/
-        '$BACORDQTY',/*BACORDQTY*/
-        '$ORIUNIPRI',/*ORIUNIPRI*/
-        '$ORISHICOS',/*ORISHICOS*/
-        '$ADJUNIPRI',/*ADJUNIPRI*/
-        '$ADJSHICOS',/*ADJSHICOS*/
-        '$INVAVAQTY',/*INVAVAQTY*/
-        '$UPC',/*UPC*/ 
-        '$CODAMABAL',/*CODAMABAL*/
-        '$QUAPUR',/*QUAPUR*/
-        '$LIQID',/*LIQID*/
-        '$BUCLE'/*BUCLE*/
-        );
-        ";
-
-        $tRes = mysqli_query(conexionProveedorLocal($_SESSION['pais']), $query);
+        $tRes = mysqli_query(conexion($_SESSION['pais']), $query);
+//        echo $query;
     }
 
     function getNewOrderId(){
-        $qry = "SELECT ORDERID FROM tra_ord_enc WHERE CODTORDEN = 'LOCALES' ORDER BY ORDERID DESC LIMIT 1;";
+        $qry = "SELECT CONT FROM cat_sal_cha WHERE CODCHAN = '_4EX0MEELT';";
         $res = mysqli_query(conexion($_SESSION['pais']), $qry);
         $response = '';
         if($res){
             if($res->num_rows > 0){
-                $response = ((int)mysqli_fetch_array($res)[0]) + 1;
+                $response = ((int)mysqli_fetch_array($res)[0]+ 1);
+                mysqli_query(conexion($_SESSION["pais"]), "UPDATE cat_sal_cha SET CONT = '$response' WHERE CODCHAN = '_4EX0MEELT';");
             }
             else{
                 $tCountryCodeQry = "SELECT CODIGO FROM direct WHERE nomPais = '".$_SESSION['pais']."';";
-                $tCountryCodeRes = mysqli_query(conexion(), $tCountryCodeQry);
+                $tCountryCodeRes = mysqli_query(conexion($_SESSION["pais"]), $tCountryCodeQry);
                 $tCountryCode = '';
                 if($tCountryCodeRes){
                     if($tCountryCodeRes->num_rows > 0){
                         $tCountryCode = mysqli_fetch_array($tCountryCodeRes)[0];
                     }
                 }
-                $response = str_pad($tCountryCode, 9, '0') . '1';
+                $response = str_pad($tCountryCode, (9), '0') . '1';
             }
         }
         return $response;
     }
 
-    function getCustomerInfo($customerId){
-        $qry = "SELECT ID, NAME, FNAME, LNAME FROM cat_customer WHERE '$customerId';";
+    function getCustomerInfo(){
+        $qry = "SELECT ID, NAME, FNAME, LNAME FROM cat_customer limit 1;";
         $res = mysqli_query(conexion($_SESSION['pais']), $qry);
         $response = '';
         if($res){

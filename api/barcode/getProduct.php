@@ -22,7 +22,7 @@ while ($countriesRow = mysqli_fetch_array($countriesR)) {
 
     $productQ = "
         SELECT 
-            codprod, descsis
+            codprod, prodname
         FROM
             cat_prod
         WHERE
@@ -36,7 +36,7 @@ while ($countriesRow = mysqli_fetch_array($countriesR)) {
         $validProduct = true;
         $product = mysqli_fetch_array($productR);
         $codprod = $product["codprod"];
-        $descsis = $product["descsis"];
+        $descsis = $product["prodname"];
 
         $exiQ = "
             SELECT 
