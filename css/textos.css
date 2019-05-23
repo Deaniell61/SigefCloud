@@ -7,60 +7,60 @@
 
 .entradaTexto{
     
-     border-radius: 10px 10px 10px 10px;
-     padding: 5px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 5px;
 
 
-    
+   
 }
 .entradaTextoBuscar{
+   
+    border-radius: 10px 10px 10px 10px;
+    padding: 5px;
+    height: 30px;
     
-     border-radius: 10px 10px 10px 10px;
-     padding: 5px;
-     height: 30px;
-     
 
 
-    
+   
 }
 
- .entradaTexto:focus{
-      outline: none;
-    border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;
+.entradaTexto:focus{
+     outline: none;
+   border-color: #9ecaed;
+   box-shadow: 0 0 10px #9ecaed;
 }
 
 
 
 /*card */
-      
+     
 .imagencard
 {
-    width: 110px;
-    height: 110px;
-    
-    
+   width: 110px;
+   height: 110px;
+   
+   
 }
 
 
 
 
-       h3{
-            
-           font-size: 16px;
-            
-        }
+      h3{
+           
+          font-size: 16px;
+           
+       }
+      
        
-        
-        .fondo{
-            
-            background: #E0E0E0   ;
-            width:150px;
-            height: 150px;
-        }
+       .fondo{
+           
+           background: #E0E0E0   ;
+           width:150px;
+           height: 150px;
+       }
 .validaraster{
-    
-   font-size: 20px;
-   color: red;
+   
+  font-size: 20px;
+  color: red;
 }
 

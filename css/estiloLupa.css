@@ -3,115 +3,115 @@
  * For more information www.facebook.com/DEANIELL6195
  * Unique creator
  */
-#lupa
-{
-	width:400px;
-	height:400px;
-	position: fixed;
-	border:1px solid #000;
-	overflow:hidden;
-	z-index: 3;
-	left: 28%;
-	top:23%;
-	background-color:#ffffff;
-}
-#im
-{
-	position: relative; 
-	left:0;
-	top:0;
-}
-#formulario form table tr td #im0
-{
-	cursor: url(lupa.png), crosshair;
-	position: relative;
-}
-
-.col3{
-            
-            width: 120px;
-            height: 120px;
-          
-           
-        }
-        
-        #contenidos{
-            
-           float: left;
-            width: 450px;
-            height: 450px;
-            border: solid 7px;
-            padding: 15px;
-          
-            
-        }
-        
-        
-        #imap{
-            
-            width: 500px;
-            height: 500px;
-            
-        }
-        
-        #imc{
-            
-            padding: 5px;
-            
-        }
-       
-        
-        
-        .mover {
-        	width: 530px;
-   display: -webkit-flex;
-   display: flex;
-   -webkit-flex-wrap: wrap;
-   flex-wrap: wrap;
-   margin-left: 2%;
-}
-.mover li{
-   display: -webkit-flex;
-   display: flex;
-}
-
-.bor{
-            
-            border: 5px solid;
+ #lupa
+ {
+     width:400px;
+     height:400px;
+     position: fixed;
+     border:1px solid #000;
+     overflow:hidden;
+     z-index: 3;
+     left: 28%;
+     top:23%;
+     background-color:#ffffff;
+ }
+ #im
+ {
+     position: relative; 
+     left:0;
+     top:0;
+ }
+ #formulario form table tr td #im0
+ {
+     cursor: url(lupa.png), crosshair;
+     position: relative;
+ }
+ 
+ .col3{
+             
              width: 120px;
-            height: 130px;
-            margin: 5px;
-             padding-left: 15px;
-              padding-bottom: 25px;
-               padding-right: 15px;
-        }
-
-
-.borrarimagen{
-    
-    width: 16px;
-    height: 16px;
-  
-}
-
-.imagenderecha{
-    
-   height: 15px;
- width: 15px;
-
-margin-right: 25px;
-    
-    
-}
-
-
-.imagenizquierda{
- height: 15px;
- width: 15px;
-    
-    margin-left: 25px;
-    
-
-    
-    
-}
+             height: 120px;
+           
+            
+         }
+         
+         #contenidos{
+             
+            float: left;
+             width: 450px;
+             height: 450px;
+             border: solid 7px;
+             padding: 15px;
+           
+             
+         }
+         
+         
+         #imap{
+             
+             width: 500px;
+             height: 500px;
+             
+         }
+         
+         #imc{
+             
+             padding: 5px;
+             
+         }
+        
+         
+         
+         .mover {
+             width: 530px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 2%;
+ }
+ .mover li{
+    display: -webkit-flex;
+    display: flex;
+ }
+ 
+ .bor{
+             
+             border: 5px solid;
+              width: 120px;
+             height: 130px;
+             margin: 5px;
+              padding-left: 15px;
+               padding-bottom: 25px;
+                padding-right: 15px;
+         }
+ 
+ 
+ .borrarimagen{
+     
+     width: 16px;
+     height: 16px;
+   
+ }
+ 
+ .imagenderecha{
+     
+    height: 15px;
+  width: 15px;
+ 
+ margin-right: 25px;
+     
+     
+ }
+ 
+ 
+ .imagenizquierda{
+  height: 15px;
+  width: 15px;
+     
+     margin-left: 25px;
+     
+ 
+     
+     
+ }

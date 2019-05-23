@@ -1,3 +1,4 @@
+
 var products = {
     getProduct: function (mCallback, mMasterSKU) {
         $.ajax({
@@ -9,7 +10,7 @@ var products = {
             },
             success: function (response) {
                 var tResponse = JSON.parse(response);
-                // console.log(tResponse);
+                console.log("D1:" + tResponse);
                 mCallback(tResponse);
             },
             error: function (response) {

@@ -94,7 +94,7 @@ include_once ("upsCsv.php");
 
 
 
-        $("#newOrderForm").tabs("option", "active", 0);
+        $("#newOrderForm").tabs("option", "active", 0,null);
 
         $("#saveOrderButton").prop('disabled', false);
 
@@ -539,7 +539,7 @@ include_once ("upsCsv.php");
             </div>
             <div class="col grey">
                 <input class='cmd button button-highlight button-pill' type="button"
-                       onClick="openNewOrderForm();"
+                       onClick="openNewOrderForm();document.getElementById('orderDetTable').hidden=true;"
                        value="<?php echo $lang[$idioma]['newOrder'] ?>"/>
 
                 <input type="text" class='entradaTexto' id="buscar" name="buscar"
@@ -636,903 +636,955 @@ include_once ("upsCsv.php");
     </div>
     <!--tab container-->
     <ul>
-        <li><a href="#tabs-1"><?= $lang[$idioma]['ordertitle'] ?></a></li>
-        <li><a href="#tabs-2"><?= $lang[$idioma]['shippingTitle'] ?></a></li>
-        <li><a href="#tabs-3"><?= $lang[$idioma]['orderDetail'] ?></a></li>
+        <li onclick="document.getElementById('orderDetTable').hidden=true"><a href="#tabs-1"><?= $lang[$idioma]['ordertitle'] ?></a></li>
+        <li onclick="document.getElementById('orderDetTable').hidden=true"><a href="#tabs-2"><?= $lang[$idioma]['shippingTitle'] ?></a></li>
+        <li onclick="document.getElementById('orderDetTable').hidden=false"><a href="#tabs-3"><?= $lang[$idioma]['orderDetail'] ?></a></li>
     </ul>
     <div style="width: 100%; height: 225px;">
         <!--row1-->
         <!--<div style="width: 100%; text-align: center; font-weight: bold;"><?= $lang[$idioma]['ordertitle'] ?></div>-->
         <div id="tabs-1" style="width: 100%; height: 240px; display: flex;  justify-content: center;">
+            
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div  class="frame">
+                        <!--<div style="width: 100%; text-align: center; font-weight: bold;"><?= $lang[$idioma]['ordertitle'] ?></div>-->
+                        <!--order id-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['orderId'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input disabled
+                                    type="text"
+                                    id="orderid"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--date-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['date'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="date"
+                                    id="date"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+
+
+                        <!--order channel-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['orderChannel'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input disabled
+                                    type="text"
+                                    id="orderChannel"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value="Local Store"/>
+                            </div>
+                        </div>
+                        <!--payment status-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['paymentStatus'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <?php
+                                $tDropdownBuilder->build("paysta", "NOMBRE", "NOMBRE", "NoPayment", "cat_pay_sta", 0, "WHERE APLICA = '1'");
+                                ?>
+                                <img id="test"
+                                    src="/images/document_add.png"
+                                    onclick="dropdownBuilder.openAddRecordForm('paymentStatusForm', 'paysta', $('#paysta').val(), true);"/>
+                                <img id="test"
+                                    src="/images/editar.png"
+                                    width="21px"
+                                    height="21px"
+                                    onclick="dropdownBuilder.openAddRecordForm('paymentStatusForm', 'paysta', $('#paysta').val(), false);"/>
+                            </div>
+                        </div>
+                        <!--payment method-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['paymentMethod'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <?php
+                                $tDropdownBuilder->build("paymet", "NOMBRE", "NOMBRE", "Cash", "cat_pay_mdo", 0, "WHERE APLICA = '1'");
+                                ?>
+                            </div>
+                        </div>
+                        <!--payment ref number-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['paymentRefNumber'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="payrefnum"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div style="width: 350px; height: 35rem;" class="frame">
+                        <div style="width: 100%; text-align: center; font-weight: bold;"></div>
+
+                        <!--username-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['username'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="username"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--firstaname-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['firstname'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="Bfirstname"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--lastname-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['lastname'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="Blastname"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+
+                        <!--shicou-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shicou'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <?php
+                                $tDropdownBuilder->build("Bshicou", "CODECO", "NOMBRE", "Estados Unidos de América", "cat_country", 0,null);
+                                ?>
+                            </div>
+                        </div>
+                        <!--shipstate-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shipstate'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <?php
+                                $tDropdownBuilder->build("Bshipstate", "CODIGO", "NOMBRE", "Alabama", "cat_estados", 0,null);
+                                ?>
+                            </div>
+                        </div>
+                        <!--shipcity-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shipcity'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="Bshipcity"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+
+                        <!--zipcode-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['ZipCode'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="BextraZipcode"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+
+                        <!--shiadd1-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shiadd1'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="BextraAddress1"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+
+                        <!--shiadd2-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shiadd2'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="BextraAddress2"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+
+
+                        <!--phone-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['Telefono'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="BextraPhone"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                   <div  class="frame">
+                        <div style="width: 100%; text-align: center; font-weight: bold;"></div>
+                        <!--site-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['site'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input disabled
+                                    type="text"
+                                    id="site"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value="LS"/>
+                            </div>
+                        </div>
+                        <!--paydate-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['paydate'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="date"
+                                    id="paydat"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--channel-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['channel'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="channel"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--warehouse-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['Warehouse'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <?php
+                                include_once($_SERVER["DOCUMENT_ROOT"] . "/php/coneccion.php");
+                                $query = "SELECT CODBODEGA, UBICACION FROM cat_bodegas;";
+                                $result = mysqli_query(conexion($_SESSION["pais"]), $query);
+                                echo "<select id='CODBOD' class='entradaTextoDrop'>";
+                                while ($row = mysqli_fetch_array($result)) {
+        //                                $response[$row[0]] = $row[0];
+                                    echo "<option value='$row[0]'>$row[1]</option>";
+                                }
+                                echo "</select>";
+                                ?>
+                            </div>
+                        </div>
+                        <!--torden-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                Tipo de Orden
+                            </div>
+                            <div class="rightSide">
+                                <select id="TORDEN" class="entradaTextoDrop">
+                                    <option value="OFL">
+                                        ORDER OFFLINE
+                                    </option>
+                                    <option value="TES">
+                                        SAMPLES ORDER
+                                    </option>
+                                    <option value="SHI">
+                                        SHIPPING ORDER
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!--                new fields-->
+
+                        <!--company-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['company'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="extraCompany"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+
+
+                        <!--firstname
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['firstname'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="extraFirstname"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+        -->
+                        <!--lastname
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['lastname'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="extraLastname"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+        -->
+
+
+                        <!--userID-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['id'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="extraUserID"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--TEST
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                TEST
+                            </div>
+                            <div class="rightSide">
+                                <?php
+                        $tDropdownBuilder->build("paises", "NOMBRE", "NOMBRE", "FreeEconom", "cat_country", 0,null);
+                        ?>
+                            </div>
+                        </div>-->
+                    </div> 
+                </div>
+            </div>
+            
             <!--bloque1-->
-            <div style="width: 350px; height: 100%;" class="frame">
-                <!--<div style="width: 100%; text-align: center; font-weight: bold;"><?= $lang[$idioma]['ordertitle'] ?></div>-->
-                <!--order id-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['orderId'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input disabled
-                               type="text"
-                               id="orderid"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--date-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['date'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="date"
-                               id="date"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-
-
-                <!--order channel-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['orderChannel'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input disabled
-                               type="text"
-                               id="orderChannel"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value="Local Store"/>
-                    </div>
-                </div>
-                <!--payment status-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['paymentStatus'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <?php
-                        $tDropdownBuilder->build("paysta", "NOMBRE", "NOMBRE", "NoPayment", "cat_pay_sta", 0, "WHERE APLICA = '1'");
-                        ?>
-                        <img id="test"
-                             src="/images/document_add.png"
-                             onclick="dropdownBuilder.openAddRecordForm('paymentStatusForm', 'paysta', $('#paysta').val(), true);"/>
-                        <img id="test"
-                             src="/images/editar.png"
-                             width="21px"
-                             height="21px"
-                             onclick="dropdownBuilder.openAddRecordForm('paymentStatusForm', 'paysta', $('#paysta').val(), false);"/>
-                    </div>
-                </div>
-                <!--payment method-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['paymentMethod'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <?php
-                        $tDropdownBuilder->build("paymet", "NOMBRE", "NOMBRE", "Cash", "cat_pay_mdo", 0, "WHERE APLICA = '1'");
-                        ?>
-                    </div>
-                </div>
-                <!--payment ref number-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['paymentRefNumber'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="payrefnum"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-
-            </div>
+            
             <!--bloque2-->
-            <div style="width: 350px; height: 100%;" class="frame">
-                <div style="width: 100%; text-align: center; font-weight: bold;"></div>
-
-                <!--username-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['username'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="username"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--firstaname-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['firstname'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="Bfirstname"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--lastname-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['lastname'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="Blastname"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-
-                <!--shicou-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shicou'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <?php
-                        $tDropdownBuilder->build("Bshicou", "CODECO", "NOMBRE", "Estados Unidos de América", "cat_country", 0);
-                        ?>
-                    </div>
-                </div>
-                <!--shipstate-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shipstate'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <?php
-                        $tDropdownBuilder->build("Bshipstate", "CODIGO", "NOMBRE", "Alabama", "cat_estados", 0);
-                        ?>
-                    </div>
-                </div>
-                <!--shipcity-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shipcity'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="Bshipcity"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-
-                <!--zipcode-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['ZipCode'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="BextraZipcode"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-
-                <!--shiadd1-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shiadd1'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="BextraAddress1"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-
-                <!--shiadd2-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shiadd2'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="BextraAddress2"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-
-
-                <!--phone-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['Telefono'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="BextraPhone"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-            </div>
+            
             <!--bloque3-->
-            <div style="width: 350px; height: 100%;" class="frame">
-                <div style="width: 100%; text-align: center; font-weight: bold;"></div>
-                <!--site-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['site'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input disabled
-                               type="text"
-                               id="site"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value="LS"/>
-                    </div>
-                </div>
-                <!--paydate-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['paydate'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="date"
-                               id="paydat"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--channel-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['channel'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="channel"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--warehouse-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['Warehouse'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <?php
-                        include_once($_SERVER["DOCUMENT_ROOT"] . "/php/coneccion.php");
-                        $query = "SELECT CODBODEGA, UBICACION FROM cat_bodegas;";
-                        $result = mysqli_query(conexion($_SESSION["pais"]), $query);
-                        echo "<select id='CODBOD' class='entradaTextoDrop'>";
-                        while ($row = mysqli_fetch_array($result)) {
-//                                $response[$row[0]] = $row[0];
-                            echo "<option value='$row[0]'>$row[1]</option>";
-                        }
-                        echo "</select>";
-                        ?>
-                    </div>
-                </div>
-                <!--torden-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        Tipo de Orden
-                    </div>
-                    <div class="rightSide">
-                        <select id="TORDEN" class="entradaTextoDrop">
-                            <option value="OFL">
-                                ORDER OFFLINE
-                            </option>
-                            <option value="TES">
-                                SAMPLES ORDER
-                            </option>
-                            <option value="SHI">
-                                SHIPPING ORDER
-                            </option>
-                        </select>
-                    </div>
-                </div>
-
-                <!--                new fields-->
-
-                <!--company-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['company'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="extraCompany"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-
-
-                <!--firstname
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['firstname'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="extraFirstname"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
--->
-                <!--lastname
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['lastname'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="extraLastname"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
--->
-
-
-                <!--userID-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['id'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="extraUserID"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--TEST
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        TEST
-                    </div>
-                    <div class="rightSide">
-                        <?php
-                $tDropdownBuilder->build("paises", "NOMBRE", "NOMBRE", "FreeEconom", "cat_country", 0);
-                ?>
-                    </div>
-                </div>-->
-            </div>
+            
         </div>
         <!-- row2 -->
         <!--<div id="tabs-2" style="width: 100%; text-align: center; font-weight: bold;"><?= $lang[$idioma]['shippingTitle'] ?></div>-->
         <div id="tabs-2" style="width: 100%; height: 235px; display: flex; justify-content: center;" id="inputs">
             <!--<div style="width: 250px; height: 225px; border-style: solid; border-width: 2px;">-->
-            <!--ship1-->
-            <div style="width: 350px; height: 210px;" class="frame">
-                <!--shimetsel-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shimetsel'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <?php
-                        $tDropdownBuilder->build("shimetsel", "nombre", "nombre", "FreeEconom", "cat_shi_mdo", 0);
-                        ?>
-                    </div>
-                </div>
-                <!--shista-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shista'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <?php
-                        $tDropdownBuilder->build("shista", "nombre", "nombre", "Unshipped", "cat_shi_sta", 0, "WHERE APLICA = '1'");
-                        ?>
-                    </div>
-                </div>
-                <!--shipdate-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shipdate'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="date"
-                               id="shipdate"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--shifee-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shifee'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="shifee"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--rusord-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['isrusord'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="checkbox"
-                               id="isrusord"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-            </div>
-            <!--ship2-->
-            <div style="width: 350px; height: 210px;" class="frame">
-                <!--firstaname-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['firstname'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="firstname"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--lastname-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['lastname'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="lastname"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
+            <style>
+            .entradaTextoDrop{
+                width: 100%!important;
+            }
+            .pt-3{
+                padding-top:3rem;
+            }
+            .pt-5{
+                padding-top:5rem;
+            }
+            .mb-3{
+                margin-bottom:3rem;
+            }
+            </style>
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+                    <div style="width: 350px; height: 210px;" class="frame pt-3">
+                        <!--shimetsel-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shimetsel'] ?>
+                            </div>
+                            <div  class="rightSide">
+                                <?php
+                                $tDropdownBuilder->build("shimetsel", "nombre", "nombre", "FreeEconom", "cat_shi_mdo", 0,null);
+                                ?>
+                            </div>
+                        </div>
+                        <!--shista-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shista'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <?php
+                                $tDropdownBuilder->build("shista", "nombre", "nombre", "Unshipped", "cat_shi_sta", 0, "WHERE APLICA = '1'");
+                                ?>
+                            </div>
+                        </div>
+                        <!--shipdate-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shipdate'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="date"
+                                    id="shipdate"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--shifee-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shifee'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="shifee"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--rusord-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['isrusord'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="checkbox"
+                                    id="isrusord"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!--shicou-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shicou'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <?php
-                        $tDropdownBuilder->build("shicou", "CODECO", "NOMBRE", "Estados Unidos de América", "cat_country", 0);
-                        ?>
-                    </div>
-                </div>
-                <!--shipstate-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shipstate'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <?php
-                        $tDropdownBuilder->build("shipstate", "CODIGO", "NOMBRE", "Alabama", "cat_estados", 0);
-                        ?>
-                    </div>
-                </div>
-                <!--shipcity-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shipcity'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="shipcity"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--shizipcod-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shizipcod'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="shizipcod"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--shiadd1-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shiadd1'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="shiadd1"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--shiadd2-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shiadd2'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="shiadd2"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
+                
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+                    <div style="heigth:100%;" class="frame mb-3">
+                        <!--firstaname-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['firstname'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="firstname"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--lastname-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['lastname'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="lastname"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--shicou-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shicou'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <?php
+                                $tDropdownBuilder->build("shicou", "CODECO", "NOMBRE", "Estados Unidos de América", "cat_country", 0,null);
+                                ?>
+                            </div>
+                        </div>
+                        <!--shipstate-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shipstate'] ?>
+                            </div>
+                            <div  class="rightSide">
+                                <?php
+                                $tDropdownBuilder->build("shipstate", "CODIGO", "NOMBRE", "Alabama", "cat_estados", 0,null);
+                                ?>
+                            </div>
+                        </div>
+                        <!--shipcity-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shipcity'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="shipcity"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--shizipcod-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shizipcod'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="shizipcod"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--shiadd1-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shiadd1'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="shiadd1"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--shiadd2-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shiadd2'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="shiadd2"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
 
-                <!--phone-->
-                <div style="width: 100%;">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['Telefono'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="extraPhone"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
+                        <!--phone-->
+                        <div style="width: 100%;">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['Telefono'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="extraPhone"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+                    <div style="width: 350px; height: 210px;" class="frame pt-5">
+                        <!--<div style="width: 100%; text-align: center; font-weight: bold;"><?= $lang[$idioma]['paytitle'] ?></div>-->
+                        <!--tracking-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['tracking'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="tracking"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--status-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['status'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="status"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--shiamocar-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shiamocar'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="shiamocar"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--paysta
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['paysta'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="paysta"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>-->
+                        <!--paydat
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['paydat'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="paydat"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>-->
+                        <!--payrefnum
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['payrefnum'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="payrefnum"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>-->
+                        <!--paymet
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['paymet'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="paymet"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+                
             </div>
+            
+            <!--ship1-->
+            
+            <!--ship2-->
+            
             <!--ext-->
-            <div style="width: 350px; height: 210px;" class="frame">
-                <!--<div style="width: 100%; text-align: center; font-weight: bold;"><?= $lang[$idioma]['paytitle'] ?></div>-->
-                <!--tracking-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['tracking'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="tracking"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--status-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['status'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="status"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--shiamocar-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shiamocar'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="shiamocar"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>
-                <!--paysta
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['paysta'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="paysta"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>-->
-                <!--paydat
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['paydat'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="paydat"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>-->
-                <!--payrefnum
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['payrefnum'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="payrefnum"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>-->
-                <!--paymet
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['paymet'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="paymet"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>-->
-            </div>
+            
         </div>
         <!-- row3 -->
-        <div id="tabs-3" style="width: 100%; height: 225px; justify-content: center;" id="inputs">
-            <!--<div style="width: 250px; height: 225px; border-style: solid; border-width: 2px;">-->
-            <!--payment-->
-            <!--
-            <div style="width: 810px; height: 175px;" class="frame">
+        <div id="tabs-3" class="row" style="width: 100%; height: 225px; justify-content: center;" id="inputs">
+            
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div style="width: 350px; height: 210px;" class="frame">
 
-                <div style="width: 100%; text-align: center">
-                    <div style="width: 100%">
-                        <div class="leftSide">
+                        <div style="width: 100%; text-align: center">
+                            <div style="width: 100%">
+                                <div class="leftSide">
 
-                        </div>
-                        <div class="rightSide">
+                                </div>
+                                <div class="rightSide">
 
-                        </div>
-                    </div>
-                    <br>
+                                </div>
+                            </div>
+                            <br>
 
-                    <div style="width: 100%">
-                        <input type="button" value="<?= $lang[$idioma]['Buscar'] ?>"
-                               onclick="getProduct(getProductCallback)"
-                               class="cmd button button-highlight button-pill"/>
-                    </div>
-                    <div style="width: 100%">
-                        <div class="leftSide">
+                            <div style="width: 100%">
+                                <input type="button" value="<?= $lang[$idioma]['Buscar'] ?>"
+                                    onclick="getProduct(getProductCallback)"
+                                    class="cmd button button-highlight button-pill"/>
+                            </div>
+                            <div style="width: 100%">
+                                <div class="leftSide">
 
-                        </div>
-                        <div class="rightSide">
+                                </div>
+                                <div class="rightSide">
 
-                        </div>
-                    </div>
-                    <div style="width: 100%">
-                        <div class="leftSide">
+                                </div>
+                            </div>
+                            <div style="width: 100%">
+                                <div class="leftSide">
 
-                        </div>
-                        <div class="rightSide" style="padding: 0px 0px 0px 15%">
-                            <div style="width: 166px">
+                                </div>
+                                <div class="rightSide" style="padding: 0px 0px 0px 15%">
+                                    <div style="width: 166px">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div hidden id="nPrice" style="width: 100%">
+                                <div class="leftSide">
+
+                                </div>
+                                <div class="rightSide" style="padding: 0px 0px 0px 15%">
+                                    <div style="width: 166px; float:  left">
+
+                                    </div>
+                                    <img id="test"
+                                        style="float: left"
+                                        src="/images/add.png"
+                                        onclick="setNPrice()"/>
+                                    <p id="newPPResponse"></p>
+                                </div>
+                            </div>
+                            <br>
+                            <div style="width: 100%">
 
                             </div>
                         </div>
                     </div>
-                    <div hidden id="nPrice" style="width: 100%">
-                        <div class="leftSide">
-
-                        </div>
-                        <div class="rightSide" style="padding: 0px 0px 0px 15%">
-                            <div style="width: 166px; float:  left">
-
+                </div>
+                
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="frame">
+                        <!--subtotal-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['subtotal'] ?>
                             </div>
-                            <img id="test"
-                                 style="float: left"
-                                 src="/images/add.png"
-                                 onclick="setNPrice()"/>
-                            <p id="newPPResponse"></p>
+                            <div class="rightSide">
+                                <input disabled
+                                    type="text"
+                                    id="subtotal"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value="0"/>
+                            </div>
                         </div>
-                    </div>
-                    <br>
-                    <div style="width: 100%">
-
+                        <!--shitot-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['shitot'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input disabled
+                                    type="text"
+                                    id="shitot"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value="0"/>
+                            </div>
+                        </div>
+                        <!--orddistot-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['orddistot'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input
+                                        type="text"
+                                        id="orddistot"
+                                        class='entradaTextoBuscar'
+                                        placeholder=""
+                                        value="0"/>
+                            </div>
+                        </div>
+                        <!--cantidad-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['cantidad'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input disabled
+                                    type="text"
+                                    id="totalQuantity"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value="0"/>
+                            </div>
+                        </div>
+                        <!--grandtotal-->
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['grandtotal'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input disabled
+                                    type="text"
+                                    id="grandtotal"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value="0"/>
+                            </div>
+                        </div>
+                        <!--estatus
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['estatus'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="estatus"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>-->
+                        <!--isrusord
+                        <div style="width: 100%">
+                            <div class="leftSide">
+                                <?= $lang[$idioma]['isrusord'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="isrusord"
+                                    class='entradaTextoBuscar'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>-->
                     </div>
                 </div>
-            </div>
-            -->
-            <div style="width: 33%; height: 115px;" class="frame">
-                <!--subtotal-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['subtotal'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input disabled
-                               type="text"
-                               id="subtotal"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value="0"/>
-                    </div>
-                </div>
-                <!--shitot-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['shitot'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input disabled
-                               type="text"
-                               id="shitot"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value="0"/>
-                    </div>
-                </div>
-                <!--orddistot-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['orddistot'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input
-                                type="text"
-                                id="orddistot"
+                
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div style="width: 350px; height: 210px;" class="frame">
+                        <div>
+                            <?= $lang[$idioma]['MasterSKU'] ?>
+                            <!--
+                            <?= $lang[$idioma]['MasterSKU'] ?>
+                            <input type="text"
+                                id="codprodinp"
+                                class='entradaTextoBuscar'
+                                placeholder=""
+                                value=""/>
+                            <input style="width: 166px" type="button" value="<?= $lang[$idioma]['Buscar'] ?>"
+                                onclick="getProduct(getProductCallback)"
+                                class="cmd button button-highlight button-pill"/>
+                            -->
+                            <input type="text"
+                                id="autocompleteProductInput"
+                                class='entradaTextoBuscar'
+                                placeholder=""
+                                value=""/>
+                        </div>
+                        <div style="width: 25%; height: 100%; float: left; padding: 10px">
+                            <div id="prodInfo" style="font-size: 12px"></div>
+                        </div>
+                        <div >
+                            <?= $lang[$idioma]['unidadDespacho'] ?>
+                            <?php
+                            $tDropdownBuilder->build("unidespa", "CODUNIDES", "NOMBRE", "", "cat_uni_des", 0,null);
+                            ?>
+                        </div>
+                        <div >
+                            <?= $lang[$idioma]['qty'] ?>
+                            <input type="text"
+                                id="quant"
                                 class='entradaTextoBuscar'
                                 placeholder=""
                                 value="0"/>
+                        </div>
+                        <div >
+                            Precio
+                            <input type="text"
+                                id="newPPrice"
+                                class='entradaTextoBuscar'
+                                placeholder=""
+                                value="0"/>
+                        </div>
+                        <div style="width: 15%; height: 100%; float: left; margin-top: 15px">
+                            <input type="button" value="<?= $lang[$idioma]['Agregar'] ?>" onclick="addProductToTable()"
+                                class="cmd button button-highlight button-pill"/>
+                        </div>
+                        <!--                <input type="text" class="entradaTexto">-->
                     </div>
                 </div>
-                <!--cantidad-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['cantidad'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input disabled
-                               type="text"
-                               id="totalQuantity"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value="0"/>
-                    </div>
-                </div>
-                <!--grandtotal-->
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['grandtotal'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input disabled
-                               type="text"
-                               id="grandtotal"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value="0"/>
-                    </div>
-                </div>
-                <!--estatus
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['estatus'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="estatus"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>-->
-                <!--isrusord
-                <div style="width: 100%">
-                    <div class="leftSide">
-                        <?= $lang[$idioma]['isrusord'] ?>
-                    </div>
-                    <div class="rightSide">
-                        <input type="text"
-                               id="isrusord"
-                               class='entradaTextoBuscar'
-                               placeholder=""
-                               value=""/>
-                    </div>
-                </div>-->
+                
+                
             </div>
-            <div style="width: 100%; height: 50px; margin-top: 5px">
-                <div style="width: 15%; height: 100%; float: left;">
-                    <?= $lang[$idioma]['MasterSKU'] ?>
-                    <!--
-                    <?= $lang[$idioma]['MasterSKU'] ?>
-                    <input type="text"
-                           id="codprodinp"
-                           class='entradaTextoBuscar'
-                           placeholder=""
-                           value=""/>
-                    <input style="width: 166px" type="button" value="<?= $lang[$idioma]['Buscar'] ?>"
-                           onclick="getProduct(getProductCallback)"
-                           class="cmd button button-highlight button-pill"/>
-                    -->
-                    <input type="text"
-                           id="autocompleteProductInput"
-                           class='entradaTextoBuscar'
-                           placeholder=""
-                           value=""/>
-                </div>
-                <div style="width: 25%; height: 100%; float: left; padding: 10px">
-                    <div id="prodInfo" style="font-size: 12px"></div>
-                </div>
-                <div style="width: 15%; height: 100%; float: left;">
-                    <?= $lang[$idioma]['unidadDespacho'] ?>
-                    <?php
-                    $tDropdownBuilder->build("unidespa", "CODUNIDES", "NOMBRE", "", "cat_uni_des", 0);
-                    ?>
-                </div>
-                <div style="width: 15%; height: 100%; float: left;">
-                    <?= $lang[$idioma]['qty'] ?>
-                    <input type="text"
-                           id="quant"
-                           class='entradaTextoBuscar'
-                           placeholder=""
-                           value="0"/>
-                </div>
-                <div style="width: 15%; height: 100%; float: left;">
-                    Precio
-                    <input type="text"
-                           id="newPPrice"
-                           class='entradaTextoBuscar'
-                           placeholder=""
-                           value="0"/>
-                </div>
-                <div style="width: 15%; height: 100%; float: left; margin-top: 15px">
-                    <input type="button" value="<?= $lang[$idioma]['Agregar'] ?>" onclick="addProductToTable()"
-                           class="cmd button button-highlight button-pill"/>
-                </div>
-                <!--                <input type="text" class="entradaTexto">-->
-            </div>
-        </div>
+            
+            
     </div>
     <!--table with order detail-->
     <div ID="orderDetTable" style="margin-top: 20px; width: 100%;">
         <table id="newOrderData" class="dataTable">
             <thead>
             <tr>
-                <th width=\"10%\"><?= $lang[$idioma]['productid'] ?></th>
-                <th width=\"50%\"><?= $lang[$idioma]['disnam'] ?></th>
-                <th width=\"8%\">Unidad</th>
-                <th width=\"8%\"><?= $lang[$idioma]['qty'] ?></th>
-                <th width=\"5%\"><?= $lang[$idioma]['oriunipri'] ?></th>
-                <th width=\"5%\"><?= $lang[$idioma]['linetotal'] ?></th>
+                <th width="10%"><?= $lang[$idioma]['productid'] ?></th>
+                <th width="50%"><?= $lang[$idioma]['disnam'] ?></th>
+                <th width="8%">Unidad</th>
+                <th width="8%"><?= $lang[$idioma]['qty'] ?></th>
+                <th width="5%"><?= $lang[$idioma]['oriunipri'] ?></th>
+                <th width="5%"><?= $lang[$idioma]['linetotal'] ?></th>
             </tr>
             </thead>
             <tbody>
@@ -1820,6 +1872,8 @@ include_once ("upsCsv.php");
         border: outset;
         border-width: 1px;
         border-radius: 10px;
+        height: 30rem;
+        padding-top: 3rem;
     }
 
     .dataTables_empty {

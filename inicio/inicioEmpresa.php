@@ -57,6 +57,7 @@ if ($_SESSION['notified'] != 0) {
         <script src="../js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../js/funcionesScript.js" type="text/javascript"></script>
         <script src="../js/funcionesScriptPermisos.js" type="text/javascript"></script>
+        <script src="../js/funcionesScriptNotificaciones.js" type="text/javascript"></script>
         <script src="../js/funcionesScriptPrecios.js" type="text/javascript"></script>
         <script src="../js/funcionesScriptUsuarios.js" type="text/javascript"></script>
         <script src="../js/funcionesScriptEmpresas.js" type="text/javascript"></script>

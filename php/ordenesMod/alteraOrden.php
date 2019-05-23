@@ -64,7 +64,7 @@ $pais=$_POST['pais'];
 											
 											</script>
 											";
-							comprobarEstadoWrong(substr($ordenes['timoford'],0,7),substr($estado,0,2));
+							comprobarEstadoWrong(substr($ordenes['timoford'],0,7),substr($estado,0,2),$pais);
 						}
 						else
 						{

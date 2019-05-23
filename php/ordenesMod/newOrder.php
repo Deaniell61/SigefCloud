@@ -700,7 +700,7 @@
 
                 $tCountryCodeQry = "SELECT CODIGO FROM direct WHERE nomPais = '".$_SESSION['pais']."';";
 
-                $tCountryCodeRes = mysqli_query(conexion(), $tCountryCodeQry);
+                $tCountryCodeRes = mysqli_query(conexion($_SESSION['pais']), $tCountryCodeQry);
 
                 $tCountryCode = '';
 

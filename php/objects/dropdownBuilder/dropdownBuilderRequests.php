@@ -57,7 +57,7 @@
                 $tDropdownBuilder = new dropdownBuilder();
                 switch ($tRecordType) {
                     case "paymentStatusForm":
-                        echo $tDropdownBuilder->build($tDropId, "CODPAYSTA", "NOMBRE", $tSelected, "cat_pay_sta", 0);
+                        echo $tDropdownBuilder->build($tDropId, "CODPAYSTA", "NOMBRE", $tSelected, "cat_pay_sta", 0,null);
                         break;
                 }
 
