@@ -7,13 +7,17 @@
 require_once('../php/coneccion.php');
 function formulario($codigo)
 {
-    $sql = "SELECT aplicacion FROM sigef_modulos WHERE codigo='$codigo' and tipo='F'";
+    $sql = "SELECT aplicacion,link FROM sigef_modulos WHERE codigo='$codigo' and tipo='F'";
     $ejecutar = conexion("")->query($sql);
 
     $row = mysqli_fetch_array($ejecutar, MYSQLI_ASSOC);
     $res = $ejecutar->num_rows;
     if ($res > 0) {
-        return " onClick=\"formulario('" . $row['aplicacion'] . "')\" ";
+        if($row['link']!="" && $row['link']!="null"){
+            return " onClick=\"formularioDinamico('" . $row['link'] . "','POST',null)\" ";
+        }else{
+            return " onClick=\"formulario('" . $row['aplicacion'] . "')\" ";
+        }
     } else {
         return "";
     }

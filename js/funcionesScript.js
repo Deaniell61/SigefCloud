@@ -83,208 +83,214 @@ function inna() {
     //document.oncontextmenu = function(){return false}
 }
 
-function selecFormulario(tipo) {
-    if(tipo.link){
-        $.ajax({
-            url: '../'+tipo.link,
-            type: ''+tipo.method?tipo.method:'POST',
-            data: ''+tipo.data?tipo.data:null,
-            success: function (resp) {
-                $('#formulario').html(resp);
-            }
-        });
-    }else{
-        switch (tipo) {
-            case "1": {
-                $.ajax({
-                    url: '../php/usuarios/formUsuarios.php',
-                    type: 'POST',
-                    success: function (resp) {
-                        $('#formulario').html(resp);
-                    }
-                });
-                break;
-            }
-    
-            case "2": {
-                $.ajax({
-                    url: '../php/empresas/formEmpresas.php',
-                    type: 'POST',
-                    success: function (resp) {
-                        $('#formulario').html(resp);
-                    }
-                });
-                break;
-            }
-    
-            case "3": {
-                $.ajax({
-                    url: '../php/menu/modulos/formModulos.php',
-                    type: 'POST',
-                    success: function (resp) {
-                        $('#formulario').html(resp);
-                    }
-                });
-                break;
-            }
-    
-            case "4": {
-                $.ajax({
-                    url: '../php/productos/DatosBundle/formCanales.php',
-                    type: 'POST',
-                    success: function (resp) {
-                        $('#formulario').html(resp);
-                    }
-                });
-                break;
-            }
-    
-            case "5": {
-                $.ajax({
-                    url: '../php/proveedores/formProveedores.php',
-                    type: 'POST',
-                    success: function (resp) {
-                        $('#formulario').html(resp);
-                    }
-                });
-                break;
-            }
-    
-            case "6": {
-                $.ajax({
-                    url: '../php/notificaciones/formNotificacion.php',
-                    type: 'POST',
-                    success: function (resp) {
-                        $('#formulario').html(resp);
-                    }
-                });
-                break;
-            }
-    
-            case "7": {
-                $.ajax({
-                    url: '../php/unidadesMedida/formMedida.php',
-                    type: 'POST',
-                    success: function (resp) {
-                        $('#formulario').html(resp);
-                    }
-                });
-                break;
-            }
-    
-            case "8": {
-                $.ajax({
-                    url: '../php/soporte/formSoporte.php',
-                    type: 'POST',
-                    success: function (resp) {
-                        $('#formulario').html(resp);
-                    }
-                });
-                break;
-            }
-    
-            case "9": {
-                //alert(2);
-                $.ajax({
-                    url: '../php/adminOrdenes/formOrdenes.php',
-                    type: 'POST',
-                    success: function (resp) {
-                        $('#formulario').html(resp);
-                    }
-                });
-                break;
-            }
-    
-            case "10": {
-                $.ajax({
-                    url: '../php/wiki/formWiki.php',
-                    type: 'POST',
-                    success: function (resp) {
-                        $('#formulario').html(resp);
-                    }
-                });
-                break;
-            }
-    
-            case "11": {
-                //alert(2);
-                $.ajax({
-                    url: '../php/adminDB/formAdminDB.php',
-                    type: 'POST',
-                    success: function (resp) {
-                        $('#formulario').html(resp);
-                    }
-                });
-                break;
-            }
-    
-            case "12": {
-                //alert(2);
-                $.ajax({
-                    url: '../php/ordenesMod/formOrdenes.php',
-                    type: 'POST',
-                    success: function (resp) {
-                        $('#formulario').html(resp);
-                    }
-                });
-                break;
-            }
-    
-            //balance actual
-            case "13":
-                $.ajax({
-                    url: "../php/balances/balances.php",
-                    type: "POST",
-                    data: {
-                        method: "",
-                    },
-                    success: function (response) {
-                        $("#formulario").html(response);
-                        setTimeout(function () {
-                            $("#tabs").tabs({active: 1});
-                            $('#balanceDrop option')[0].selected = true;
-                            $("#balanceDrop").change();
-                        }, 250);
-                    }
-                });
-                break;
-    
-            //balance pasado
-            case "14":
-                $.ajax({
-                    url: "../php/balances/balances.php",
-                    type: "POST",
-                    data: {
-                        method: "",
-                    },
-                    success: function (response) {
-                        $("#formulario").html(response);
-                        setTimeout(function () {
-                            $("#tabs").tabs({active: 1});
-                            $('#balanceDrop option')[1].selected = true;
-                            $("#balanceDrop").change();
-                        }, 250);
-                    }
-                });
-                break;
-    
-            case "15":
-                $.ajax({
-                    url: "../php/bodegaje/bodegaje.php",
-                    type: "POST",
-                    data: {
-                        method: "",
-                    },
-                    success: function (response) {
-                        console.log("S");
-                        $("#formulario").html(response);
-                    },
-                    error: function (response) {
-                        console.log("E");
-                    }
-                });
-                break;
+function formularioDinamico(link,method,data){
+    let data1 = {
+        link : link,
+        data : data,
+        method: method
+    }
+
+    $.ajax({
+        url: '../'+data1.link,
+        type: ''+data1.method?data1.method:'POST',
+        data: ''+data1.data?data1.data:null,
+        success: function (resp) {
+            $('#formulario').html(resp);
         }
+    });
+}
+
+function selecFormulario(tipo) {
+    switch (tipo) {
+        case "1": {
+            $.ajax({
+                url: '../php/usuarios/formUsuarios.php',
+                type: 'POST',
+                success: function (resp) {
+                    $('#formulario').html(resp);
+                }
+            });
+            break;
+        }
+
+        case "2": {
+            $.ajax({
+                url: '../php/empresas/formEmpresas.php',
+                type: 'POST',
+                success: function (resp) {
+                    $('#formulario').html(resp);
+                }
+            });
+            break;
+        }
+
+        case "3": {
+            $.ajax({
+                url: '../php/menu/modulos/formModulos.php',
+                type: 'POST',
+                success: function (resp) {
+                    $('#formulario').html(resp);
+                }
+            });
+            break;
+        }
+
+        case "4": {
+            $.ajax({
+                url: '../php/productos/DatosBundle/formCanales.php',
+                type: 'POST',
+                success: function (resp) {
+                    $('#formulario').html(resp);
+                }
+            });
+            break;
+        }
+
+        case "5": {
+            $.ajax({
+                url: '../php/proveedores/formProveedores.php',
+                type: 'POST',
+                success: function (resp) {
+                    $('#formulario').html(resp);
+                }
+            });
+            break;
+        }
+
+        case "6": {
+            $.ajax({
+                url: '../php/notificaciones/formNotificacion.php',
+                type: 'POST',
+                success: function (resp) {
+                    $('#formulario').html(resp);
+                }
+            });
+            break;
+        }
+
+        case "7": {
+            $.ajax({
+                url: '../php/unidadesMedida/formMedida.php',
+                type: 'POST',
+                success: function (resp) {
+                    $('#formulario').html(resp);
+                }
+            });
+            break;
+        }
+
+        case "8": {
+            $.ajax({
+                url: '../php/soporte/formSoporte.php',
+                type: 'POST',
+                success: function (resp) {
+                    $('#formulario').html(resp);
+                }
+            });
+            break;
+        }
+
+        case "9": {
+            //alert(2);
+            $.ajax({
+                url: '../php/adminOrdenes/formOrdenes.php',
+                type: 'POST',
+                success: function (resp) {
+                    $('#formulario').html(resp);
+                }
+            });
+            break;
+        }
+
+        case "10": {
+            $.ajax({
+                url: '../php/wiki/formWiki.php',
+                type: 'POST',
+                success: function (resp) {
+                    $('#formulario').html(resp);
+                }
+            });
+            break;
+        }
+
+        case "11": {
+            //alert(2);
+            $.ajax({
+                url: '../php/adminDB/formAdminDB.php',
+                type: 'POST',
+                success: function (resp) {
+                    $('#formulario').html(resp);
+                }
+            });
+            break;
+        }
+
+        case "12": {
+            //alert(2);
+            $.ajax({
+                url: '../php/ordenesMod/formOrdenes.php',
+                type: 'POST',
+                success: function (resp) {
+                    $('#formulario').html(resp);
+                }
+            });
+            break;
+        }
+
+        //balance actual
+        case "13":
+            $.ajax({
+                url: "../php/balances/balances.php",
+                type: "POST",
+                data: {
+                    method: "",
+                },
+                success: function (response) {
+                    $("#formulario").html(response);
+                    setTimeout(function () {
+                        $("#tabs").tabs({active: 1});
+                        $('#balanceDrop option')[0].selected = true;
+                        $("#balanceDrop").change();
+                    }, 250);
+                }
+            });
+            break;
+
+        //balance pasado
+        case "14":
+            $.ajax({
+                url: "../php/balances/balances.php",
+                type: "POST",
+                data: {
+                    method: "",
+                },
+                success: function (response) {
+                    $("#formulario").html(response);
+                    setTimeout(function () {
+                        $("#tabs").tabs({active: 1});
+                        $('#balanceDrop option')[1].selected = true;
+                        $("#balanceDrop").change();
+                    }, 250);
+                }
+            });
+            break;
+
+        case "15":
+            $.ajax({
+                url: "../php/bodegaje/bodegaje.php",
+                type: "POST",
+                data: {
+                    method: "",
+                },
+                success: function (response) {
+                    console.log("S");
+                    $("#formulario").html(response);
+                },
+                error: function (response) {
+                    console.log("E");
+                }
+            });
+            break;
     }
     
 }
