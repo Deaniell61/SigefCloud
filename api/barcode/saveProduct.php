@@ -42,9 +42,11 @@ while ($countriesRow = mysqli_fetch_array($countriesR)) {
             SELECT 
                 coddtomin
             FROM
-                tra_tin_det
+                tra_tin_det AS tin
+                    INNER JOIN
+                tra_tin_enc AS tinenc ON tin.codtominv = tinenc.codtominv
             WHERE
-                codprod = '$codprod';
+                codprod = '$codprod' and tinenc.ajuste=0;
         ";
 
         $exiR = mysqli_query(conexion($country), $exiQ);

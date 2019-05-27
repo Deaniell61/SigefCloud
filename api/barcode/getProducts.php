@@ -32,7 +32,7 @@ while ($countriesRow = mysqli_fetch_array($countriesR)) {
                     INNER JOIN
                 cat_prod AS prod ON tin.codprod = prod.codprod
             WHERE
-                sisexi > 0
+                sisexi > 0 and tinenc.ajuste=0
             ORDER BY nomprod LIMIT 15;
         ";
     }
@@ -43,9 +43,11 @@ while ($countriesRow = mysqli_fetch_array($countriesR)) {
             FROM
                 tra_tin_det AS tin
                     INNER JOIN
+                tra_tin_enc AS tinenc ON tin.codtominv = tinenc.codtominv
+                    INNER JOIN
                 cat_prod AS prod ON tin.codprod = prod.codprod
             WHERE
-                fisexi = 0 AND sisexi
+                fisexi = 0 AND sisexi and tinenc.ajuste=0
             ORDER BY nomprod LIMIT 15;
         ";
     }

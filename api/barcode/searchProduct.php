@@ -17,6 +17,7 @@ $countriesQ = "
 
 $countriesR = mysqli_query(conexion(""), $countriesQ);
 $response = Array();
+$responseError = Array();
 
 while ($countriesRow = mysqli_fetch_array($countriesR)) {
     $country = $countriesRow[0];
@@ -25,11 +26,15 @@ while ($countriesRow = mysqli_fetch_array($countriesR)) {
         SELECT 
             mastersku, prodname, upc
         FROM
-            cat_prod AS prod
+        tra_tin_det AS tin
+            INNER JOIN
+        tra_tin_enc AS tinenc ON tin.codtominv = tinenc.codtominv
+            INNER JOIN
+        cat_prod AS prod ON tin.codprod = prod.codprod
         WHERE
-            mastersku LIKE '%$term%'
+            (mastersku LIKE '%$term%'
                 || prodname LIKE '%$term%'
-                || upc LIKE '%$term%'
+                || upc LIKE '%$term%')  and tinenc.ajuste=0
         ORDER BY prodname , mastersku , upc
         LIMIT 15;
     ";
@@ -51,6 +56,9 @@ while ($countriesRow = mysqli_fetch_array($countriesR)) {
                 "upc" => $upc,
             ];
         }
+    }
+    if($productR->num_rows<=0){
+        $validProduct=false;
     }
 }
 
