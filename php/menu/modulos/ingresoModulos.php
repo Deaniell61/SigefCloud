@@ -8,6 +8,7 @@ $nombre= strtoupper($_POST['nombre']);
 $padre = $_POST['padre'];
 $nivel= $_POST['nivel'];
 $codigo= $_POST['codigo'];
+$link= $_POST['link'];
 $aplicacion= $_POST['aplicacion'];
 $tipo = strtoupper($_POST['tipo']);
 
@@ -24,32 +25,32 @@ switch($nivel)
 {
 	case 1:
 	{
-		$sql_auten="insert into sigef_modulos(codigo,nombre,tipo,aplicacion) values('$padre.0".cod($padre,".")."','".$nombre."','$tipo','$aplicacion')"; 
+		$sql_auten="insert into sigef_modulos(codigo,nombre,tipo,aplicacion,link) values('$padre.0".cod($padre,".")."','".$nombre."','$tipo','$aplicacion','$link')"; 
 		break;
 	}
 	case 2:
 	{
-		$sql_auten="insert into sigef_modulos(codigo,nombre,tipo,aplicacion) values('$padre.0".cod($padre,".")."','".$nombre."','$tipo','$aplicacion')";
+		$sql_auten="insert into sigef_modulos(codigo,nombre,tipo,aplicacion,link) values('$padre.0".cod($padre,".")."','".$nombre."','$tipo','$aplicacion','$link')";
 		break;
 	}
 	case 3:
 	{
-		$sql_auten="insert into sigef_modulos(codigo,nombre,tipo,aplicacion) values('$padre.0".cod($padre,".")."','".$nombre."','$tipo','$aplicacion')";
+		$sql_auten="insert into sigef_modulos(codigo,nombre,tipo,aplicacion,link) values('$padre.0".cod($padre,".")."','".$nombre."','$tipo','$aplicacion','$link')";
 		break;
 	}
 	case 4:
 	{
-		$sql_auten="insert into sigef_modulos(codigo,nombre,tipo,aplicacion) values('$padre.0".cod($padre,".")."','".$nombre."','$tipo','$aplicacion')";
+		$sql_auten="insert into sigef_modulos(codigo,nombre,tipo,aplicacion,link) values('$padre.0".cod($padre,".")."','".$nombre."','$tipo','$aplicacion','$link')";
 		break;
 	}
 	case 5:
 	{
-		$sql_auten="insert into sigef_modulos(codigo,nombre,tipo,aplicacion) values('$padre.0".cod($padre,".")."','".$nombre."','$tipo','$aplicacion')";
+		$sql_auten="insert into sigef_modulos(codigo,nombre,tipo,aplicacion,link) values('$padre.0".cod($padre,".")."','".$nombre."','$tipo','$aplicacion','$link')";
 		break;
 	}
 	case 0:
 	{
-		$sql_auten="insert into sigef_modulos(codigo,nombre,tipo,aplicacion) values('0".cod1($padre)."','".$nombre."','$tipo','$aplicacion')";
+		$sql_auten="insert into sigef_modulos(codigo,nombre,tipo,aplicacion,link) values('0".cod1($padre)."','".$nombre."','$tipo','$aplicacion','$link')";
 		break;
 	}
 }
@@ -60,32 +61,32 @@ switch($nivel)
 {
 	case 1:
 	{
-		$sql_auten="update sigef_modulos set codigo='$padre.0".cod($padre,".")."',nombre='".$nombre."',tipo='$tipo',aplicacion='$aplicacion' where codigo='".$codigo."'";
+		$sql_auten="update sigef_modulos set codigo='$padre.0".cod($padre,".")."',nombre='".$nombre."',tipo='$tipo',aplicacion='$aplicacion',link='$link' where codigo='".$codigo."'";
 		break;
 	}
 	case 2:
 	{
-		$sql_auten="update sigef_modulos set codigo='$padre.0".cod($padre,".")."',nombre='".$nombre."',tipo='$tipo',aplicacion='$aplicacion' where codigo='".$codigo."'";
+		$sql_auten="update sigef_modulos set codigo='$padre.0".cod($padre,".")."',nombre='".$nombre."',tipo='$tipo',aplicacion='$aplicacion',link='$link' where codigo='".$codigo."'";
 		break;
 	}
 	case 3:
 	{
-		$sql_auten="update sigef_modulos set codigo='$padre.0".cod($padre,".")."',nombre='".$nombre."',tipo='$tipo',aplicacion='$aplicacion' where codigo='".$codigo."'";
+		$sql_auten="update sigef_modulos set codigo='$padre.0".cod($padre,".")."',nombre='".$nombre."',tipo='$tipo',aplicacion='$aplicacion',link='$link' where codigo='".$codigo."'";
 		break;
 	}
 	case 4:
 	{
-		$sql_auten="update sigef_modulos set codigo='$padre.0".cod($padre,".")."',nombre='".$nombre."',tipo='$tipo',aplicacion='$aplicacion' where codigo='".$codigo."'";
+		$sql_auten="update sigef_modulos set codigo='$padre.0".cod($padre,".")."',nombre='".$nombre."',tipo='$tipo',aplicacion='$aplicacion',link='$link' where codigo='".$codigo."'";
 		break;
 	}
 	case 5:
 	{
-		$sql_auten="update sigef_modulos set codigo='$padre.0".cod($padre,".")."',nombre='".$nombre."',tipo='$tipo',aplicacion='$aplicacion' where codigo='".$codigo."'";
+		$sql_auten="update sigef_modulos set codigo='$padre.0".cod($padre,".")."',nombre='".$nombre."',tipo='$tipo',aplicacion='$aplicacion',link='$link' where codigo='".$codigo."'";
 		break;
 	}
 	case 0:
 	{
-		$sql_auten="update sigef_modulos set codigo='0".cod1($padre)."',nombre='".$nombre."',tipo='$tipo',aplicacion='$aplicacion' where codigo='".$codigo."'";
+		$sql_auten="update sigef_modulos set codigo='0".cod1($padre)."',nombre='".$nombre."',tipo='$tipo',aplicacion='$aplicacion',link='$link' where codigo='".$codigo."'";
 		break;
 	}
 }

@@ -5,8 +5,8 @@ $idioma=idioma();
 require_once('../../idiomas/'.$idioma.'.php');
 formulario();
 $codigo=$_POST['codigo'];
-$squery="select codigo,nombre,tipo,aplicacion from sigef_modulos where codigo='".$codigo."'";
-
+$squery="select codigo,nombre,tipo,aplicacion,link from sigef_modulos where codigo='".$codigo."'";
+// echo $squery;
 
 ## ejecución de la sentencia sql
 
@@ -18,7 +18,10 @@ $squery="select codigo,nombre,tipo,aplicacion from sigef_modulos where codigo='"
 					if($row=mysqli_fetch_array($ejecutar,MYSQLI_ASSOC))
 					{
 						echo "<script>
-						llenarDatosModulos();
+						$(document).ready(function () {
+							llenarDatosModulos();
+		
+						});
 						llenarDatosModulos()
 						{
 							
@@ -27,9 +30,10 @@ $squery="select codigo,nombre,tipo,aplicacion from sigef_modulos where codigo='"
 								document.getElementById('codigo').disabled = true;
 								document.getElementById('nombre').value = \"".$row['nombre']."\";
 								document.getElementById('tipo').value = \"".$row['tipo']."\";
+								document.getElementById('link').value = \"".$row['link']."\";
 								document.getElementById('aplicacion').value = \"".$row['aplicacion']."\";
 								".mostrarAplicacion($row['tipo'])."
-								document.getElementById('nivel').value = '".nivel($row['codigo'])."';
+								document.getElementById('nivel').value = '".nivel($row['codigo']."")."';
 								llenarPadres(document.getElementById('nivel').value);
 								
 								setTimeout(function(){document.getElementById('padre').value = \"".substr($row['codigo'],0,strlen($row['codigo'])-3)."\"},500);
@@ -114,9 +118,9 @@ include('../../idiomas/'.$idioma.'.php');
                 <br>
 <?php }
 
-function nivel($nive)
+function nivel($nivel)
 {
-	$nive=strlen($nive);
+	$nive=strlen($nivel);
 	switch($nive)
 	{
 		case strlen("00"):{return 0; break;}

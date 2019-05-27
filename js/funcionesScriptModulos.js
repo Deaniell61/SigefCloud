@@ -30,7 +30,7 @@ function llenarPadres(nivel)
 	codigo=limpiarCaracteresEspeciales(document.getElementById('codigo').value);
 	link=limpiarCaracteresEspeciales(document.getElementById('link').value);
 	aplicacion=limpiarCaracteresEspeciales(document.getElementById('aplicacion').value);
-
+	console.log(link)
 	$.ajax({
 					url:'ingresoModulos.php',
 					type:'POST',
