@@ -16,6 +16,7 @@ $lang['en']['AccesosVisor'] = 'Usuario limitado';
 $lang['en']['Account'] = "Cuenta";
 $lang['en']['Activo'] = 'Activo';
 $lang['en']['Actualizar'] = 'Actualizar';
+$lang['es']['Link'] = 'Link';
 $lang['en']['AD1'] = "Aditional 1";
 $lang['en']['AD2'] = "Aditional 2";
 $lang['en']['Adevertencia_Rojo'] = '<span class="validaraster">*</span> Campos Obligatorios';

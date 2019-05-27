@@ -28,13 +28,14 @@ function llenarPadres(nivel)
 	nombre=limpiarCaracteresEspeciales(document.getElementById('nombre').value);
 	nivel=limpiarCaracteresEspeciales(document.getElementById('nivel').value);
 	codigo=limpiarCaracteresEspeciales(document.getElementById('codigo').value);
+	link=limpiarCaracteresEspeciales(document.getElementById('link').value);
 	aplicacion=limpiarCaracteresEspeciales(document.getElementById('aplicacion').value);
 
 	$.ajax({
 					url:'ingresoModulos.php',
 					type:'POST',
 					data:'nombre='+nombre+'&padre='+padre+'&tipo='+
-					tipo+'&nivel='+nivel+'&aplicacion='+aplicacion+'&codigo='+codigo,
+					tipo+'&nivel='+nivel+'&aplicacion='+aplicacion+'&codigo='+codigo+'&link='+link,
 					success: function(resp)
 					{
 						

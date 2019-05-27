@@ -96,6 +96,7 @@ $lang['es']['Category'] = "Categoria";
 $lang['es']['catEstado'] = 'Catalogo de Presentacion o Estado';
 $lang['es']['catFlavor'] = 'Catalogo de Sabor o Fragancia';
 $lang['es']['catLinea'] = 'Catalogo de Linea de Producto';
+$lang['es']['Link'] = 'Link';
 $lang['es']['catManufacturador'] = 'Catalogo de Manufacturador';
 $lang['es']['catMarca'] = 'Catalogo de Marca';
 $lang['es']['catPresentacion'] = 'Catalogo de Presentacion';

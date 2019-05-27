@@ -69,6 +69,10 @@ include('../../idiomas/'.$idioma.'.php');
             	<td class="text"><span><?php echo $lang[$idioma]['Nombre'];?></span></td>
                 <td class="colo1"><input type="text" class='entradaTexto' name="nombre" id="nombre" autofocus placeholder="<?php echo $lang[$idioma]['Nombre'];?>" ></td>
             </tr>
+        	<tr>
+            	<td class="text"><span><?php echo $lang[$idioma]['Link'];?></span></td>
+                <td class="colo1"><input type="text" class='entradaTexto' name="link" id="link" autofocus placeholder="<?php echo $lang[$idioma]['Link'];?>" ></td>
+            </tr>
             
             <tr>
             	<td class="text"><span><?php echo $lang[$idioma]['Tipo'];?></span></td>
