@@ -510,6 +510,10 @@ include_once ("upsCsv.php");
     }
 </script>
 <center>
+    <span>
+    <input type="button" class='cmd button button-highlight button-pill' style="position: absolute;left: 0px;margin-top: -1rem;"
+                       onClick="window.location.href='inicioEmpresa.php'" value="<?php echo $lang[$idioma]['Salir']; ?>"/>
+    </span>
     <?php echo $lang[$idioma]['ordenes']; ?>
 </center>
 <aside>
@@ -517,12 +521,7 @@ include_once ("upsCsv.php");
     <div class="controls">
         <div class="row">
             <div class="col">
-                <input type="button" class='cmd button button-highlight button-pill'
-                       onClick="document.getElementById('filtro').value='1';document.getElementById('buscar').value='';buscar();"
-                       value="<?php echo $lang[$idioma]['Cancelar']; ?>"/>
-                <input type="button" class='cmd button button-highlight button-pill'
-                       onClick="window.location.href='inicioEmpresa.php'" value="<?php echo $lang[$idioma]['Salir']; ?>"/>
-                <br>
+            
                 <select class='entradaTexto' style="" id="filtro" onChange="buscar();">
                     <option value="1" selected>Hoy</option>
                     <option value="8">Ultima semana</option>
@@ -537,7 +536,7 @@ include_once ("upsCsv.php");
                     <option value="13">Inicio de los tiempos</option>
                 </select>
             </div>
-            <div class="col grey">
+            <div class="col-8 grey">
                 <input class='cmd button button-highlight button-pill' type="button"
                        onClick="openNewOrderForm();document.getElementById('orderDetTable').hidden=true;"
                        value="<?php echo $lang[$idioma]['newOrder'] ?>"/>
@@ -552,9 +551,7 @@ include_once ("upsCsv.php");
                        onClick="abrirNotificacion('',paisGlobal,codPaisGlobal);"
                        value="<?php echo $lang[$idioma]['Nuevo'] ?>"/>
             </div>
-            <div class="col">
-
-            </div>
+            
             <div class="col grey">
                 <span><?php echo $lang[$idioma]['grandtotal']; ?></span>
                 <span id="totalGrid"></span>

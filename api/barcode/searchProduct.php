@@ -32,13 +32,12 @@ while ($countriesRow = mysqli_fetch_array($countriesR)) {
             INNER JOIN
         cat_prod AS prod ON tin.codprod = prod.codprod
         WHERE
-            (mastersku LIKE '%$term%'
-                || prodname LIKE '%$term%'
-                || upc LIKE '%$term%')  and tinenc.ajuste=0
+            (mastersku LIKE '%".$term."%'
+                || prodname LIKE '%".$term."%'
+                || upc LIKE '%".$term."%')  and tinenc.ajuste=0
         ORDER BY prodname , mastersku , upc
         LIMIT 15;
     ";
-
 
     $productR = mysqli_query(conexion($country), $productQ);
 
@@ -57,10 +56,8 @@ while ($countriesRow = mysqli_fetch_array($countriesR)) {
             ];
         }
     }
-    if($productR->num_rows<=0){
-        $validProduct=false;
-    }
 }
+// echo $productQ;
 
 echo json_encode($response);
 

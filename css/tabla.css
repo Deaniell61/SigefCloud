@@ -70,7 +70,30 @@
         
            
        }
-      
+  .interno{
+      position: absolute!important;
+  } 
+  .row1Detalle{
+      height: 100px!important;
+  } 
+  .DivInterno{
+    display: '';
+    position: absolute;
+    z-index: 3;
+    left: 2%;
+    width: 100%;
+  }
+  .DivInternoOculto{
+    display: none;
+    position: absolute;
+    z-index: -3;
+    left: 2%;
+  }  
+  .rowInterno{
+      margin-top: 2%;
+      margin-left: 2%;
+
+  }
         thead{
            
         color: white;

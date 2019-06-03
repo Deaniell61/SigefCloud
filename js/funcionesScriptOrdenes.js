@@ -31,6 +31,106 @@ function abrirOrdenes(codprov, pais, codpais, contador) {
 
 }
 
+function mostrarDetalleOrden(orderid, pais, codpais, codorden) {
+
+    let params = {
+        codorden:codorden,
+        orderId:orderid,
+        pais:pais,
+        codpais:codpais,
+        controller:"orden/detalle"
+    }
+    $.ajax({
+            url:'../php/general/controladorGeneral.php',
+            type:'GET',
+            datatype:'json',
+            data:params,
+            success: function(response)
+            {		
+                var tr = $("#"+orderid+"Detail").closest('tr');
+                if(tr.hasClass('row1Detalle')){
+                    tr.removeClass('row1Detalle');
+                }else{
+                    tr.addClass('row1Detalle');
+                    // tr.html(tr.html()+"<div id='divid'>este div es dinamico</div>");
+                }
+                response = JSON.parse(response);
+                var trtd =$("#"+orderid+"Detail")
+                var detalle = ''
+                detalle += '<div class="row pl-5">'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">'+
+                            'Nombre'+
+                        '</div>'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">'+
+                            'Cantidad'+
+                        '</div>'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">'+
+                            'Precio'+
+                        '</div>'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">'+
+                            'Total'+
+                        '</div>'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">'+
+                            'UPC'+
+                        '</div>'+
+                    '</div>';
+                if(Array.isArray( response )){
+                    response.forEach(element => {
+                        detalle += '<div class="row pl-5">'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">'+
+                            element.DISNAM+
+                        '</div>'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">'+
+                            element.QTY+
+                        '</div>'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">'+
+                            element.ORIUNIPRI+
+                        '</div>'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">'+
+                            element.LINETOTAL+
+                        '</div>'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">'+
+                            element.UPC+
+                        '</div>'+
+                    '</div>';
+                    });
+                }
+                else{
+                    detalle += '<div class="row pl-5">'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">'+
+                            response.DISNAM+
+                        '</div>'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">'+
+                            response.QTY+
+                        '</div>'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">'+
+                            response.PRECIO+
+                        '</div>'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">'+
+                            response.TOTAL+
+                        '</div>'+
+                        '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">'+
+                            response.UPC+
+                        '</div>'+
+                    '</div>';
+                }
+                if(trtd.hasClass('DivInternoOculto')){
+                    trtd.removeClass('DivInternoOculto');
+                    trtd.addClass('DivInterno');
+                    trtd.html('<div class="rowInterno">'+detalle+'</div>')
+                }else{
+                    trtd.removeClass('DivInterno');
+                    trtd.addClass('DivInternoOculto');
+                    trtd.html('');
+                }
+            },
+            error: element => {
+                console.log(element);
+                
+            }
+        });	
+}
+
 function cambiarOrden(tipo, num, pais, codigo, ul) {
     if (tipo == 1) {
         num++;

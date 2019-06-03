@@ -62,12 +62,12 @@ function insertShipping(data){
             data: data1,
             success: function(resp) {
                 buscarOrdenBodega(data.ORDERID)
-                console.log(JSON.parse(resp));
+                // console.log(JSON.parse(resp));
                 
             }
         });
     }else{
-        alert('la orden se despacho correctamente 2')
+        alert('La orden se despacho correctamente 2')
     }
 }
 function buscarOrdenBodega(term) {
@@ -157,6 +157,7 @@ function armarTablaOrdenes(resp){
     $('#ordenesData').html(data);
     $(document).ready(function(){
         $("#esperaD").dialog("close");
+
         localStorage.setItem('detalleSigef',JSON.stringify(resp))
 
         $('#tablas').DataTable( {
@@ -176,7 +177,8 @@ function armarTablaOrdenes(resp){
     document.getElementById('tablas_length').style.display='none';
     $(".productoId").removeClass('hidden');
     setTimeout(function () {
-        $("#cargaLoad").dialog("close");
+        $('#productoId').focus();
+        $("#esperaD").dialog("close");
     }, 300);
         
 }

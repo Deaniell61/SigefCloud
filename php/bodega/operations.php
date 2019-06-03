@@ -135,6 +135,8 @@ require_once('../coneccion.php');
                                 if($ejecutar->num_rows>0){
                                     ($value->append['Productos']);
                                     $value['Productos']=mysqli_fetch_assoc($ejecutar);
+                                    ($$value['Productos']->append['Producto']);
+                                    $$value['Productos']['Producto']=mysqli_fetch_assoc($ejecutar);
                                 }
                             }
                             $ores = $value;
@@ -161,7 +163,7 @@ require_once('../coneccion.php');
                                 ($Orden['Detalle']->append['squery']);
                                 $Orden['Detalle']['pendientes']= $Orden['Detalle']['QTY']-$ejecutar3->num_rows;
                                 $Orden['Detalle']['agregadas']=$ejecutar3->num_rows;
-                                $Orden['Detalle']['squery']=$squery;
+                                // $Orden['Detalle']['squery']=$squery;
                             }
                         }
                     }else{
@@ -170,6 +172,17 @@ require_once('../coneccion.php');
                             if($ejecutar->num_rows>0){
                                 ($Orden['Detalle']->append['Productos']);
                                 $Orden['Detalle']['Productos']=mysqli_fetch_assoc($ejecutar);
+                                ($Orden['Detalle']['Productos']->append['Producto']);
+                                $Orden['Detalle']['Productos']['Producto']=$Orden['Detalle']['Productos'];
+                                $squery = "select * from tra_ord_shi where CODORDDET='".$Orden['Detalle']['CODDETORD']."';";
+                                if($ejecutar3=mysqli_query(conexion($_SESSION["pais"]), $squery)){
+                                    ($Orden['Detalle']->append['pendientes']);
+                                    ($Orden['Detalle']->append['agregadas']);
+                                    ($Orden['Detalle']->append['squery']);
+                                    $Orden['Detalle']['pendientes']= $Orden['Detalle']['QTY']-$ejecutar3->num_rows;
+                                    $Orden['Detalle']['agregadas']=$ejecutar3->num_rows;
+                                    // $Orden['Detalle']['squery']=$squery;
+                                }
                             }
                         }
                     }
