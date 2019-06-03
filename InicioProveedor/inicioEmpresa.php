@@ -67,6 +67,7 @@ if ($_SESSION['notified'] != 0) {
         <script src="../js/funcionesScriptSoporte.js" type="text/javascript"></script>
         <script src="../js/funcionesScriptOrdenes.js" type="text/javascript"></script>
         <script src="../js/funcionesScriptBodegasExistencia.js" type="text/javascript"></script>
+        <script src="../js/funcionesScriptBodegas.js" type="text/javascript"></script>
 
         <script src="../js/funcionesScriptUsuarioLogiado.js" type="text/javascript"></script>
         <script src="../js/datatables.min.js" type="text/javascript"></script>

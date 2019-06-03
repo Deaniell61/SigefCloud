@@ -128,6 +128,27 @@ if ($ejecutar = mysqli_query(conexion($_SESSION['pais']), $squery)) {
                                 <div id="caracteresShortProdDesc4" class="caracteres">255</div>
                             </td>
                         </tr>
+
+                        <tr>
+                            <td class="text"><span><?php echo $lang[$idioma]['ItemInclude']; ?></span></td>
+                                        
+                            <td colspan="2"><textarea class='entradaTexto' id="itemInclude"
+                                                      onKeyUp="contarCaracteres(this,255,document.getElementById('caracteresShortitemInclude'));verificaImportantes('MetaData','guardar23');"
+                                                      rows="7"><?php echo ((($row['ItemInclude']))); ?></textarea>
+                                <div id="caracteresShortitemInclude" class="caracteres">255</div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="text"><span><?php echo $lang[$idioma]['ItemInclude']; ?></span></td>
+                                        
+                            <td colspan="2"><textarea class='entradaTexto' id="itemInclude"
+                                                      onKeyUp="contarCaracteres(this,255,document.getElementById('caracteresShortitemInclude'));verificaImportantes('MetaData','guardar23');"
+                                                      rows="7"><?php echo ((($row['ItemInclude']))); ?></textarea>
+                                <div id="caracteresShortitemInclude" class="caracteres">255</div>
+                            </td>
+                        </tr>
                         <tr>
                             <td colspan="4"><br><br></td>
                         </tr>

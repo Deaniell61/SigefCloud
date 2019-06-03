@@ -33,11 +33,11 @@ $nuevafecha2 = strtotime ( '+1 day' , strtotime ( $fecha ) ) ;
 $fecha = date ( 'Y-m-d' , $nuevafecha2 );
 if($nombre==NULL)
 {
-	$squery="select orderid, timoford, (grandtotal), orderunits, ordsou, tranum,shicar from tra_ord_enc where (timoford <= '".$fecha."' and timoford >= '".$nuevafecha."') and codprov='".$_SESSION['codprov']."' order by timoford desc";
+	$squery="select orderid, timoford, (grandtotal), orderunits, ordsou, tranum,shicar,estatus,codorden from tra_ord_enc where (timoford <= '".$fecha."' and timoford >= '".$nuevafecha."') and codprov='".$_SESSION['codprov']."' order by timoford desc";
 }
 else
 {
-	$squery="select orderid, timoford, (grandtotal), orderunits, ordsou, tranum,shicar from tra_ord_enc where (orderid like '%$nombre%' or timoford like '%$nombre%' or grandtotal like '%$nombre%' or orderunits like '%$nombre%' or ordsou like '%$nombre%' or tranum like '%$nombre%') and (timoford <= '".$fecha."' and timoford >='".$nuevafecha."') and codprov='".$_SESSION['codprov']."' order by timoford desc";
+	$squery="select orderid, timoford, (grandtotal), orderunits, ordsou, tranum,shicar,estatus,codorden from tra_ord_enc where (orderid like '%$nombre%' or timoford like '%$nombre%' or grandtotal like '%$nombre%' or orderunits like '%$nombre%' or ordsou like '%$nombre%' or tranum like '%$nombre%') and (timoford <= '".$fecha."' and timoford >='".$nuevafecha."') and codprov='".$_SESSION['codprov']."' order by timoford desc";
 }
 
 
@@ -106,9 +106,12 @@ include('../idiomas/'.$idioma.'.php');
 							$click="";
 						}
 						
+						
+						
+						
 						setlocale(LC_MONETARY, 'en_US');
 						$retornar=$retornar."<tr >
-								<td><input type=\"checkbox\" id=\"".strtoupper($row['0'])."\"  onClick=\"agregarAccesos(document.getElementById('".strtoupper($row['0'])."').value)\"  value=\"".strtoupper($row['0'])."\" /></td>
+								<td><input type=\"checkbox\" id=\"".strtoupper($row['0'])."\"  onClick=\"mostrarDetalleOrden('".strtoupper($row['0'])."','".$pais."','".$codpais."','".strtoupper($row['8'])."')\"  value=\"".strtoupper($row['0'])."\" /></td>
 								<td hidden=\"hidden\">".($row['0'])."</td>
 								<td id=\"numOrd".$contador."\" onMouseOver=\"this.style.cssText='background-color: #afafaf'\" onMouseOut=\"this.style.cssText='background-color: none'\" ".$click.">".($row['0'])."</td>
 								<td>".($row['1'])."</td>
@@ -116,6 +119,8 @@ include('../idiomas/'.$idioma.'.php');
 								<td><center>".number_format($row['3'])."</center></td>
 								<td><center>".($canal)."</center></td>
 								<td><a href='".$link.">".($row['5'])."</a></td>
+								<td><center>".(strtoupper($row['7']))."</center></td>
+								<td id=\"".strtoupper($row['0'])."Detail\" class='DivInternoOculto'> </td>
 								
 							  </tr>";
 					$total=$total+round($row['2'],5,2);
@@ -144,10 +149,6 @@ include('../idiomas/'.$idioma.'.php');
 		\"pageLength\": 100,
         \"oLanguage\": {
       \"sLengthMenu\": \" _MENU_ \",
-	  
-      
-  
-      
     }
         
          
@@ -179,7 +180,7 @@ include('../idiomas/'.$idioma.'.php');
             	
 				<thead>
 				<tr  class=\"titulo\">
-                	<th class=\"check\"><img src=\"../images/yes.jpg\"/></th>
+                	<th class=\"check\"><img src=\"../images/yes.jpg\"  style=\"width:50px;height:50px;\"/></th>
 					<th hidden=\"hidden\">".$lang[$idioma]['Codigo']."</th>
 					<th >".$lang[$idioma]['orderid']."</th>
 					<th>".$lang[$idioma]['timoford']."</th>
@@ -187,6 +188,8 @@ include('../idiomas/'.$idioma.'.php');
                     <th>".$lang[$idioma]['orderunits']."</th>
 					<th>".$lang[$idioma]['ordsou']."</th>
 					<th>".$lang[$idioma]['tranum']."</th>
+					<th>".$lang[$idioma]['estatus']."</th>
+					<th hidden=\"hidden\"></th>
 					
                 </tr> </thead>
                 

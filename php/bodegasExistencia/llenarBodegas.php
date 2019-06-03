@@ -44,7 +44,7 @@ $retornar="";
 			
 			$existencia=existenciaInicial($periIni,$prod,$bodegas[0],$pais);
 			$retornar=$retornar.buscaProducto($prod,$pais);
-				$sqlTabla="select e.codmovbod,e.tipomov,e.numero,e.fecha,e.obser,d.cantidad from tra_mob_enc e,tra_mob_det d where d.codmovbod=e.codmovbod and d.codprod='".$prod."' and e.codbod='".$bodegas[0]."' and (e.fecha between '".$periIni."' and '".$periFin."') order by e.fecha asc;";
+				$sqlTabla="select e.codmovbod,e.tipomov,e.numero,e.fecha,e.obser,d.cantidad from tra_mob_enc e,tra_mob_det d where d.codmovbod=e.codmovbod and d.codprod='".$prod."' and e.codbod='".$bodegas[0]."' and (e.fecha between '".$periIni."' and '".$periFin."') order by e.tipomov,e.fecha asc,e.tipomov asc ;";
 				$contar=0;
 			if($ejecutaTabla=mysqli_query($conP,$sqlTabla))
 			{

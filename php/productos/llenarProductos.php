@@ -140,7 +140,18 @@ if ($ejecutar) {
             $retornar = $retornar . "<td onClick=\"nuevoProducto('" . $_SESSION['codEmpresa'] . "','" . $_SESSION['pais'] . "','" . $row['masterSKU'] . "')\">" . $tName . "</td>
 								<td onClick=\"nuevoProducto('" . $_SESSION['codEmpresa'] . "','" . $_SESSION['pais'] . "','" . $row['masterSKU'] . "')\">" . (($row['marca'])) . "</td>
 								<td onClick=\"nuevoProducto('" . $_SESSION['codEmpresa'] . "','" . $_SESSION['pais'] . "','" . $row['masterSKU'] . "')\">" . ucwords(strtolower($row['category'])) . "</td>
-								<td onClick=\"abrirBodegasE('" . $row['codprod'] . "','" . $_SESSION['pais'] . "','" . $_SESSION['codprov'] . "')\"><div class=\"bodegaDeclara\"><a>" . intval(($row['inventario'])) . "<div class=\"globoFlotanteExistencia\"><div class=\"parrafoFlotanteExistencia\">" . llenarBodegas($row['codprod']) . "</div></div></a></div></td>" .
+                                <td onClick=\"abrirBodegasE('" . $row['codprod'] . "','" . $_SESSION['pais'] . "','" . $_SESSION['codprov'] . "')\">
+                                    <div class=\"bodegaDeclara\">
+                                        <a >" . intval(($row['inventario'])) . "
+                                            
+                                            <div class=\"globoFlotanteExistencia \">
+                                                <div class=\"parrafoFlotanteExistencia\">
+                                                    " . llenarBodegas($row['codprod']) . "
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>" .
                 $showEditButton
                 . "
 							  </tr>";

@@ -270,8 +270,10 @@ if (!$icode == NULL) {
                                onkeypress="return isNumber(event)"></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td class="text"><span><?php echo $lang[$idioma]['grados']; ?></span></td>
+                    <td><input type="text" class='entradaTexto' name="grados" id="grados" disabled
+                                           placeholder="<?php echo $lang[$idioma]['grados']; ?>">
+                    </td>
                     <td class="text"><span><?php echo $lang[$idioma]['SID']; ?></span></td>
                     <td><input type="text" class='entradaTexto' name="SID" id="SID"
                                onChange="verificaImportantes('General','guardar112');"></td>

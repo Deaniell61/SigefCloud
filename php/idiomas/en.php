@@ -16,7 +16,9 @@ $lang['en']['AccesosVisor'] = 'Usuario limitado';
 $lang['en']['Account'] = "Cuenta";
 $lang['en']['Activo'] = 'Activo';
 $lang['en']['Actualizar'] = 'Actualizar';
-$lang['es']['Link'] = 'Link';
+$lang['en']['ItemInclude'] = 'Item Incluyed';
+$lang['en']['Link'] = 'Link';
+$lang['en']['grados'] = "Temperatura";
 $lang['en']['AD1'] = "Aditional 1";
 $lang['en']['AD2'] = "Aditional 2";
 $lang['en']['Adevertencia_Rojo'] = '<span class="validaraster">*</span> Campos Obligatorios';
@@ -575,7 +577,15 @@ $lang['en']['ZipCode'] = "Codigo Postal";
 $lang['en']['EstadoCorrect'] = "Estado Correcto";
 $lang['en']['ordenesMod'] = "Correccion de estado";
 $lang['en']['Reset'] = "Reset";
+$lang['en']['Movimiento'] = "Movimiento";
 $lang['en']['publicar'] = "Publicar";
+$lang['en']['codProd'] = "Codigo Producto";
+$lang['en']['descProd'] = "Descripcion de Producto";
+$lang['en']['ubicacion'] = "Ubicacion";
+$lang['en']['PesoKG'] = "Peso KG";
+$lang['en']['cantidadAgregada'] = "Agregadas";
+$lang['en']['cantidadPendiente'] = "Pendientes";
+
 
 //copiar producto
 $lang['en']['copyProduct'] = "Copiar Producto";
