@@ -585,6 +585,7 @@ $lang['en']['ubicacion'] = "Ubicacion";
 $lang['en']['PesoKG'] = "Peso KG";
 $lang['en']['cantidadAgregada'] = "Agregadas";
 $lang['en']['cantidadPendiente'] = "Pendientes";
+$lang['en']['BodegaMov'] = "Movimientos de Bodega";
 
 
 //copiar producto

@@ -510,19 +510,18 @@ include_once ("upsCsv.php");
     }
 </script>
 <center>
-    <span>
-    <input type="button" class='cmd button button-highlight button-pill' style="position: absolute;left: 0px;margin-top: -1rem;"
-                       onClick="window.location.href='inicioEmpresa.php'" value="<?php echo $lang[$idioma]['Salir']; ?>"/>
-    </span>
     <?php echo $lang[$idioma]['ordenes']; ?>
 </center>
 <aside>
     <div id="resultado"></div>
     <div class="controls">
         <div class="row">
-            <div class="col">
             
-                <select class='entradaTexto' style="" id="filtro" onChange="buscar();">
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-left">
+            <input type="button" class='cmd button button-highlight button-pill' style="position: absolute;margin-top: -5rem;"
+                       onClick="window.location.href='inicioEmpresa.php'" value="<?php echo $lang[$idioma]['Salir']; ?>"/>
+                <br>
+                <select class='entradaTexto' style="margin-left:1rem;" id="filtro" onChange="buscar();">
                     <option value="1" selected>Hoy</option>
                     <option value="8">Ultima semana</option>
                     <option value="2">Ultimas 24 horas</option>
@@ -536,23 +535,39 @@ include_once ("upsCsv.php");
                     <option value="13">Inicio de los tiempos</option>
                 </select>
             </div>
-            <div class="col-8 grey">
-                <input class='cmd button button-highlight button-pill' type="button"
-                       onClick="openNewOrderForm();document.getElementById('orderDetTable').hidden=true;"
-                       value="<?php echo $lang[$idioma]['newOrder'] ?>"/>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 grey">
+                
+                
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center">
+                        <input class='cmd button button-highlight button-pill' type="button"
+                            onClick="openNewOrderForm();document.getElementById('orderDetTable').hidden=true;"
+                            value="<?php echo $lang[$idioma]['newOrder'] ?>"/>
+                    </div>
+                    
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                        <input type="text" class='entradaTexto form-control' id="buscar" name="buscar"
+                            placeholder="<?php echo $lang[$idioma]['Buscar'] ?>" value="" onKeyUp="buscare(event);"/>
+                    </div>
+                    
+                    
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center">
+                        <input type="button" class='cmd button button-highlight button-pill' onClick="buscar();"
+                            value="<?php echo $lang[$idioma]['Buscar'] ?>"/>
+                    </div>
+                </div>
+                
+                
 
-                <input type="text" class='entradaTexto' id="buscar" name="buscar"
-                       placeholder="<?php echo $lang[$idioma]['Buscar'] ?>" value="" onKeyUp="buscare(event);"/>
+                
+               
 
-                <input type="button" class='cmd button button-highlight button-pill' onClick="buscar();"
-                       value="<?php echo $lang[$idioma]['Buscar'] ?>"/>
-
-                <input class='cmd button button-highlight button-pill' type="button"
+                <!-- <input class='cmd button button-highlight button-pill' type="button"
                        onClick="abrirNotificacion('',paisGlobal,codPaisGlobal);"
-                       value="<?php echo $lang[$idioma]['Nuevo'] ?>"/>
+                       value="<?php echo $lang[$idioma]['Nuevo'] ?>"/> -->
             </div>
             
-            <div class="col grey">
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 grey">
                 <span><?php echo $lang[$idioma]['grandtotal']; ?></span>
                 <span id="totalGrid"></span>
                 <br>
@@ -637,38 +652,38 @@ include_once ("upsCsv.php");
         <li onclick="document.getElementById('orderDetTable').hidden=true"><a href="#tabs-2"><?= $lang[$idioma]['shippingTitle'] ?></a></li>
         <li onclick="document.getElementById('orderDetTable').hidden=false"><a href="#tabs-3"><?= $lang[$idioma]['orderDetail'] ?></a></li>
     </ul>
-    <div style="width: 100%; height: 225px;">
+    <div style="width: 100%; height: 40rem;">
         <!--row1-->
         <!--<div style="width: 100%; text-align: center; font-weight: bold;"><?= $lang[$idioma]['ordertitle'] ?></div>-->
-        <div id="tabs-1" style="width: 100%; height: 240px; display: flex;  justify-content: center;">
+        <div id="tabs-1" style="width: 100%; height: 40rem; display: flex;  justify-content: center;">
             
             <div class="row">
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <div  class="frame">
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+                    <div  class="frame" style="height:40rem;">
                         <!--<div style="width: 100%; text-align: center; font-weight: bold;"><?= $lang[$idioma]['ordertitle'] ?></div>-->
                         <!--order id-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['orderId'] ?>
                             </div>
                             <div class="rightSide">
                                 <input disabled
                                     type="text"
                                     id="orderid"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
                                     placeholder=""
                                     value=""/>
                             </div>
                         </div>
                         <!--date-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['date'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="date"
                                     id="date"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
                                     placeholder=""
                                     value=""/>
                             </div>
@@ -677,21 +692,21 @@ include_once ("upsCsv.php");
 
                         <!--order channel-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['orderChannel'] ?>
                             </div>
                             <div class="rightSide">
                                 <input disabled
                                     type="text"
                                     id="orderChannel"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
                                     placeholder=""
                                     value="Local Store"/>
                             </div>
                         </div>
                         <!--payment status-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2">
                                 <?= $lang[$idioma]['paymentStatus'] ?>
                             </div>
                             <div class="rightSide">
@@ -710,7 +725,7 @@ include_once ("upsCsv.php");
                         </div>
                         <!--payment method-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2">
                                 <?= $lang[$idioma]['paymentMethod'] ?>
                             </div>
                             <div class="rightSide">
@@ -721,13 +736,66 @@ include_once ("upsCsv.php");
                         </div>
                         <!--payment ref number-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['paymentRefNumber'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="payrefnum"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--site-->
+                        <div style="width: 100%;">
+                            <div class="leftSide mr-2 mt-2">
+                                <?= $lang[$idioma]['site'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input disabled
+                                    type="text"
+                                    id="site"
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
+                                    placeholder=""
+                                    value="LS"/>
+                            </div>
+                        </div>
+                        <!--paydate-->
+                        <div style="width: 100%;">
+                            <div class="leftSide mr-2 mt-2">
+                                <?= $lang[$idioma]['paydate'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="date"
+                                    id="paydat"
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--channel-->
+                        <div style="width: 100%;">
+                            <div class="leftSide mr-2 mt-2">
+                                <?= $lang[$idioma]['channel'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="channel"
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--userID-->
+                        <div style="width: 100%;">
+                            <div class="leftSide mr-2 mt-2">
+                                <?= $lang[$idioma]['id'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="extraUserID"
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
                                     placeholder=""
                                     value=""/>
                             </div>
@@ -735,45 +803,45 @@ include_once ("upsCsv.php");
 
                     </div>
                 </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <div style="width: 350px; height: 35rem;" class="frame">
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                    <div style="width: 100%; height: 45rem;" class="frame">
                         <div style="width: 100%; text-align: center; font-weight: bold;"></div>
 
                         <!--username-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['username'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="username"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
                                     placeholder=""
                                     value=""/>
                             </div>
                         </div>
                         <!--firstaname-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['firstname'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="Bfirstname"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
                                     placeholder=""
                                     value=""/>
                             </div>
                         </div>
                         <!--lastname-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['lastname'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="Blastname"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
                                     placeholder=""
                                     value=""/>
                             </div>
@@ -781,7 +849,7 @@ include_once ("upsCsv.php");
 
                         <!--shicou-->
                         <div style="width: 100%">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2">
                                 <?= $lang[$idioma]['shicou'] ?>
                             </div>
                             <div class="rightSide">
@@ -792,7 +860,7 @@ include_once ("upsCsv.php");
                         </div>
                         <!--shipstate-->
                         <div style="width: 100%">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2">
                                 <?= $lang[$idioma]['shipstate'] ?>
                             </div>
                             <div class="rightSide">
@@ -803,13 +871,13 @@ include_once ("upsCsv.php");
                         </div>
                         <!--shipcity-->
                         <div style="width: 100%">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['shipcity'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="Bshipcity"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
                                     placeholder=""
                                     value=""/>
                             </div>
@@ -817,13 +885,13 @@ include_once ("upsCsv.php");
 
                         <!--zipcode-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['ZipCode'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="BextraZipcode"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
                                     placeholder=""
                                     value=""/>
                             </div>
@@ -831,13 +899,13 @@ include_once ("upsCsv.php");
 
                         <!--shiadd1-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['shiadd1'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="BextraAddress1"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
                                     placeholder=""
                                     value=""/>
                             </div>
@@ -845,13 +913,13 @@ include_once ("upsCsv.php");
 
                         <!--shiadd2-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['shiadd2'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="BextraAddress2"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
                                     placeholder=""
                                     value=""/>
                             </div>
@@ -860,65 +928,20 @@ include_once ("upsCsv.php");
 
                         <!--phone-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['Telefono'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="BextraPhone"
-                                    class='entradaTextoBuscar'
-                                    placeholder=""
-                                    value=""/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                   <div  class="frame">
-                        <div style="width: 100%; text-align: center; font-weight: bold;"></div>
-                        <!--site-->
-                        <div style="width: 100%;">
-                            <div class="leftSide">
-                                <?= $lang[$idioma]['site'] ?>
-                            </div>
-                            <div class="rightSide">
-                                <input disabled
-                                    type="text"
-                                    id="site"
-                                    class='entradaTextoBuscar'
-                                    placeholder=""
-                                    value="LS"/>
-                            </div>
-                        </div>
-                        <!--paydate-->
-                        <div style="width: 100%;">
-                            <div class="leftSide">
-                                <?= $lang[$idioma]['paydate'] ?>
-                            </div>
-                            <div class="rightSide">
-                                <input type="date"
-                                    id="paydat"
-                                    class='entradaTextoBuscar'
-                                    placeholder=""
-                                    value=""/>
-                            </div>
-                        </div>
-                        <!--channel-->
-                        <div style="width: 100%;">
-                            <div class="leftSide">
-                                <?= $lang[$idioma]['channel'] ?>
-                            </div>
-                            <div class="rightSide">
-                                <input type="text"
-                                    id="channel"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
                                     placeholder=""
                                     value=""/>
                             </div>
                         </div>
                         <!--warehouse-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2">
                                 <?= $lang[$idioma]['Warehouse'] ?>
                             </div>
                             <div class="rightSide">
@@ -937,7 +960,7 @@ include_once ("upsCsv.php");
                         </div>
                         <!--torden-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 Tipo de Orden
                             </div>
                             <div class="rightSide">
@@ -959,75 +982,21 @@ include_once ("upsCsv.php");
 
                         <!--company-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['company'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="extraCompany"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control my-2 ml-2'
                                     placeholder=""
                                     value=""/>
                             </div>
                         </div>
 
-
-                        <!--firstname
-                        <div style="width: 100%;">
-                            <div class="leftSide">
-                                <?= $lang[$idioma]['firstname'] ?>
-                            </div>
-                            <div class="rightSide">
-                                <input type="text"
-                                    id="extraFirstname"
-                                    class='entradaTextoBuscar'
-                                    placeholder=""
-                                    value=""/>
-                            </div>
-                        </div>
-        -->
-                        <!--lastname
-                        <div style="width: 100%;">
-                            <div class="leftSide">
-                                <?= $lang[$idioma]['lastname'] ?>
-                            </div>
-                            <div class="rightSide">
-                                <input type="text"
-                                    id="extraLastname"
-                                    class='entradaTextoBuscar'
-                                    placeholder=""
-                                    value=""/>
-                            </div>
-                        </div>
-        -->
-
-
-                        <!--userID-->
-                        <div style="width: 100%;">
-                            <div class="leftSide">
-                                <?= $lang[$idioma]['id'] ?>
-                            </div>
-                            <div class="rightSide">
-                                <input type="text"
-                                    id="extraUserID"
-                                    class='entradaTextoBuscar'
-                                    placeholder=""
-                                    value=""/>
-                            </div>
-                        </div>
-                        <!--TEST
-                        <div style="width: 100%;">
-                            <div class="leftSide">
-                                TEST
-                            </div>
-                            <div class="rightSide">
-                                <?php
-                        $tDropdownBuilder->build("paises", "NOMBRE", "NOMBRE", "FreeEconom", "cat_country", 0,null);
-                        ?>
-                            </div>
-                        </div>-->
-                    </div> 
+                    </div>
                 </div>
+                
             </div>
             
             <!--bloque1-->
@@ -1056,11 +1025,11 @@ include_once ("upsCsv.php");
             }
             </style>
             <div class="row">
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
-                    <div style="width: 350px; height: 210px;" class="frame pt-3">
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+                    <div style="width: 100%; height: 40rem;" class="frame pt-3">
                         <!--shimetsel-->
                         <div style="width: 100%">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2">
                                 <?= $lang[$idioma]['shimetsel'] ?>
                             </div>
                             <div  class="rightSide">
@@ -1071,7 +1040,7 @@ include_once ("upsCsv.php");
                         </div>
                         <!--shista-->
                         <div style="width: 100%">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2">
                                 <?= $lang[$idioma]['shista'] ?>
                             </div>
                             <div class="rightSide">
@@ -1082,39 +1051,78 @@ include_once ("upsCsv.php");
                         </div>
                         <!--shipdate-->
                         <div style="width: 100%">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['shipdate'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="date"
                                     id="shipdate"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control ml-2 my-2'
                                     placeholder=""
                                     value=""/>
                             </div>
                         </div>
                         <!--shifee-->
                         <div style="width: 100%">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['shifee'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="shifee"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control ml-2 my-2'
                                     placeholder=""
                                     value=""/>
                             </div>
                         </div>
                         <!--rusord-->
                         <div style="width: 100%">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['isrusord'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="checkbox"
                                     id="isrusord"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control ml-2 my-2'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--tracking-->
+                        <div style="width: 100%">
+                            <div class="leftSide mr-2 mt-2">
+                                <?= $lang[$idioma]['tracking'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="tracking"
+                                    class='entradaTextoBuscar form-control ml-2 my-2'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--status-->
+                        <div style="width: 100%">
+                            <div class="leftSide mr-2 mt-2">
+                                <?= $lang[$idioma]['status'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="status"
+                                    class='entradaTextoBuscar form-control ml-2 my-2'
+                                    placeholder=""
+                                    value=""/>
+                            </div>
+                        </div>
+                        <!--shiamocar-->
+                        <div style="width: 100%">
+                            <div class="leftSide mr-2 mt-2">
+                                <?= $lang[$idioma]['shiamocar'] ?>
+                            </div>
+                            <div class="rightSide">
+                                <input type="text"
+                                    id="shiamocar"
+                                    class='entradaTextoBuscar form-control ml-2 my-2'
                                     placeholder=""
                                     value=""/>
                             </div>
@@ -1122,37 +1130,37 @@ include_once ("upsCsv.php");
                     </div>
                 </div>
                 
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
-                    <div style="heigth:100%;" class="frame mb-3">
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 ">
+                    <div  class="mb-3" style="border: outset;border-width: 1px;border-radius: 10px;height: 40rem;padding-top: 3rem;">
                         <!--firstaname-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['firstname'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="firstname"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control ml-2 my-2'
                                     placeholder=""
                                     value=""/>
                             </div>
                         </div>
                         <!--lastname-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['lastname'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="lastname"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control ml-2 my-2'
                                     placeholder=""
                                     value=""/>
                             </div>
                         </div>
                         <!--shicou-->
                         <div style="width: 100%">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2">
                                 <?= $lang[$idioma]['shicou'] ?>
                             </div>
                             <div class="rightSide">
@@ -1163,7 +1171,7 @@ include_once ("upsCsv.php");
                         </div>
                         <!--shipstate-->
                         <div style="width: 100%">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2">
                                 <?= $lang[$idioma]['shipstate'] ?>
                             </div>
                             <div  class="rightSide">
@@ -1174,52 +1182,52 @@ include_once ("upsCsv.php");
                         </div>
                         <!--shipcity-->
                         <div style="width: 100%">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['shipcity'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="shipcity"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control ml-2 my-2'
                                     placeholder=""
                                     value=""/>
                             </div>
                         </div>
                         <!--shizipcod-->
                         <div style="width: 100%">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['shizipcod'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="shizipcod"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control ml-2 my-2'
                                     placeholder=""
                                     value=""/>
                             </div>
                         </div>
                         <!--shiadd1-->
                         <div style="width: 100%">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['shiadd1'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="shiadd1"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control ml-2 my-2'
                                     placeholder=""
                                     value=""/>
                             </div>
                         </div>
                         <!--shiadd2-->
                         <div style="width: 100%">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['shiadd2'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="shiadd2"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control ml-2 my-2'
                                     placeholder=""
                                     value=""/>
                             </div>
@@ -1227,114 +1235,17 @@ include_once ("upsCsv.php");
 
                         <!--phone-->
                         <div style="width: 100%;">
-                            <div class="leftSide">
+                            <div class="leftSide mr-2 mt-2">
                                 <?= $lang[$idioma]['Telefono'] ?>
                             </div>
                             <div class="rightSide">
                                 <input type="text"
                                     id="extraPhone"
-                                    class='entradaTextoBuscar'
+                                    class='entradaTextoBuscar form-control ml-2 my-2'
                                     placeholder=""
                                     value=""/>
                             </div>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
-                    <div style="width: 350px; height: 210px;" class="frame pt-5">
-                        <!--<div style="width: 100%; text-align: center; font-weight: bold;"><?= $lang[$idioma]['paytitle'] ?></div>-->
-                        <!--tracking-->
-                        <div style="width: 100%">
-                            <div class="leftSide">
-                                <?= $lang[$idioma]['tracking'] ?>
-                            </div>
-                            <div class="rightSide">
-                                <input type="text"
-                                    id="tracking"
-                                    class='entradaTextoBuscar'
-                                    placeholder=""
-                                    value=""/>
-                            </div>
-                        </div>
-                        <!--status-->
-                        <div style="width: 100%">
-                            <div class="leftSide">
-                                <?= $lang[$idioma]['status'] ?>
-                            </div>
-                            <div class="rightSide">
-                                <input type="text"
-                                    id="status"
-                                    class='entradaTextoBuscar'
-                                    placeholder=""
-                                    value=""/>
-                            </div>
-                        </div>
-                        <!--shiamocar-->
-                        <div style="width: 100%">
-                            <div class="leftSide">
-                                <?= $lang[$idioma]['shiamocar'] ?>
-                            </div>
-                            <div class="rightSide">
-                                <input type="text"
-                                    id="shiamocar"
-                                    class='entradaTextoBuscar'
-                                    placeholder=""
-                                    value=""/>
-                            </div>
-                        </div>
-                        <!--paysta
-                        <div style="width: 100%">
-                            <div class="leftSide">
-                                <?= $lang[$idioma]['paysta'] ?>
-                            </div>
-                            <div class="rightSide">
-                                <input type="text"
-                                    id="paysta"
-                                    class='entradaTextoBuscar'
-                                    placeholder=""
-                                    value=""/>
-                            </div>
-                        </div>-->
-                        <!--paydat
-                        <div style="width: 100%">
-                            <div class="leftSide">
-                                <?= $lang[$idioma]['paydat'] ?>
-                            </div>
-                            <div class="rightSide">
-                                <input type="text"
-                                    id="paydat"
-                                    class='entradaTextoBuscar'
-                                    placeholder=""
-                                    value=""/>
-                            </div>
-                        </div>-->
-                        <!--payrefnum
-                        <div style="width: 100%">
-                            <div class="leftSide">
-                                <?= $lang[$idioma]['payrefnum'] ?>
-                            </div>
-                            <div class="rightSide">
-                                <input type="text"
-                                    id="payrefnum"
-                                    class='entradaTextoBuscar'
-                                    placeholder=""
-                                    value=""/>
-                            </div>
-                        </div>-->
-                        <!--paymet
-                        <div style="width: 100%">
-                            <div class="leftSide">
-                                <?= $lang[$idioma]['paymet'] ?>
-                            </div>
-                            <div class="rightSide">
-                                <input type="text"
-                                    id="paymet"
-                                    class='entradaTextoBuscar'
-                                    placeholder=""
-                                    value=""/>
-                            </div>
-                        </div>-->
                     </div>
                 </div>
                 

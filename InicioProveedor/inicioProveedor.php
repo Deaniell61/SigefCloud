@@ -62,15 +62,16 @@ verTiempo();
         <div id="cuerpo">
             <div id="resultado"></div>
             <div id="formulario">
+            <div style="position: absolute;"><input type="button" class='cmd button button-highlight button-pill'
+                                         value="<?php echo $lang[$idioma]['Salir']; ?>"
+                                         onClick="window.location.href='inicio.php'"/></div>
                 <div id="datos">
                     <?php
                     getProveedor($_SESSION['codigo']);
                     ?>
                 </div>
                 <center>
-                    <div class=""><input type="button" class='cmd button button-highlight button-pill'
-                                         value="<?php echo $lang[$idioma]['Salir']; ?>"
-                                         onClick="window.location.href='inicio.php'"/></div>
+                   
                 </center>
             </div>
         </div>

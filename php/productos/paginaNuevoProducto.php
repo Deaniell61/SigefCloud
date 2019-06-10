@@ -75,14 +75,15 @@ $_SESSION['mastersku'] = $_GET['mt'];
                 <?php ayuda("../../images/header.png", "", "../../images/sigef_logo.png"); ?>
                 <ul id="elementoLogin">
                     <strong><?php echo ucwords(strtolower($_SESSION['nom'])) . " " . ucwords(strtolower($_SESSION['apel'])) . "<br>" . ucwords(strtolower($_SESSION['nomEmpresa'])) . "<br>" . ucwords(strtolower($_SESSION['nomProv'])); ?></strong>
-                    <a onClick="window.close();">
-                        <li>
-                            <?php echo $lang[$idioma]['Salir']; ?>
-                        </li>
-                    </a>
+                    
                 </ul>
             </header>
+            <div class="text-left">
+                <input type="button" class='cmd button button-highlight button-pill'
+                            value="<?php echo $lang[$idioma]['Salir']; ?>" onClick="window.close();"/>
+</div>
             <center>
+                
                 <aside class="pestanas">
                     <br>
                     <ul>

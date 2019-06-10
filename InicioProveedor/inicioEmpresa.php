@@ -148,12 +148,12 @@ if ($_SESSION['notified'] != 0) {
 
 
         <div id="formulario" onClick="__('globoNotificacion').hidden=true;">
-
-            <img src="<?php echo $_SESSION['img']; ?>" width="70%" height="65%"/>
-            <center>
-                <div><input type="button" class='cmd button button-highlight button-pill'
+        <div style="position: absolute;"><input type="button" class='cmd button button-highlight button-pill'
                             value="<?php echo $lang[$idioma]['Salir']; ?>" onClick="window.location.href='inicio.php'"/>
                 </div>
+            <img src="<?php echo $_SESSION['img']; ?>" width="70%" height="65%"/>
+            <center>
+                
             </center>
 
         </div>

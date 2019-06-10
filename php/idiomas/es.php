@@ -585,6 +585,8 @@ $lang['es']['Reset'] = "Reset";
 $lang['es']['publicar'] = "Publicar";
 $lang['es']['cantidadAgregada'] = "Agregadas";
 $lang['es']['cantidadPendiente'] = "Pendientes";
+$lang['es']['BodegaMov'] = "Movimientos de Bodega";
+$lang['es']['company'] = "Compañia";
 
 //copiar producto
 $lang['es']['copyProduct'] = "Copiar Producto";

@@ -56,7 +56,7 @@ else{
     $productStatusMessageStyle = "mBAJA";
 }
 $productTotalQuantity = intval($productRow["QTYONHAND"]) + intval($productRow["QTYPURCHAS"]) - intval($productRow["QTYSALESOR"]) - intval($productRow["QTYBACKOR"]);
-$productTotalUnityQuantity = (intval($productRow["QTYONHAND"]) + intval($productRow["QTYPURCHAS"]) - intval($productRow["QTYSALESOR"]) - intval($productRow["QTYBACKOR"])) * intval($productRow["UNIVENTA"]);
+$productTotalUnityQuantity = (intval($productRow["QTYONHAND"])  - intval($productRow["QTYSALESOR"])) * intval($productRow["UNIVENTA"]);
 $productStoreInventory = $productRow["sumexistencia"];
 //$productTotalStoreInventory = ($productRow["QTYONHAND"] > 0) ? $productStoreInventory : "0";
 $productTotalStoreInventory = intval($productTotalUnityQuantity) + intval($productStoreInventory);
@@ -213,7 +213,19 @@ function exiTable() {
             </div>
 
             <div class="topSpace15"></div>
+            
+            <div class="row">
+                
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    Iventario Mayaland
+                </div>
 
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    Iventario Guatedirect
+                </div>
+                
+            </div>
+            
             <!--OH Quantity-->
             <div class="row50">
                 <div class="leftSide stackHorizontally alignRight">
@@ -230,7 +242,7 @@ function exiTable() {
             <!--total unity quantity-->
             <div class="row50 stackHorizontally">
                 <div class="leftSide stackHorizontally alignRight">
-                    Total Unity Quantity
+                    Total Unity Quantity (OH * UC)
                 </div>
                 <div class="rightSide stackHorizontally alignLeft">
                     <input disabled id="bodegajeTotalQuantity"

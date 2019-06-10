@@ -725,7 +725,22 @@ display: inline-block;
 	
 
 }
-
+.my-2{
+	margin-bottom: 0.25rem;
+	margin-top: 0.25rem;
+}
+.mt-2{
+	margin-top: 0.25rem;
+}
+.mb-2{
+	margin-bottom: 0.25rem;
+}
+.ml-2{
+	margin-left: 0.25rem;
+}
+.mr-2{
+	margin-right: 0.25rem;
+}
 .combosCentrar
 {
 	    width: 90%;
