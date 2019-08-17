@@ -208,7 +208,7 @@ $(document).ready(function(e) {
 	<div id="encabezado">
 
     	<?php ayuda("images/header.png","window.location.href='index.php'","images/sigef_logo.png");?> 
-
+<!--Lrem-->
     </div>
 
 
